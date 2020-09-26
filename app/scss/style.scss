@@ -1,0 +1,51 @@
+// @import '../../node_modules/slick-carousel/slick/slick';
+// @import '../../node_modules/magnific-popup/dist/magnific-popup';
+@import "vars";
+@import "libs";
+@import "fonts";
+@import "global";
+
+// blocks
+
+// p{
+//   font-size: 3rem;
+//   background: #c91313;
+//   color: #000;
+// }
+
+//Header-------------------------------------- 
+.header__inner{
+  font-size: 1.3rem;
+  letter-spacing: 0.3px;
+  // background: rgb(107, 231, 173);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1110px;
+  margin: 0 auto;
+}
+.header__logo{
+  width: 130px;
+}
+.header__menu{
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding-right: 300px;
+  .header__menu_item{
+    padding: 0 20px;
+    text-decoration: none;
+    color: $main-font;
+  }
+}
+.lang-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+
+
+@import "media";
