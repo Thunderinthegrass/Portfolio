@@ -918,11 +918,15 @@ body {
   margin: 0 auto;
 }
 
+.cls-1 {
+  fill: #ffffff;
+}
+
 .workspace {
   fill: #282A36;
   opacity: 0;
-  -webkit-animation: workspace 2s linear 1s 1 forwards;
-          animation: workspace 2s linear 1s 1 forwards;
+  -webkit-animation: workspace 1s linear 0.3s 1 forwards;
+          animation: workspace 1s linear 0.3s 1 forwards;
 }
 
 @-webkit-keyframes workspace {
@@ -3219,11 +3223,89 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: relative;
+  width: 180px;
+}
+
+.change__language[type="checkbox"] {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 2px;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 3;
+  width: 50px;
+  height: 20px;
+  -webkit-appearance: none;
+  outline: none;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 0 0 3px rgba(6, 185, 230, 0.4);
+          box-shadow: 0 0 0 3px rgba(6, 185, 230, 0.4);
+  cursor: pointer;
+}
+
+.change__language[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: #04d7df;
+  border-radius: 20px;
+  -webkit-transform: scale(0.98, 0.96);
+      -ms-transform: scale(0.98, 0.96);
+          transform: scale(0.98, 0.96);
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
+}
+
+.change__language:checked[type="checkbox"]::before {
+  -webkit-animation: change-language-checked 0.4s linear 1 forwards;
+          animation: change-language-checked 0.4s linear 1 forwards;
+}
+
+@-webkit-keyframes change-language-checked {
+  0% {
+  }
+  50% {
+    width: 34px;
+  }
+  100% {
+    -webkit-transform: translateX(30px);
+            transform: translateX(30px);
+    width: 20px;
+  }
+}
+
+@keyframes change-language-checked {
+  0% {
+  }
+  50% {
+    width: 34px;
+  }
+  100% {
+    -webkit-transform: translateX(30px);
+            transform: translateX(30px);
+    width: 20px;
+  }
 }
 
 .lang-rus {
   padding: 0 5px;
   text-transform: uppercase;
+  overflow: visible;
+  position: relative;
+}
+
+.paint-smear-1 {
+  position: absolute;
+  left: -10px;
+  width: 70px;
+  z-index: -1;
 }
 
 .lang-en {
