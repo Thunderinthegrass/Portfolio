@@ -50,7 +50,7 @@
     color: $main-font;
   }
 }
-.lang-wrapper{
+.lang{
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -68,11 +68,9 @@
   width: 50px;
   height: 20px;
   -webkit-appearance: none;
-  // background: linear-gradient(0deg, #333, #000);
   outline: none;
   border-radius: 20px;
   box-shadow: 0 0 0 3px rgba(6, 185, 230, 0.4);
-  // box-shadow: 0 0 0 3px #04d7df;
   cursor: pointer;
 }
 .change__language[type="checkbox"]::before {
@@ -83,8 +81,6 @@
   width: 20px;
   height: 20px;
   background: #04d7df;
-  // background: rgba(6, 184, 229, 0.4);
-  // box-shadow: 0 0 0 3px rgba(6, 184, 229, 0.4);
   border-radius: 20px;
   transform: scale(.98, .96);
   transition: .4s;
@@ -118,7 +114,7 @@
     width: 20px;
   }
 }
-.lang-rus{
+.lang__rus{
   padding: 0 5px;
   text-transform: uppercase;
   overflow: visible;
@@ -128,15 +124,50 @@
   position: absolute;
   left: -10px;
   width: 70px;
-  z-index: -1;
+  z-index: -2;
 }
-.lang-en{
-  width: 60px;
+.paint-smear-en{
+  position: absolute;
+  right: -25px;
+  width: 70px;
+  z-index: -2;
+}
+.paint-smear-mask{
+  width: 70px;
+  height: 21px;
+  position: absolute;
+  left: -10px;
+  top: 0;
+  background: #ffffff;
+  z-index: -1;
+  transition: 1s;
+}
+.paint-smear-mask-en{
+  width: 70px;
+  height: 21px;
+  position: absolute;
+  right: -25px;
+  top: 0;
+  background: #ffffff;
+  z-index: -1;
+  transition: 1s;
+}
+.go-right{
+  transform: translateX(70px);
+}
+.go-left{
+  transform: translateX(-70px);
+}
+.disp-none{
+  transition: .2s;
+  opacity: 0;
+}
+.bg-white{
+  background: #fff;
+}
+.lang__en{
   padding: 0 5px;
   text-transform: uppercase;
-  background-image: url(../img/paint-smear.svg);
-  background-size: cover;
-  background-repeat: no-repeat;
   overflow: visible;
 }
 // end-header------------------------
