@@ -48,6 +48,7 @@
     padding: 0 20px;
     text-decoration: none;
     color: $main-font;
+    text-transform: uppercase;
   }
 }
 .lang{
@@ -169,6 +170,35 @@
   padding: 0 5px;
   text-transform: uppercase;
   overflow: visible;
+}
+.header__text{
+  margin-left: 200px;
+  margin-top: 45vh;
+  text-align: center;
+  text-transform: uppercase;
+}
+.header__title{
+  font-size: 3.3rem;
+  color: rgb(255, 255, 255);
+}
+.header__text{
+  font-size: 1.7rem;
+  color: rgb(255, 255, 255);
+}
+.paint-smear-title{
+  width: 800px;
+  position: absolute;
+  z-index: -1;
+  left: 170px;
+  top: 40vh;
+  .cls-1{
+  // fill:#0fc3ed;
+  // fill:#3a07c5;
+  fill:#d61a05;
+
+
+
+  }
 }
 // end-header------------------------
 // about-----------------------------
