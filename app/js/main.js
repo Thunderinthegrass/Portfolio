@@ -36,3 +36,53 @@ changeLanguage.onclick = () => {
     paintSmearEn.classList.add('disp-none');
   }
 }
+
+// плавный скролл до якоря
+const anchors = document.querySelectorAll('a[href*="#"]')
+
+for (let anchor of anchors) {
+  anchor.addEventListener("click", function (event) {
+    event.preventDefault();
+    const blockID = anchor.getAttribute('href')
+    document.querySelector('' + blockID).scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    })
+  })
+}
+
+// progress-bar--------------------------------------------
+
+const progress = document.querySelector('.progress');
+
+window.addEventListener('scroll', progressBar);
+
+function progressBar(e) {
+  let windowScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  let windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  let per = windowScroll / windowHeight * 100;
+
+  progress.style.height = per + '%';
+
+}
+
+// back-to-top--------------------------------------------
+function btnToTop() {
+  let button = $('.btn-totop');
+
+  $(window).on('scroll', () => {
+    if ($(this).scrollTop() >= 100) {
+      button.fadeIn();
+    }
+    else {
+      button.fadeOut();
+    }
+  });
+
+  button.on('click', (e) => {
+    e.preventDefault();
+    $('html').animate({scrollTop: 0}, 500);
+  })
+}
+
+btnToTop();
