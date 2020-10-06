@@ -67,7 +67,7 @@
 .header{
   height: 100vh;
 }
-.header__inner{
+.header__top-inner{
   font-size: 1.3rem;
   letter-spacing: 0.3px;
   background: rgba(255, 255, 255, 0.7);
@@ -170,10 +170,12 @@
   text-transform: uppercase;
   overflow: visible;
   position: relative;
+  color: #ffffff;
 }
 .paint-smear{
   position: absolute;
-  left: -10px;
+  top: -2px;
+  left: -9px;
   width: 70px;
   z-index: -2;
 }
@@ -184,8 +186,8 @@
   z-index: -2;
 }
 .paint-smear-mask{
-  width: 70px;
-  height: 21px;
+  width: 80px;
+  height: 27px;
   position: absolute;
   left: -10px;
   top: 0;
@@ -195,7 +197,7 @@
 }
 .paint-smear-mask-en{
   width: 70px;
-  height: 21px;
+  height: 27px;
   position: absolute;
   right: -25px;
   top: 0;
@@ -220,27 +222,35 @@
   padding: 0 5px;
   text-transform: uppercase;
   overflow: visible;
+  color: #ffffff;
+
 }
 .header__text{
   margin-left: 200px;
   margin-top: 45vh;
-  text-align: center;
+  position: relative;
+  height: 172px;
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-transform: uppercase;
 }
 .header__title{
   font-size: 3.3rem;
   color: rgb(255, 255, 255);
 }
-.header__text{
+.header__subtitle{
   font-size: 1.7rem;
   color: rgb(255, 255, 255);
 }
 .paint-smear-title{
   width: 800px;
-  position: absolute;
   z-index: -1;
-  left: 170px;
-  top: 40vh;
+  position: absolute;
+  left: 0;
+  top: 0;
   .cls-1{
   // fill:#0fc3ed;
   // fill:#3a07c5;
