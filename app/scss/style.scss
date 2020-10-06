@@ -63,14 +63,14 @@
     }
   }
 }
-//Header-------------------------------------- 
-.header{
+//Header--------------------------------------
+.header {
   height: 100vh;
 }
-.header__top-inner{
+.header__top-inner {
   font-size: 1.3rem;
   letter-spacing: 0.3px;
-  background: rgba(255, 255, 255, 0.7);
+  background: #ffffff00;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -80,28 +80,28 @@
   left: 0;
   top: 0;
 }
-.header__bg-wrapper{
+.header__bg-wrapper {
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
-  opacity: .2;
+  opacity: 0.2;
   z-index: -1;
 }
-.header__menu{
+.header__menu {
   display: flex;
   align-items: center;
   justify-content: left;
   padding-right: 300px;
   position: relative;
-  .header__menu_item{
+  .header__menu_item {
     padding: 0 20px;
     text-decoration: none;
     color: #ffffff;
     text-transform: uppercase;
   }
 }
-.lang{
+.lang {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -133,19 +133,19 @@
   height: 20px;
   background: #04d7df;
   border-radius: 20px;
-  transform: scale(.98, .96);
-  transition: .4s;
+  transform: scale(0.98, 0.96);
+  transition: 0.4s;
   animation: change-language 0.4s linear 1 forwards;
 }
-@keyframes change-language{
-  0%{
+@keyframes change-language {
+  0% {
     transform: translateX(30px);
   }
-  50%{
+  50% {
     transform: translateX(0);
     width: 37px;
   }
-  100%{
+  100% {
     transform: translateX(0);
     width: 20px;
   }
@@ -153,39 +153,41 @@
 .change__language:checked[type="checkbox"]::before {
   animation: change-language-checked 0.4s linear 1 forwards;
 }
-@keyframes change-language-checked{
-  0%{
-
+@keyframes change-language-checked {
+  0% {
   }
-  50%{
+  50% {
     width: 37px;
   }
-  100%{
+  100% {
     transform: translateX(30px);
     width: 20px;
   }
 }
-.lang__rus{
+.lang__rus {
   padding: 0 5px;
   text-transform: uppercase;
   overflow: visible;
   position: relative;
   color: #ffffff;
+  span{
+    text-shadow: 1px 1px 1px #04D7DF;
+    }
 }
-.paint-smear{
+.paint-smear {
   position: absolute;
   top: -2px;
   left: -9px;
   width: 70px;
   z-index: -2;
 }
-.paint-smear-en{
+.paint-smear-en {
   position: absolute;
   right: -25px;
   width: 70px;
   z-index: -2;
 }
-.paint-smear-mask{
+.paint-smear-mask {
   width: 80px;
   height: 27px;
   position: absolute;
@@ -195,7 +197,7 @@
   z-index: -1;
   transition: 1s;
 }
-.paint-smear-mask-en{
+.paint-smear-mask-en {
   width: 70px;
   height: 27px;
   position: absolute;
@@ -205,27 +207,29 @@
   z-index: -1;
   transition: 1s;
 }
-.go-right{
+.go-right {
   transform: translateX(70px);
 }
-.go-left{
+.go-left {
   transform: translateX(-70px);
 }
-.disp-none{
-  transition: .2s;
+.disp-none {
+  transition: 0.2s;
   opacity: 0;
 }
-.bg-white{
+.bg-white {
   background: #fff;
 }
-.lang__en{
+.lang__en {
   padding: 0 5px;
   text-transform: uppercase;
   overflow: visible;
   color: #ffffff;
-
+  span{
+  text-shadow: 1px 1px 1px #04D7DF;
+  }
 }
-.header__text{
+.header__text {
   margin-left: 200px;
   margin-top: 45vh;
   position: relative;
@@ -236,28 +240,30 @@
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
+  text-shadow: 1px 5px 3px  #d61a05;  
 }
-.header__title{
+.header__title {
   font-size: 3.3rem;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
 }
-.header__subtitle{
+.header__subtitle {
   font-size: 1.7rem;
   color: rgb(255, 255, 255);
+  text-shadow: 0px -2px 2px #d61a05;
 }
-.paint-smear-title{
+.paint-smear-title {
   width: 800px;
   z-index: -1;
   position: absolute;
   left: 0;
   top: 0;
-  .cls-1{
-  // fill:#0fc3ed;
-  // fill:#3a07c5;
-  fill:#d61a05;
+  .cls-1 {
+    // fill:#0fc3ed;
+    // fill:#3a07c5;
+    fill: #d61a05;
   }
 }
-.paint-smear-menu{
+.paint-smear-menu {
   width: 700px;
   position: absolute;
   left: -20px;
@@ -268,19 +274,15 @@
 }
 // end-header------------------------
 // about-----------------------------
-.about{
+.about {
   height: 100vh;
 }
 // end-about-------------------------
-.portfolio{
+.portfolio {
   height: 100vh;
 }
-.contacts{
+.contacts {
   height: 100vh;
 }
-
-
-
-
 
 @import "media";
