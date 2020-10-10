@@ -8,6 +8,7 @@ let paintSmearMask = document.querySelector('.paint-smear-mask');
 let paintSmearRu = document.querySelector('.paint-smear-ru');
 let paintSmearEn = document.querySelector('.paint-smear-en');
 let paintSmearMaskEn = document.querySelector('.paint-smear-mask-en');
+let headerTitle = document.querySelector('.header__title');
 
 changeLanguage.onclick = () => {
   if (changeLanguage.checked) {
@@ -15,6 +16,8 @@ changeLanguage.onclick = () => {
     aboutMe.innerHTML = ('About me');
     myPortfolio.innerHTML = ('Portfolio');
     myContacts.innerHTML = ('Contacts');
+
+    headerTitle.innerHTML = ('Roman Nasachevsky');
 
     paintSmearMask.classList.remove('go-right');
     paintSmearRu.classList.add('disp-none');
@@ -28,6 +31,8 @@ changeLanguage.onclick = () => {
     aboutMe.innerHTML = ('Обо мне');
     myPortfolio.innerHTML = ('Портфолио');
     myContacts.innerHTML = ('Контакты');
+
+    headerTitle.innerHTML = ('Роман Насачевский');
 
     paintSmearRu.classList.remove('disp-none');
     paintSmearMask.classList.add('go-right');

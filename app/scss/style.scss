@@ -19,7 +19,7 @@
   top: 0;
   width: 6px;
   height: 0;
-  background: #14e664;
+  background: #6a2cce;
   border-left: 1px solid #ffffff;
   border-bottom: 1px solid #ffffff;
   z-index: 2;
@@ -30,7 +30,7 @@
   right: 20px;
   bottom: 20px;
   padding: 15px 20px;
-  background: #09e3eb;
+  background: #6A2CCE;
   border-radius: 2px;
   z-index: 5;
   font-size: 20px;
@@ -66,6 +66,7 @@
 //Header--------------------------------------
 .header {
   height: 100vh;
+  border-bottom: 1px solid $section-border;
 }
 .header__top-inner {
   font-size: 1.3rem;
@@ -240,7 +241,8 @@
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
-  text-shadow: 1px 5px 3px  #d61a05;  
+  text-shadow: 1px 5px 3px  #d61a05;
+  z-index: -1;  
 }
 .header__title {
   font-size: 3.3rem;
@@ -276,13 +278,23 @@
 // about-----------------------------
 .about {
   height: 100vh;
+  border-bottom: 1px solid $section-border;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.about__item{
+  background: $button-to-top-color;
+  border: 1px solid #ffffff;
 }
 // end-about-------------------------
 .portfolio {
   height: 100vh;
+  border-bottom: 1px solid $section-border;
 }
 .contacts {
   height: 100vh;
+  border-bottom: 1px solid $section-border;
 }
 
 @import "media";

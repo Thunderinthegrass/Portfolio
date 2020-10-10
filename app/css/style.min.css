@@ -3176,7 +3176,7 @@ a {
   top: 0;
   width: 6px;
   height: 0;
-  background: #14e664;
+  background: #6a2cce;
   border-left: 1px solid #ffffff;
   border-bottom: 1px solid #ffffff;
   z-index: 2;
@@ -3188,7 +3188,7 @@ a {
   right: 20px;
   bottom: 20px;
   padding: 15px 20px;
-  background: #09e3eb;
+  background: #6A2CCE;
   border-radius: 2px;
   z-index: 5;
   font-size: 20px;
@@ -3237,6 +3237,7 @@ a {
 
 .header {
   height: 100vh;
+  border-bottom: 1px solid #9f20aa;
 }
 
 .header__top-inner {
@@ -3514,6 +3515,7 @@ a {
           align-items: center;
   text-transform: uppercase;
   text-shadow: 1px 5px 3px  #d61a05;
+  z-index: -1;
 }
 
 .header__title {
@@ -3552,12 +3554,23 @@ a {
 
 .about {
   height: 100vh;
+  border-bottom: 1px solid #9f20aa;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.about__item {
+  background: #09e3eb;
+  border: 1px solid #ffffff;
 }
 
 .portfolio {
   height: 100vh;
+  border-bottom: 1px solid #9f20aa;
 }
 
 .contacts {
   height: 100vh;
+  border-bottom: 1px solid #9f20aa;
 }
