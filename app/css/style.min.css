@@ -3577,9 +3577,8 @@ a {
 }
 
 .about__item-1._active {
-  -webkit-animation: about-item-1 .8s .2s;
-          animation: about-item-1 .8s .2s;
-  opacity: 1;
+  -webkit-animation: about-item-1 .8s .2s forwards;
+          animation: about-item-1 .8s .2s forwards;
 }
 
 @-webkit-keyframes about-item-1 {
@@ -3612,6 +3611,7 @@ a {
   to {
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
+    opacity: 1;
   }
 }
 
@@ -3645,6 +3645,7 @@ a {
   to {
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
+    opacity: 1;
   }
 }
 

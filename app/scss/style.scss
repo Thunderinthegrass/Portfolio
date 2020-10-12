@@ -293,8 +293,7 @@
   opacity: 0;
 }
 .about__item-1._active{
-  animation: about-item-1 .8s .2s;
-  opacity: 1;
+  animation: about-item-1 .8s .2s forwards;
 }
 @keyframes about-item-1 {
   from,
@@ -325,6 +324,7 @@
 
   to {
     transform: translate3d(0, 0, 0);
+    opacity: 1;
   }
 }
 
