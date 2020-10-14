@@ -3524,6 +3524,35 @@ a {
   z-index: -1;
 }
 
+.header__text-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  -webkit-animation: header__text-mask 0.7s linear forwards;
+          animation: header__text-mask 0.7s linear forwards;
+}
+
+@-webkit-keyframes header__text-mask {
+  0% {
+  }
+  100% {
+    -webkit-transform: translate(100%, 0);
+            transform: translate(100%, 0);
+  }
+}
+
+@keyframes header__text-mask {
+  0% {
+  }
+  100% {
+    -webkit-transform: translate(100%, 0);
+            transform: translate(100%, 0);
+  }
+}
+
 .header__title {
   font-size: 3.3rem;
   color: #ffffff;
@@ -3972,6 +4001,17 @@ a {
 .portfolio {
   height: 100vh;
   border-bottom: 1px solid #9f20aa;
+}
+
+.portfolio__wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.portfolio__item {
+  border: 1px solid #ffffff;
+  background: #e93a91;
+  height: 400px;
 }
 
 .contacts {
