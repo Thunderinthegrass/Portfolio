@@ -3542,6 +3542,7 @@ a {
   100% {
     -webkit-transform: translate(100%, 0);
             transform: translate(100%, 0);
+    display: none;
   }
 }
 
@@ -3551,6 +3552,7 @@ a {
   100% {
     -webkit-transform: translate(100%, 0);
             transform: translate(100%, 0);
+    display: none;
   }
 }
 
