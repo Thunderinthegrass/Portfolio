@@ -1,0 +1,356 @@
+// portfolio--------------------------------------------------------------
+.portfolio {
+  border-bottom: 1px solid $main-color;
+  height: 100vh;
+}
+.portfolio__title{
+  position: absolute;
+  font-size: 110px;
+  font-weight: 800;
+  transform: translate(-200px);
+  text-transform: uppercase;
+  color: $main-color;
+  mix-blend-mode: difference;
+}
+.portfolio__wrapper{
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+.portfolio__item{
+  border: 1px solid $main-color;
+  background: #ffffff;
+  width: 100%;
+  mix-blend-mode: difference;
+}
+.portfolio__item-1{
+  opacity: 0;
+}
+.portfolio__wrapper._active{
+  .portfolio__item-1{
+    animation: portfolio__item-1 .5s .4s forwards;
+  }
+}
+@keyframes portfolio__item-1{
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 1;
+    transform: translate(0, -3000px);
+  }
+
+  60% {
+    transform: translate(0, 0);
+  }
+
+  75% {
+    transform: translate(0, -15px);
+  }
+
+  90% {
+    transform: translate(0, 0);
+  }
+  95%{
+    transform: translate(0, -3px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+.portfolio__item-2{
+  opacity: 0;
+}
+.portfolio__wrapper._active{
+  .portfolio__item-2{
+    animation: portfolio__item-2 .5s .5s forwards;
+  }
+}
+@keyframes portfolio__item-2{
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 1;
+    transform: translate(0, -3000px);
+  }
+
+  60% {
+    transform: translate(0, 0);
+  }
+
+  75% {
+    transform: translate(0, -15px);
+  }
+
+  90% {
+    transform: translate(0, 0);
+  }
+  95%{
+    transform: translate(0, -3px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+.portfolio__item-3{
+  opacity: 0;
+}
+.portfolio__wrapper._active{
+  .portfolio__item-3{
+    animation: portfolio__item-3 .5s .6s forwards;
+  }
+}
+@keyframes portfolio__item-3{
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 1;
+    transform: translate(0, -3000px);
+  }
+
+  60% {
+    transform: translate(0, 0);
+  }
+
+  75% {
+    transform: translate(0, -15px);
+  }
+
+  90% {
+    transform: translate(0, 0);
+  }
+  95%{
+    transform: translate(0, -3px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+.portfolio__item-4{
+  opacity: 0;
+}
+.portfolio__wrapper._active{
+  .portfolio__item-4{
+    animation: portfolio__item-4 .5s .7s forwards;
+  }
+}
+@keyframes portfolio__item-4{
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 1;
+    transform: translate(0, -3000px);
+  }
+
+  60% {
+    transform: translate(0, 0);
+  }
+
+  75% {
+    transform: translate(0, -15px);
+  }
+
+  90% {
+    transform: translate(0, 0);
+  }
+  95%{
+    transform: translate(0, -3px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+.portfolio__item-5{
+  opacity: 0;
+}
+.portfolio__wrapper._active{
+  .portfolio__item-5{
+    animation: portfolio__item-5 .6s .3s forwards;
+  }
+}
+@keyframes portfolio__item-5{
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 1;
+    transform: translate(0, -3000px);
+  }
+
+  60% {
+    transform: translate(0, 0);
+  }
+
+  75% {
+    transform: translate(0, -15px);
+  }
+
+  90% {
+    transform: translate(0, 0);
+  }
+  95%{
+    transform: translate(0, -3px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+.portfolio__item-6{
+  opacity: 0;
+}
+.portfolio__wrapper._active{
+  .portfolio__item-6{
+    animation: portfolio__item-6 .6s .2s forwards;
+  }
+}
+@keyframes portfolio__item-6{
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 1;
+    transform: translate(0, -3000px);
+  }
+
+  60% {
+    transform: translate(0, 0);
+  }
+
+  75% {
+    transform: translate(0, -15px);
+  }
+
+  90% {
+    transform: translate(0, 0);
+  }
+  95%{
+    transform: translate(0, -3px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+.portfolio__item-7{
+  opacity: 0;
+}
+.portfolio__wrapper._active{
+  .portfolio__item-7{
+    animation: portfolio__item-7 .6s .1s forwards;
+  }
+}
+@keyframes portfolio__item-7{
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 1;
+    transform: translate(0, -3000px);
+  }
+
+  60% {
+    transform: translate(0, 0);
+  }
+
+  75% {
+    transform: translate(0, -15px);
+  }
+
+  90% {
+    transform: translate(0, 0);
+  }
+  95%{
+    transform: translate(0, -3px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+.portfolio__item-8{
+  opacity: 0;
+}
+.portfolio__wrapper._active{
+  .portfolio__item-8{
+    animation: portfolio__item-8 .6s forwards;
+  }
+}
+@keyframes portfolio__item-8{
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 1;
+    transform: translate(0, -3000px);
+  }
+
+  60% {
+    transform: translate(0, 0);
+  }
+
+  75% {
+    transform: translate(0, -15px);
+  }
+
+  90% {
+    transform: translate(0, 0);
+  }
+  95%{
+    transform: translate(0, -3px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+// end-portfolio-----------------------------

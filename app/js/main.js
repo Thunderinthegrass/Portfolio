@@ -18,13 +18,6 @@ changeLanguage.onclick = () => {
     myContacts.innerHTML = ('Contacts');
 
     headerTitle.innerHTML = ('Roman Nasachevsky');
-
-    paintSmearMask.classList.remove('go-right');
-    paintSmearRu.classList.add('disp-none');
-    
-
-    paintSmearEn.classList.remove('disp-none');
-    paintSmearMaskEn.classList.add('go-right');
   }
   else {
     home.innerHTML = ('Главная');
@@ -33,12 +26,6 @@ changeLanguage.onclick = () => {
     myContacts.innerHTML = ('Контакты');
 
     headerTitle.innerHTML = ('Роман Насачевский');
-
-    paintSmearRu.classList.remove('disp-none');
-    paintSmearMask.classList.add('go-right');
-
-    paintSmearMaskEn.classList.remove('go-right');
-    paintSmearEn.classList.add('disp-none');
   }
 }
 
@@ -126,8 +113,8 @@ if (animItems.length > 0) {
     return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
   }
 
-  // setTimeout(() => {
-  //   animOnScroll();
-  // }, 100);
+  setTimeout(() => {
+    animOnScroll();
+  }, 100);
   animOnScroll();
 }
