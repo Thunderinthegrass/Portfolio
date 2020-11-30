@@ -3253,7 +3253,21 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
-  width: 180px;
+  width: 230px;
+}
+
+.eue-inp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  width: 600px;
 }
 
 .change__language[type="checkbox"] {
@@ -3275,7 +3289,27 @@ a {
   cursor: pointer;
 }
 
-.change__language[type="checkbox"]::before {
+.eye-switch[type="checkbox"] {
+  display: inline-block;
+  position: static;
+  left: 50%;
+  top: 2px;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 3;
+  width: 50px;
+  height: 20px;
+  -webkit-appearance: none;
+  outline: none;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 0 0 3px #7a7b85;
+          box-shadow: 0 0 0 3px #7a7b85;
+  cursor: pointer;
+}
+
+.change__language[type="checkbox"]::before,
+.eye-switch[type="checkbox"]::before {
   content: "";
   position: absolute;
   top: 0;
@@ -3328,7 +3362,8 @@ a {
   }
 }
 
-.change__language:checked[type="checkbox"]::before {
+.change__language:checked[type="checkbox"]::before,
+.eye-switch:checked[type="checkbox"]::before {
   -webkit-animation: change-language-checked 0.4s linear 1 forwards;
           animation: change-language-checked 0.4s linear 1 forwards;
 }
@@ -3359,7 +3394,8 @@ a {
   }
 }
 
-.lang__rus {
+.lang__rus,
+.eye-on {
   padding: 0 5px;
   text-transform: uppercase;
   overflow: visible;
@@ -3367,18 +3403,21 @@ a {
   color: #ffffff;
 }
 
-.lang__rus span {
+.lang__rus span,
+.eye-on span {
   text-shadow: 1px 1px 1px #373841;
 }
 
-.lang__en {
+.lang__en,
+.eye-off {
   padding: 0 5px;
   text-transform: uppercase;
   overflow: visible;
   color: #ffffff;
 }
 
-.lang__en span {
+.lang__en span,
+.eye-off span {
   text-shadow: 1px 1px 1px #373841;
 }
 
@@ -3388,18 +3427,22 @@ a {
   position: absolute;
   left: 100px;
   top: 70px;
-  background-image: url(../img/portret.jpg);
-  background-repeat: no-repeat;
   opacity: 0;
   -webkit-animation: header-bg 1s linear 2s forwards;
           animation: header-bg 1s linear 2s forwards;
 }
 
-.header__bg-mask {
-  background: #808186;
-  height: 100%;
-  width: 100%;
-  mix-blend-mode: lighten;
+.header__bg-head {
+  fill: #373841;
+}
+
+.header__bg .eye {
+  fill: #373841;
+}
+
+.header__bg .eye-red {
+  -webkit-animation: eye-red 1.7s linear 3s infinite;
+          animation: eye-red 1.7s linear 3s infinite;
 }
 
 @-webkit-keyframes header-bg {
@@ -3417,6 +3460,32 @@ a {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes eye-red {
+  0% {
+  }
+  25% {
+    fill: #ff0000;
+  }
+  50% {
+    fill: #ff0000;
+  }
+  100% {
+  }
+}
+
+@keyframes eye-red {
+  0% {
+  }
+  25% {
+    fill: #ff0000;
+  }
+  50% {
+    fill: #ff0000;
+  }
+  100% {
   }
 }
 

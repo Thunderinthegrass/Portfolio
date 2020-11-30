@@ -54,7 +54,15 @@
   align-items: center;
   justify-content: space-between;
   position: relative;
-  width: 180px;
+  width: 230px;
+  // background: rgb(155, 7, 7);
+}
+.eue-inp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 600px;
   // background: rgb(155, 7, 7);
 }
 .change__language[type="checkbox"] {
@@ -72,7 +80,23 @@
   box-shadow: 0 0 0 3px #7a7b85;
   cursor: pointer;
 }
-.change__language[type="checkbox"]::before {
+.eye-switch[type="checkbox"] {
+  display: inline-block;
+  position: static;
+  left: 50%;
+  top: 2px;
+  transform: translateX(-50%);
+  z-index: 3;
+  width: 50px;
+  height: 20px;
+  -webkit-appearance: none;
+  outline: none;
+  border-radius: 2px;
+  box-shadow: 0 0 0 3px #7a7b85;
+  cursor: pointer;
+}
+.change__language[type="checkbox"]::before,
+.eye-switch[type="checkbox"]::before {
   content: "";
   position: absolute;
   top: 0;
@@ -98,7 +122,8 @@
     width: 20px;
   }
 }
-.change__language:checked[type="checkbox"]::before {
+.change__language:checked[type="checkbox"]::before,
+.eye-switch:checked[type="checkbox"]::before {
   animation: change-language-checked 0.4s linear 1 forwards;
 }
 @keyframes change-language-checked {
@@ -112,7 +137,8 @@
     width: 20px;
   }
 }
-.lang__rus {
+.lang__rus,
+.eye-on {
   padding: 0 5px;
   text-transform: uppercase;
   overflow: visible;
@@ -122,7 +148,8 @@
     text-shadow: 1px 1px 1px $main-color;
     }
 }
-.lang__en {
+.lang__en,
+.eye-off {
   padding: 0 5px;
   text-transform: uppercase;
   overflow: visible;
@@ -137,15 +164,16 @@
   position: absolute;
   left: 100px;
   top: 70px;
-  background-image: url(../img/portret.jpg);
-  background-repeat: no-repeat;
   opacity: 0;
   animation: header-bg 1s linear 2s forwards;
-  &-mask{
-    background: #808186;
-    height: 100%;
-    width: 100%;
-    mix-blend-mode: lighten;
+  &-head{
+    fill: $main-color;
+  }
+  .eye{
+    fill: $main-color;
+  }
+  .eye-red{
+    animation: eye-red 1.7s linear 3s infinite;
   }
 }
 @keyframes header-bg{
@@ -154,6 +182,20 @@
   }
   100%{
     opacity: 1;
+  }
+}
+@keyframes eye-red{
+  0%{
+
+  }
+  25%{
+    fill: #ff0000;
+  }
+  50%{
+    fill: #ff0000;
+  }
+  100%{
+    // fill: none;
   }
 }
 .header__text {
