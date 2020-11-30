@@ -3175,6 +3175,7 @@ a {
   height: 100vh;
   padding-top: 400px;
   border-bottom: 1px solid #373841;
+  position: relative;
 }
 
 .header__top {
@@ -3196,6 +3197,7 @@ a {
   position: fixed;
   top: 0;
   z-index: 2;
+  mix-blend-mode: luminosity;
 }
 
 .header__top-inner {
@@ -3237,6 +3239,7 @@ a {
   color: #373841;
   background: white;
   text-transform: uppercase;
+  mix-blend-mode: multiply;
 }
 
 .lang {
@@ -3379,6 +3382,44 @@ a {
   text-shadow: 1px 1px 1px #373841;
 }
 
+.header__bg {
+  height: 800px;
+  width: 500px;
+  position: absolute;
+  left: 100px;
+  top: 70px;
+  background-image: url(../img/portret.jpg);
+  background-repeat: no-repeat;
+  opacity: 0;
+  -webkit-animation: header-bg 1s linear 2s forwards;
+          animation: header-bg 1s linear 2s forwards;
+}
+
+.header__bg-mask {
+  background: #808186;
+  height: 100%;
+  width: 100%;
+  mix-blend-mode: lighten;
+}
+
+@-webkit-keyframes header-bg {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes header-bg {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .header__text {
   position: relative;
   height: 172px;
@@ -3403,8 +3444,9 @@ a {
   -webkit-transition: 1s;
   -o-transition: 1s;
   transition: 1s;
-  -webkit-animation: header__text 3.3s linear forwards;
-          animation: header__text 3.3s linear forwards;
+  -webkit-animation: header__text 3s linear forwards;
+          animation: header__text 3s linear forwards;
+  mix-blend-mode: multiply;
 }
 
 .header__text-mask {
@@ -3429,24 +3471,24 @@ a {
     margin-left: 100px;
   }
   40% {
-    margin-left: 25%;
+    margin-left: 50%;
   }
-  90% {
+  70% {
     -webkit-transform: rotate(3deg);
             transform: rotate(3deg);
   }
-  92% {
+  72% {
     -webkit-transform: rotate(-1deg);
             transform: rotate(-1deg);
   }
-  97% {
+  77% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
   100% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
-    margin-left: 25%;
+    margin-left: 50%;
   }
 }
 
@@ -3459,24 +3501,24 @@ a {
     margin-left: 100px;
   }
   40% {
-    margin-left: 25%;
+    margin-left: 50%;
   }
-  90% {
+  70% {
     -webkit-transform: rotate(3deg);
             transform: rotate(3deg);
   }
-  92% {
+  72% {
     -webkit-transform: rotate(-1deg);
             transform: rotate(-1deg);
   }
-  97% {
+  77% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
   100% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
-    margin-left: 25%;
+    margin-left: 50%;
   }
 }
 
@@ -3522,6 +3564,8 @@ a {
 
 .about {
   position: relative;
+  padding-top: 50px;
+  margin-bottom: 50px;
 }
 
 .about__title {
@@ -3537,7 +3581,7 @@ a {
 }
 
 .about__inner {
-  height: 100vh;
+  height: calc(100vh - 6vh);
   border-bottom: 1px solid #373841;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -3556,8 +3600,8 @@ a {
 }
 
 .about__item-1._active {
-  -webkit-animation: about-item-1 .8s .2s forwards;
-          animation: about-item-1 .8s .2s forwards;
+  -webkit-animation: about-item-1 0.8s 0.2s forwards;
+          animation: about-item-1 0.8s 0.2s forwards;
 }
 
 @-webkit-keyframes about-item-1 {
@@ -3635,8 +3679,8 @@ a {
 }
 
 .about__item-2._active {
-  -webkit-animation: about-item-2 .8s;
-          animation: about-item-2 .8s;
+  -webkit-animation: about-item-2 0.8s;
+          animation: about-item-2 0.8s;
   opacity: 1;
 }
 
@@ -3712,8 +3756,8 @@ a {
 }
 
 .about__item-3._active {
-  -webkit-animation: about-item-3 .8s .1s forwards;
-          animation: about-item-3 .8s .1s forwards;
+  -webkit-animation: about-item-3 0.8s 0.1s forwards;
+          animation: about-item-3 0.8s 0.1s forwards;
 }
 
 @-webkit-keyframes about-item-3 {
@@ -3791,8 +3835,8 @@ a {
 }
 
 .about__item-4._active {
-  -webkit-animation: about-item-4 .8s .2s forwards;
-          animation: about-item-4 .8s .2s forwards;
+  -webkit-animation: about-item-4 0.8s 0.2s forwards;
+          animation: about-item-4 0.8s 0.2s forwards;
 }
 
 @-webkit-keyframes about-item-4 {
@@ -3870,8 +3914,8 @@ a {
 }
 
 .about__item-5._active {
-  -webkit-animation: about-item-5 .8s 1s forwards;
-          animation: about-item-5 .8s 1s forwards;
+  -webkit-animation: about-item-5 0.8s 1s forwards;
+          animation: about-item-5 0.8s 1s forwards;
 }
 
 @-webkit-keyframes about-item-5 {
@@ -3951,6 +3995,8 @@ a {
 .portfolio {
   border-bottom: 1px solid #373841;
   height: 100vh;
+  padding-top: 50px;
+  border-top: 1px solid #373841;
 }
 
 .portfolio__title {
@@ -3975,12 +4021,17 @@ a {
 .portfolio__item {
   border: 1px solid #373841;
   background: #ffffff;
-  width: 100%;
   mix-blend-mode: difference;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 5px;
 }
 
 .portfolio__item-1 {
   opacity: 0;
+  background-image: url(../img/go-surf.jpg);
+  background-position: 0 0;
 }
 
 .portfolio__wrapper._active .portfolio__item-1 {
@@ -4064,6 +4115,7 @@ a {
 
 .portfolio__item-2 {
   opacity: 0;
+  background-image: url(../img/complex-closure-of-the-enterprise.jpg);
 }
 
 .portfolio__wrapper._active .portfolio__item-2 {
@@ -4147,6 +4199,7 @@ a {
 
 .portfolio__item-3 {
   opacity: 0;
+  background-image: url(../img/web-development-project.jpg);
 }
 
 .portfolio__wrapper._active .portfolio__item-3 {
@@ -4711,4 +4764,24 @@ a {
 .contacts {
   height: 100vh;
   border-bottom: 1px solid #373841;
+}
+
+.wrap-cont {
+  position: relative;
+}
+
+.wrap-cont img {
+  width: 1000px;
+}
+
+.wrap-cont .mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1000px;
+  height: 100%;
+  background: #ffffff;
+  color: #000000;
+  font-size: 8px;
+  mix-blend-mode: lighten;
 }

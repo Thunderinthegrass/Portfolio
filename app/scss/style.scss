@@ -71,4 +71,22 @@
   border-bottom: 1px solid $main-color;
 }
 
+.wrap-cont{
+  position: relative;
+  img{
+    width: 1000px;
+  }
+  .mask{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1000px;
+    height: 100%;
+    background: #ffffff;
+    color: #000000;
+    font-size: 8px;
+    mix-blend-mode: lighten;
+  }
+}
+
 @import "media";
