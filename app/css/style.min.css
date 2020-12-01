@@ -3254,6 +3254,7 @@ a {
           justify-content: space-between;
   position: relative;
   width: 230px;
+  left: -50px;
 }
 
 .eue-inp {
@@ -3267,7 +3268,7 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
-  width: 600px;
+  width: 364px;
 }
 
 .change__language[type="checkbox"] {

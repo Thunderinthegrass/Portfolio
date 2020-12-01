@@ -28,6 +28,18 @@ changeLanguage.onclick = () => {
     headerTitle.innerHTML = ('Роман Насачевский');
   }
 }
+//eye
+let eyeSwitch = document.querySelector('.eye-switch');
+
+eyeSwitch.onclick = function() {
+  let eye = document.querySelector('.eye');
+  if (eyeSwitch.checked) {
+    eye.classList.remove('eye-red');
+  }
+  else{
+    eye.classList.add('eye-red');
+  }
+}
 
 // плавный скролл до якоря
 const anchors = document.querySelectorAll('a[href*="#"]')
