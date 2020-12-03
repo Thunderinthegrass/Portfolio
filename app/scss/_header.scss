@@ -8,13 +8,15 @@
 .header__top {
   font-size: 1.3rem;
   letter-spacing: 0.3px;
-  background: #ffffff00;
+  background: #ffffff;
   display: flex;
   align-items: center;
   justify-content: space-between;
   max-width: 1920px;
   width: 100%;
-  padding: 17px 100px;
+  padding: 10px 100px;
+  padding-left: 302px;
+  border-bottom: 1px solid $main-color;
   position: fixed;
   top: 0;
   z-index: 2;
@@ -39,12 +41,10 @@
   .header__menu_item {
     display: inline-block;
     padding: 2px 20px;
-    border: 2px solid $main-color;
-    border-radius: 2px;
     margin-right: 10px;
+    border: 2px solid $main-color;
     text-decoration: none;
     color: $main-color;
-    background: rgb(255, 255, 255);
     text-transform: uppercase;
     mix-blend-mode: multiply;
   }
@@ -159,14 +159,26 @@
   text-shadow: 1px 1px 1px $main-color;
   }
 }
-.header__bg{
+.header__bg-wrapper._active{
+  animation: header-bg 1s linear 2s forwards;
+}
+.header__bg-wrapper{
   height: 800px;
   width: 500px;
   position: absolute;
   left: 100px;
   top: 70px;
   opacity: 0;
-  animation: header-bg 1s linear 2s forwards;
+}
+.header__bg{
+  height: 800px;
+  width: 500px;
+  // position: absolute;
+  // left: 100px;
+  // top: 70px;
+  // opacity: 0;
+  // background: #000;
+  // animation: header-bg 1s linear 2s forwards;
   &-head{
     fill: $main-color;
   }
@@ -183,6 +195,7 @@
   }
   100%{
     opacity: 1;
+    // background: #000;
   }
 }
 @keyframes eye-red{
@@ -199,6 +212,9 @@
     // fill: none;
   }
 }
+.header__text._active{
+  animation: header__text 3s linear forwards;
+}
 .header__text {
   position: relative;
   height: 172px;
@@ -212,7 +228,7 @@
   text-transform: uppercase;
   z-index: -1;
   transition: 1s;
-  animation: header__text 3s linear forwards;
+  // animation: header__text 3s linear forwards;
   mix-blend-mode: multiply;
   &-mask{
     position: absolute;

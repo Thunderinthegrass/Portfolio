@@ -926,6 +926,51 @@ a {
   margin: 0 auto;
   max-width: 1140px;
   width: 100%;
+  position: relative;
+}
+
+.container .logo {
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 4px;
+  -webkit-transform: translate(-1000px);
+      -ms-transform: translate(-1000px);
+          transform: translate(-1000px);
+  padding: 7px 15px;
+  border: 3px solid #373841;
+  color: #373841;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+  z-index: 2;
+}
+
+.container .logo__link {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.container .logo__title {
+  font-size: 20px;
+}
+
+.container .logo__subtitle {
+  margin-top: 3px;
+  font-size: 11px;
+}
+
+.container._active .logo {
+  -webkit-animation: logo 1s forwards;
+          animation: logo 1s forwards;
+  -webkit-transform: translate(35px);
+      -ms-transform: translate(35px);
+          transform: translate(35px);
 }
 
 .workspace-wrapper {
@@ -3181,7 +3226,7 @@ a {
 .header__top {
   font-size: 1.3rem;
   letter-spacing: 0.3px;
-  background: #ffffff00;
+  background: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3193,7 +3238,9 @@ a {
           justify-content: space-between;
   max-width: 1920px;
   width: 100%;
-  padding: 17px 100px;
+  padding: 10px 100px;
+  padding-left: 302px;
+  border-bottom: 1px solid #373841;
   position: fixed;
   top: 0;
   z-index: 2;
@@ -3232,12 +3279,10 @@ a {
 .header__menu .header__menu_item {
   display: inline-block;
   padding: 2px 20px;
-  border: 2px solid #373841;
-  border-radius: 2px;
   margin-right: 10px;
+  border: 2px solid #373841;
   text-decoration: none;
   color: #373841;
-  background: white;
   text-transform: uppercase;
   mix-blend-mode: multiply;
 }
@@ -3422,15 +3467,23 @@ a {
   text-shadow: 1px 1px 1px #373841;
 }
 
-.header__bg {
+.header__bg-wrapper._active {
+  -webkit-animation: header-bg 1s linear 2s forwards;
+          animation: header-bg 1s linear 2s forwards;
+}
+
+.header__bg-wrapper {
   height: 800px;
   width: 500px;
   position: absolute;
   left: 100px;
   top: 70px;
   opacity: 0;
-  -webkit-animation: header-bg 1s linear 2s forwards;
-          animation: header-bg 1s linear 2s forwards;
+}
+
+.header__bg {
+  height: 800px;
+  width: 500px;
 }
 
 .header__bg-head {
@@ -3490,6 +3543,11 @@ a {
   }
 }
 
+.header__text._active {
+  -webkit-animation: header__text 3s linear forwards;
+          animation: header__text 3s linear forwards;
+}
+
 .header__text {
   position: relative;
   height: 172px;
@@ -3514,8 +3572,6 @@ a {
   -webkit-transition: 1s;
   -o-transition: 1s;
   transition: 1s;
-  -webkit-animation: header__text 3s linear forwards;
-          animation: header__text 3s linear forwards;
   mix-blend-mode: multiply;
 }
 
@@ -3642,9 +3698,9 @@ a {
   position: absolute;
   font-size: 110px;
   font-weight: 800;
-  -webkit-transform: translate(-200px);
-      -ms-transform: translate(-200px);
-          transform: translate(-200px);
+  -webkit-transform: translate(-200px, 83px);
+      -ms-transform: translate(-200px, 83px);
+          transform: translate(-200px, 83px);
   text-transform: uppercase;
   color: #373841;
   mix-blend-mode: difference;
@@ -4105,8 +4161,8 @@ a {
 }
 
 .portfolio__wrapper._active .portfolio__item-1 {
-  -webkit-animation: portfolio__item-1 .5s .4s forwards;
-          animation: portfolio__item-1 .5s .4s forwards;
+  -webkit-animation: portfolio__item-1 0.5s 0.4s forwards;
+          animation: portfolio__item-1 0.5s 0.4s forwards;
 }
 
 @-webkit-keyframes portfolio__item-1 {
@@ -4189,8 +4245,8 @@ a {
 }
 
 .portfolio__wrapper._active .portfolio__item-2 {
-  -webkit-animation: portfolio__item-2 .5s .5s forwards;
-          animation: portfolio__item-2 .5s .5s forwards;
+  -webkit-animation: portfolio__item-2 0.5s 0.5s forwards;
+          animation: portfolio__item-2 0.5s 0.5s forwards;
 }
 
 @-webkit-keyframes portfolio__item-2 {
@@ -4273,8 +4329,8 @@ a {
 }
 
 .portfolio__wrapper._active .portfolio__item-3 {
-  -webkit-animation: portfolio__item-3 .5s .6s forwards;
-          animation: portfolio__item-3 .5s .6s forwards;
+  -webkit-animation: portfolio__item-3 0.5s 0.6s forwards;
+          animation: portfolio__item-3 0.5s 0.6s forwards;
 }
 
 @-webkit-keyframes portfolio__item-3 {
@@ -4356,8 +4412,8 @@ a {
 }
 
 .portfolio__wrapper._active .portfolio__item-4 {
-  -webkit-animation: portfolio__item-4 .5s .7s forwards;
-          animation: portfolio__item-4 .5s .7s forwards;
+  -webkit-animation: portfolio__item-4 0.5s 0.7s forwards;
+          animation: portfolio__item-4 0.5s 0.7s forwards;
 }
 
 @-webkit-keyframes portfolio__item-4 {
@@ -4439,8 +4495,8 @@ a {
 }
 
 .portfolio__wrapper._active .portfolio__item-5 {
-  -webkit-animation: portfolio__item-5 .6s .3s forwards;
-          animation: portfolio__item-5 .6s .3s forwards;
+  -webkit-animation: portfolio__item-5 0.6s 0.3s forwards;
+          animation: portfolio__item-5 0.6s 0.3s forwards;
 }
 
 @-webkit-keyframes portfolio__item-5 {
@@ -4522,8 +4578,8 @@ a {
 }
 
 .portfolio__wrapper._active .portfolio__item-6 {
-  -webkit-animation: portfolio__item-6 .6s .2s forwards;
-          animation: portfolio__item-6 .6s .2s forwards;
+  -webkit-animation: portfolio__item-6 0.6s 0.2s forwards;
+          animation: portfolio__item-6 0.6s 0.2s forwards;
 }
 
 @-webkit-keyframes portfolio__item-6 {
@@ -4605,8 +4661,8 @@ a {
 }
 
 .portfolio__wrapper._active .portfolio__item-7 {
-  -webkit-animation: portfolio__item-7 .6s .1s forwards;
-          animation: portfolio__item-7 .6s .1s forwards;
+  -webkit-animation: portfolio__item-7 0.6s 0.1s forwards;
+          animation: portfolio__item-7 0.6s 0.1s forwards;
 }
 
 @-webkit-keyframes portfolio__item-7 {
@@ -4688,8 +4744,8 @@ a {
 }
 
 .portfolio__wrapper._active .portfolio__item-8 {
-  -webkit-animation: portfolio__item-8 .6s forwards;
-          animation: portfolio__item-8 .6s forwards;
+  -webkit-animation: portfolio__item-8 0.6s forwards;
+          animation: portfolio__item-8 0.6s forwards;
 }
 
 @-webkit-keyframes portfolio__item-8 {
