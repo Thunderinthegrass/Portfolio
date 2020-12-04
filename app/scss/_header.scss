@@ -8,15 +8,15 @@
 .header__top {
   font-size: 1.3rem;
   letter-spacing: 0.3px;
-  background: #ffffff;
+  // background: #ffffff;
   display: flex;
   align-items: center;
   justify-content: space-between;
   max-width: 1920px;
   width: 100%;
-  padding: 10px 100px;
+  padding: 1px 100px;
   padding-left: 302px;
-  border-bottom: 1px solid $main-color;
+  // border-bottom: 1px solid $main-color;
   position: fixed;
   top: 0;
   z-index: 2;
@@ -47,6 +47,7 @@
     color: $main-color;
     text-transform: uppercase;
     mix-blend-mode: multiply;
+    background: #ffffffe0;
   }
 }
 .lang {
@@ -159,9 +160,9 @@
   text-shadow: 1px 1px 1px $main-color;
   }
 }
-.header__bg-wrapper._active{
-  animation: header-bg 1s linear 2s forwards;
-}
+// .header__bg-wrapper._active{
+//   animation: header-bg 1s linear 2s forwards;
+// }
 .header__bg-wrapper{
   height: 800px;
   width: 500px;
@@ -169,6 +170,7 @@
   left: 100px;
   top: 70px;
   opacity: 0;
+  animation: header-bg 1s linear 2s forwards;
 }
 .header__bg{
   height: 800px;
@@ -212,9 +214,9 @@
     // fill: none;
   }
 }
-.header__text._active{
-  animation: header__text 3s linear forwards;
-}
+// .header__text._active{
+//   animation: header__text 3s linear forwards;
+// }
 .header__text {
   position: relative;
   height: 172px;
@@ -228,7 +230,7 @@
   text-transform: uppercase;
   z-index: -1;
   transition: 1s;
-  // animation: header__text 3s linear forwards;
+  animation: header__text 3s linear forwards;
   mix-blend-mode: multiply;
   &-mask{
     position: absolute;
