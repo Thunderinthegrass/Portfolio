@@ -1,8 +1,15 @@
 //Header--------------------------------------
 .header {
   height: 100vh;
-  padding-top: 400px;
+  // padding-top: 400px;
   border-bottom: 1px solid $main-color;
+  position: relative;
+}
+.header__wrapper{
+  max-width: 1920px;
+  height: 100%;
+  margin: 0 auto;
+  padding-right: 30px;
   position: relative;
 }
 .header__top {
@@ -168,7 +175,8 @@
   width: 500px;
   position: absolute;
   left: 100px;
-  top: 70px;
+  top: 50%;
+  transform: translateY(-50%);
   opacity: 0;
   animation: header-bg 1s linear 2s forwards;
 }
@@ -218,7 +226,8 @@
 //   animation: header__text 3s linear forwards;
 // }
 .header__text {
-  position: relative;
+  position: absolute;
+  top: 50%;
   height: 172px;
   max-width: 800px;
   width: 100%;
@@ -246,7 +255,7 @@
 }
 @keyframes header__text {
   0%{
-    transform: rotate(3deg);
+    transform: rotate(3deg) translateY(-50%);
   }
   30%{
     margin-left: 100px;
@@ -254,17 +263,17 @@
   40%{
     margin-left: 50%;
   }
-  70%{
-    transform: rotate(3deg);
+  67%{
+    transform: rotate(3deg) translateY(-50%);
   }
   72%{
-    transform: rotate(-1deg);
+    transform: rotate(-1deg) translateY(-50%);
   }
-  77%{
-    transform: rotate(0deg);
+  78%{
+    transform: rotate(0deg) translateY(-50%);
   }
   100%{
-    transform: rotate(0deg);
+    transform: rotate(0deg) translateY(-50%);
     margin-left: 50%;
   }
 }
