@@ -1,3 +1,131 @@
-@media (max-width: 1650px) {
-  
+@media (max-width: 1600px) {
+  .header__text{
+    animation: header__text-1600 3s linear forwards;
+  }
+  @keyframes header__text-1600 {
+    0%{
+      transform: rotate(3deg) translateY(-50%) translateX(10%);
+    }
+    30%{
+      transform: rotate(3deg) translateY(-50%) translateX(90%);
+    }
+    67%{
+      transform: rotate(3deg) translateY(-50%) translateX(90%);
+    }
+    72%{
+      transform: rotate(-1deg) translateY(-43%) translateX(90%);
+    }
+    78%{
+      transform: rotate(0deg) translateY(-52%) translateX(90%);
+    }
+    100%{
+      transform: rotate(0deg) translateY(-50%) translateX(90%);
+    }
+  }
+}
+@media (max-width: 1536px){
+  .header__menu{
+    padding-right: 200px;
+  }
+  .header__text{
+    animation: header__text-1536 3s linear forwards;
+  }
+  @keyframes header__text-1536 {
+    0%{
+      transform: rotate(3deg) translateY(-50%) translateX(10%);
+    }
+    30%{
+      transform: rotate(3deg) translateY(-50%) translateX(80%);
+    }
+    67%{
+      transform: rotate(3deg) translateY(-50%) translateX(80%);
+    }
+    72%{
+      transform: rotate(-1deg) translateY(-43%) translateX(80%);
+    }
+    78%{
+      transform: rotate(0deg) translateY(-52%) translateX(80%);
+    }
+    100%{
+      transform: rotate(0deg) translateY(-50%) translateX(80%);
+    }
+  }
+}
+@media (max-width: 1440px){
+  .header__title{
+    font-size: 3.2rem;
+  }
+  .header__text{
+    padding: 41px 122px;
+  }
+}
+@media (max-width: 1408px){
+  .header__menu{
+    padding-right: 100px;
+  }
+  .header__title{
+    font-size: 3.1rem;
+  }
+  .header__text{
+    padding: 37px 118px;
+  }
+}
+@media (max-width: 1280px){
+  .header__top{
+    padding: 0 0 0 302px;
+    span{
+      font-size: 1.1rem;
+    }
+  }
+  .header__menu{
+    padding: 0;
+  }
+  .header__bg{
+    height: 610px;
+  }
+  .header__title{
+    font-size: 2.6rem;
+  }
+  .header__text{
+    padding: 30px 110px;
+  }
+}
+@media (max-width: 1200px){
+  .header__top{
+    font-size: 1rem;
+    span{
+      font-size: 0.8rem;
+    }
+  }
+  .header__bg{
+    height: 510px;
+  }
+  .header__title{
+    font-size: 2.3rem;
+  }
+  .header__text{
+    padding: 25px 105px;
+  }
+}
+@media (max-width: 1152px){
+  .header__title{
+    font-size: 2.2rem;
+  }
+  .header__text{
+    padding: 23px 100px;
+  }
+}
+@media (max-width: 1024px){
+  .header__title{
+    font-size: 2.1rem;
+  }
+  .header__subtitle{
+    font-size: 1.2rem;
+  }
+  .header__text{
+    padding: 20px 87px;
+    &-mask{
+      border: 2px solid #373841;
+    }
+  }
 }

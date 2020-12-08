@@ -9,7 +9,6 @@
   max-width: 1920px;
   height: 100%;
   margin: 0 auto;
-  padding-right: 30px;
   position: relative;
 }
 .header__top {
@@ -171,8 +170,6 @@
 //   animation: header-bg 1s linear 2s forwards;
 // }
 .header__bg-wrapper{
-  height: 800px;
-  width: 500px;
   position: absolute;
   left: 100px;
   top: 50%;
@@ -182,7 +179,7 @@
 }
 .header__bg{
   height: 800px;
-  width: 500px;
+  // width: 500px;
   // position: absolute;
   // left: 100px;
   // top: 70px;
@@ -228,16 +225,13 @@
 .header__text {
   position: absolute;
   top: 50%;
-  height: 172px;
-  max-width: 800px;
-  width: 100%;
-  margin-left: 100px;
+  padding: 44px 125px;
+  // padding: 3rem 8.3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
-  z-index: -1;
   transition: 1s;
   animation: header__text 3s linear forwards;
   mix-blend-mode: multiply;
@@ -255,26 +249,22 @@
 }
 @keyframes header__text {
   0%{
-    transform: rotate(3deg) translateY(-50%);
+    transform: rotate(3deg) translateY(-50%) translateX(10%);
   }
   30%{
-    margin-left: 100px;
-  }
-  40%{
-    margin-left: 50%;
+    transform: rotate(3deg) translateY(-50%) translateX(100%);
   }
   67%{
-    transform: rotate(3deg) translateY(-50%);
+    transform: rotate(3deg) translateY(-50%) translateX(100%);
   }
   72%{
-    transform: rotate(-1deg) translateY(-50%);
+    transform: rotate(-1deg) translateY(-43%) translateX(100%);
   }
   78%{
-    transform: rotate(0deg) translateY(-50%);
+    transform: rotate(0deg) translateY(-52%) translateX(100%);
   }
   100%{
-    transform: rotate(0deg) translateY(-50%);
-    margin-left: 50%;
+    transform: rotate(0deg) translateY(-50%) translateX(100%);
   }
 }
 @keyframes header__text-mask{
