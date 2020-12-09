@@ -41,6 +41,14 @@ eyeSwitch.onclick = function() {
   }
 }
 
+//hamburger
+let menuBtn = document.querySelector('.menu-btn');
+let headerMenu = document.querySelector('.header__menu');
+
+menuBtn.onclick = () => {
+  headerMenu.classList.toggle('menu--active');
+}
+
 // плавный скролл до якоря
 const anchors = document.querySelectorAll('a[href*="#"]')
 
