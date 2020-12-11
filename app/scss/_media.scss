@@ -24,9 +24,6 @@
   }
 }
 @media (max-width: 1536px) {
-  .header__menu {
-    // padding-right: 200px;
-  }
   .header__text {
     animation: header__text-1536 3s linear forwards;
   }
@@ -149,6 +146,9 @@
   }
 }
 @media (max-width: 960px){
+  .menu-btn{
+    display: block;
+  }
   .header__menu{
     position: absolute;
     right: 15px;
@@ -156,6 +156,7 @@
     height: 125px;
     justify-content: center;
     flex-direction: column;
+    transition: 1s;
     transform: translateY(-500px);
     &_item{
       margin: 0;
@@ -171,5 +172,27 @@
   }
   .header__checkbox-wrapper{
     padding-left: 350px;
+  }
+}
+@media (max-width: 854px) {
+  .header__checkbox-wrapper{
+    padding-left: 290px;
+  }
+  .header__bg {
+    height: 430px;
+    margin-top: 15px;
+  }
+  .header__title {
+    font-size: 1.7rem;
+  }
+  .header__subtitle {
+    font-size: 0.95rem;
+    line-height: 1.2rem;
+  }
+  .header__text {
+    padding: 18px 85px;
+    &-mask {
+      border: 2px solid #373841;
+    }
   }
 }

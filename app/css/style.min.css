@@ -3278,7 +3278,7 @@ a {
   position: relative;
 }
 
-.menu--active {
+.header__menu.menu--active {
   -webkit-animation: menu--active .7s linear forwards;
           animation: menu--active .7s linear forwards;
 }
@@ -3354,15 +3354,17 @@ a {
 }
 
 .menu-btn {
+  display: none;
   width: 40px;
   height: 30px;
-  position: absolute;
+  position: fixed;
   right: 12px;
   top: 12px;
   border: none;
   background: transparent;
   z-index: 10;
   outline: none;
+  -webkit-appearance: none;
 }
 
 .menu-btn__inner {
@@ -3384,6 +3386,17 @@ a {
   height: 6px;
   border-radius: 1.1px;
   background: #373841;
+  opacity: 1;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.menu-btn__elem--active {
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+  opacity: 0;
 }
 
 .menu-btn::before {
@@ -3395,6 +3408,12 @@ a {
   top: 0;
   left: 0;
   background: #373841;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  -webkit-transform: translate(0, 0) rotate(0);
+      -ms-transform: translate(0, 0) rotate(0);
+          transform: translate(0, 0) rotate(0);
 }
 
 .menu-btn::after {
@@ -3406,6 +3425,46 @@ a {
   bottom: 0;
   left: 0;
   background: #373841;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  -webkit-transform: translate(0, 0) rotate(0);
+      -ms-transform: translate(0, 0) rotate(0);
+          transform: translate(0, 0) rotate(0);
+}
+
+.menu-btn--active::before {
+  content: "";
+  width: 100%;
+  height: 6px;
+  border-radius: 1.1px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #373841;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  -webkit-transform: translate(0, 12px) rotate(37deg);
+      -ms-transform: translate(0, 12px) rotate(37deg);
+          transform: translate(0, 12px) rotate(37deg);
+}
+
+.menu-btn--active::after {
+  content: "";
+  width: 100%;
+  height: 6px;
+  border-radius: 1.1px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #373841;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  -webkit-transform: translate(0, -12px) rotate(-37deg);
+      -ms-transform: translate(0, -12px) rotate(-37deg);
+          transform: translate(0, -12px) rotate(-37deg);
 }
 
 .header__checkbox-wrapper {
@@ -5248,6 +5307,9 @@ a {
 }
 
 @media (max-width: 960px) {
+  .menu-btn {
+    display: block;
+  }
   .header__menu {
     position: absolute;
     right: 15px;
@@ -5260,6 +5322,9 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
     -webkit-transform: translateY(-500px);
         -ms-transform: translateY(-500px);
             transform: translateY(-500px);
@@ -5277,5 +5342,28 @@ a {
   }
   .header__checkbox-wrapper {
     padding-left: 350px;
+  }
+}
+
+@media (max-width: 854px) {
+  .header__checkbox-wrapper {
+    padding-left: 290px;
+  }
+  .header__bg {
+    height: 430px;
+    margin-top: 15px;
+  }
+  .header__title {
+    font-size: 1.7rem;
+  }
+  .header__subtitle {
+    font-size: 0.95rem;
+    line-height: 1.2rem;
+  }
+  .header__text {
+    padding: 18px 85px;
+  }
+  .header__text-mask {
+    border: 2px solid #373841;
   }
 }
