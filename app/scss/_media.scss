@@ -139,17 +139,17 @@
     font-size: 1.2rem;
   }
   .header__text {
-    padding: 20px 87px;
+    padding: 19px 86px;
     &-mask {
       border: 2px solid #373841;
     }
   }
 }
-@media (max-width: 960px){
-  .menu-btn{
+@media (max-width: 960px) {
+  .menu-btn {
     display: block;
   }
-  .header__menu{
+  .header__menu {
     position: absolute;
     right: 15px;
     top: 0;
@@ -158,9 +158,9 @@
     flex-direction: column;
     transition: 1s;
     transform: translateY(-500px);
-    &_item{
+    &_item {
       margin: 0;
-      padding: 5px 0;
+      padding: 7px 0;
       width: 320px;
       text-align: center;
       border: 1px solid #ffffff;
@@ -170,17 +170,33 @@
       font-size: 1.3rem;
     }
   }
-  .header__checkbox-wrapper{
+  .header__checkbox-wrapper {
     padding-left: 350px;
+  }
+  .header__title {
+    font-size: 1.9rem;
+  }
+  .header__subtitle {
+    font-size: 0.95rem;
+    line-height: 1.2rem;
   }
 }
 @media (max-width: 854px) {
-  .header__checkbox-wrapper{
+  .header {
+    padding-right: 15px;
+  }
+  .header__checkbox-wrapper {
     padding-left: 290px;
   }
   .header__bg {
-    height: 430px;
-    margin-top: 15px;
+    height: 530px;
+    margin-top: 45px;
+    // opacity: .5;
+    &-wrapper {
+      left: 50%;
+      top: 20px;
+      transform: translateX(-50%);
+    }
   }
   .header__title {
     font-size: 1.7rem;
@@ -191,8 +207,33 @@
   }
   .header__text {
     padding: 18px 85px;
+    top: 85%;
+    left: 50%;
+    width: 454px;
+    transform: translateX(-50%);
+    animation: header__text-854 3s linear forwards;
     &-mask {
       border: 2px solid #373841;
     }
   }
+  // @keyframes header__text-854 {
+  //   0% {
+  //     transform: rotate(3deg) translateY(-50%) translateX(10%);
+  //   }
+  //   30% {
+  //     transform: rotate(3deg) translateY(-50%) translateX(-50%);
+  //   }
+  //   67% {
+  //     transform: rotate(3deg) translateY(-50%) translateX(-50%);
+  //   }
+  //   72% {
+  //     transform: rotate(-1deg) translateY(-43%) translateX(-50%);
+  //   }
+  //   78% {
+  //     transform: rotate(0deg) translateY(-52%) translateX(-50%);
+  //   }
+  //   100% {
+  //     transform: rotate(0deg) translateY(-50%) translateX(-50%);
+  //   }
+  // }
 }
