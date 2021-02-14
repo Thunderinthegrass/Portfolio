@@ -231,15 +231,11 @@
   padding: 15px;
 }
 .scills__title{
-  padding: 10px 0;
   text-align: center;
   font-size: 25px;
 }
 .scills__list{
   padding-left: 20px;
-  ul{
-    
-  }
   li{
     list-style: none;
     padding: 2px;
@@ -263,7 +259,224 @@
   text-align: center;
   color: $main-color;
 }
+
+//form------------------------
+.form-wrapper{
+  background: $main-color;
+  color:#ffffff;
+}
+
+//contacts
 .contactss{
   text-align: center;
+  padding: 15px;
+  &__title{
+
+  }
+  &__phone{
+    display: inline-block;
+    position: relative;
+    padding-left: 22px;
+    line-height: 22px;
+    margin-top: 15px;
+    &::before{
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      left: 0;
+      top: 0;
+      content: "";
+      background-image: url(../img/mobile.svg);
+      background-size: cover;
+    }
+  }
+  &__email{
+    display: inline-block;
+    position: relative;
+    padding-left: 25px;
+    line-height: 22px;
+    margin-top: 15px;
+    &::before{
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      left: 0;
+      top: 0;
+      content: "";
+      background-image: url(../img/envelop.svg);
+      background-size: cover;
+    }
+  }
 }
+
 // end-about-------------------------
+//form-------------------------------
+.form {
+  max-width: 550px;
+  // margin: 0 auto;
+  color: rgb(163, 159, 159);
+  padding-top: 30px 0;
+}
+.form__body{
+  position: relative;
+  &::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.411) url(../../img/form/gif.gif) center 50% no-repeat;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.form__body._sending::after{
+  opacity: 1;
+  visibility: visible;
+}
+.form__title {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.form__item {
+  margin-bottom: 20px;
+}
+.form__label {
+  font-size: 18px;
+  display: block;
+  margin-bottom: 10px;
+}
+.form__input {
+  height: 50px;
+  width: 100%;
+  border-radius: 3px;
+  border: none;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  &:focus{
+    box-shadow: 0 0 5px #00e1ff, 0 0 10px #00e1ff,
+    0 0 15px #00e1ff;
+  }
+}
+textarea.form__input {
+  min-height: 120px;
+  resize: vertical;
+  padding: 20px;
+}
+.options {
+  padding: 10px 0 0 0;
+}
+.options__item {
+  margin: 0 0 10px 0;
+}
+.options__input {
+  display: none;
+}
+.options__input:checked + .options__label::after {
+  transform: scale(1);
+}
+.options__label {
+  display: inline-flex;
+  font-size: 16px;
+  line-height: 140%;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  &::before {
+    content: "";
+    align-self: flex-start;
+    flex: 0 0 24px;
+    height: 24px;
+    background: #fff;
+    border-radius: 50%;
+    margin: 0 10px 0 0;
+  }
+  &::after {
+    transition: all 0.3s;
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #000;
+    top: 5px;
+    left: 5px;
+    transform: scale(0);
+  }
+}
+.file__item {
+  position: relative;
+}
+.file__input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  font-size: 0;
+  cursor: pointer;
+}
+.file__button{
+  display: inline-flex;
+  min-height: 40px;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  background: #00e1ff;
+  border-radius: 8px;
+}
+.file__preview{
+  display: inline-block;
+  max-width: 100px;
+  padding: 10px 0 0 0;
+}
+.file__preview img {
+  max-width: 100%;
+}
+.checkbox__label{
+  font-size: 16px;
+  line-height: 140%;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  &::before{
+    content: "";
+    align-self: flex-start;
+    margin-right: 10px;
+    flex: 0 0 24px;
+    height: 24px;
+    background: rgb(255, 255, 255);
+    border-radius: 3px;
+  }
+  &::after{
+    content: "";
+    transform: scale(0);
+    transition: .3s;
+    // flex: 0 0 10px;
+    width: 20px;
+    height: 20px;
+    background: #00e1ff;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    clip-path: polygon(18% 30%, 0 55%, 51% 100%, 100% 18%, 78% 0, 44% 53%);
+  }
+}
+.checkbox__input{
+  display: none;
+}
+.checkbox__input:checked + .checkbox__label::after{
+  transform: scale(1);
+}
+.form__input._error{
+  box-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000,
+    0 0 15px #ff0000;
+}
+.checkbox._error .checkbox__label::before {
+  box-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000,
+    0 0 15px #ff0000;
+}

@@ -98,7 +98,7 @@
       </div>
     </div>
   </header>
-   <div class="container _anim-items">
+  <div class="container _anim-items">
     <a href="#home" class="logo">
       <div class="logo__title _lang">
         Роман Насачевский
@@ -148,11 +148,51 @@
           </ul>
         </div>
         <div class="about__item about__item-2 general _anim-items">
-          Зовут меня Насачевский Роман, живу в замечательном городе Братске. Веб-разработку изучаю более двух лет. Учусь на четвёртом курсе Братского Государственного Университета, специальность - Информационные системы и технологии. 31 год, женат. 
+          <!-- Зовут меня Насачевский Роман, живу в замечательном городе Братске. Веб-разработку изучаю более двух лет. Учусь
+          на четвёртом курсе Братского Государственного Университета, специальность - Информационные системы и
+          технологии. 31 год, женат. -->
         </div>
-        <div class="about__item about__item-3 _anim-items"></div>
+        <div class="about__item about__item-3 form-wrapper _anim-items">
+          <div class="form">
+
+            <form action="#" id="form" class="form__body">
+
+              <!-- Hidden Required Fields -->
+              <input type="hidden" name="project_name" value="Site Name">
+              <input type="hidden" name="admin_email" value="nomertelefona1111111111@gmail.com">
+              <input type="hidden" name="form_subject" value="Form Subject">
+              <!-- END Hidden Required Fields -->
+
+              <div class="form__item">
+                <label for="formName" class="form__label">Имя*</label>
+                <input type="text" id="formName" name="name" class="form__input _req">
+              </div>
+
+              <div class="form__item">
+                <label for="formEmail" class="form__label">E-mail*</label>
+                <input type="text" id="formEmail" name="email" class="form__input _req _email">
+              </div>
+
+              <div class="form__item">
+                <label for="formMassage" class="form__label">Сообщение</label>
+                <textarea name="massage" id="formMassage" class="form__input"></textarea>
+              </div>
+
+              <div class="form__item">
+                <div class="checkbox">
+                  <input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox__input _req">
+                  <label for="formAgreement" class="checkbox__label"><span>Даю согласие чайку попить</span></label>
+                </div>
+              </div>
+
+              <button type="submit" class="form__button">Жмяк</button>
+            </form>
+          </div>
+        </div>
         <div class="about__item about__item-5 contactss _anim-items">
           <h3 class="contactss__title">Контакты</h3>
+          <a href="#" class="contactss__phone">80955951119</a>
+          <a href="#" class="contactss__email">nomertelefona1111111111@gmail.com</a>
         </div>
       </div>
     </section>
@@ -170,9 +210,9 @@
   </div> -->
 
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="js/libs.min.js"></script>
-  <script src="js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

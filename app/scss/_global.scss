@@ -6,6 +6,7 @@ body{
   font-family: "Fira Sans", sans-serif;
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
+  color: $main-color;
 }
 *,
 *::after,
@@ -20,6 +21,7 @@ h1,h2,h3,h4,h5,h6{
 }
 a{
   text-decoration: none;
+  color: $main-color;
 }
 .container{
   margin: 0 auto;
