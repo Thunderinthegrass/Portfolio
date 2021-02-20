@@ -153,6 +153,27 @@ if (animItems.length > 0) {
 }
 
 //form-------------------------------------------------------------
+// $(document).ready(function() {
+
+// 	//E-mail Ajax Send
+// 	$("form").submit(function() { //Change
+// 		var th = $(this);
+// 		$.ajax({
+// 			type: "POST",
+// 			url: "mail.php", //Change
+// 			data: th.serialize()
+// 		}).done(function() {
+// 			alert("Thank you!");
+// 			setTimeout(function() {
+// 				// Done Functions
+// 				th.trigger("reset");
+// 			}, 1000);
+// 		});
+// 		return false;
+// 	});
+
+// });
+//========================================
 "use strict"
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -165,6 +186,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		let error = formValidate(form);
 
 		let formData = new FormData(form);
+		formData.append('image', formImage.files[0]);
 
 		if (error === 0) {
 			form.classList.add('_sending');
@@ -179,7 +201,6 @@ document.addEventListener('DOMContentLoaded', function () {
 				form.reset();
 				form.classList.remove('_sending');
 			} else {
-				alert("Ошибка");
 				form.classList.remove('_sending');
 			}
 		} else {
@@ -232,6 +253,33 @@ document.addEventListener('DOMContentLoaded', function () {
 	//Получаем див для превью в переменную
 	const formPreview = document.getElementById('formPreview');
 
+	//Слушаем изменения в инпуте file
+	formImage.addEventListener('change', () => {
+		uploadFile(formImage.files[0]);
+	});
+
+	function uploadFile(file) {
+		// провераяем тип файла
+		if (!['image/jpeg', 'image/png', 'image/gif'].includes(file.type)) {
+			alert('Разрешены только изображения.');
+			formImage.value = '';
+			return;
+		}
+		// проверим размер файла (<2 Мб)
+		if (file.size > 2 * 1024 * 1024) {
+			alert('Файл должен быть менее 2 МБ.');
+			return;
+		}
+
+		var reader = new FileReader();
+		reader.onload = function (e) {
+			formPreview.innerHTML = `<img src="${e.target.result}" alt="Фото">`;
+		};
+		reader.onerror = function (e) {
+			alert('Ошибка');
+		};
+		reader.readAsDataURL(file);
+	}
 });
 // -----------------------------------------
 
