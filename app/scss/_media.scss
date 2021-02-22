@@ -57,11 +57,40 @@
   }
 }
 @media (max-width: 1408px) {
+  .header__bg {
+    height: 610px;
+  }
   .header__title {
     font-size: 3.1rem;
   }
   .header__text {
     padding: 37px 118px;
+  }
+}
+@media (max-width: 1366px) {
+  .header__text {
+    animation: header__text-1366 3s linear forwards;
+    padding: 30px 110px;
+  }
+  @keyframes header__text-1366 {
+    0% {
+      transform: rotate(3deg) translateY(-50%) translateX(10%);
+    }
+    30% {
+      transform: rotate(3deg) translateY(-50%) translateX(70%);
+    }
+    67% {
+      transform: rotate(3deg) translateY(-50%) translateX(70%);
+    }
+    72% {
+      transform: rotate(-1deg) translateY(-43%) translateX(70%);
+    }
+    78% {
+      transform: rotate(0deg) translateY(-52%) translateX(70%);
+    }
+    100% {
+      transform: rotate(0deg) translateY(-50%) translateX(70%);
+    }
   }
 }
 @media (max-width: 1280px) {
@@ -77,14 +106,12 @@
   .eue-inp {
     width: 215px;
   }
-  .header__bg {
-    height: 610px;
-  }
   .header__title {
     font-size: 2.6rem;
   }
   .header__text {
     padding: 30px 110px;
+    animation: header__text-1536 3s linear forwards;
   }
 }
 @media (max-width: 1200px) {
@@ -145,6 +172,51 @@
     }
   }
 }
+@media only screen and (max-width: 1024px) {
+  .about__item-1._active,
+  .about__item-2._active,
+  .about__item-3._active,
+  .about__item-5._active{
+    animation: none;
+    opacity: 1;
+  }
+  .portfolio__wrapper._active {
+    .portfolio__item-1 {
+      animation: none;
+      opacity: 1;
+    }
+  }
+  .portfolio__wrapper._active {
+    .portfolio__item-2 {
+      animation: none;
+      opacity: 1;
+    }
+  }
+  .portfolio__wrapper._active {
+    .portfolio__item-3 {
+      animation: none;
+      opacity: 1;
+    }
+  }
+  .portfolio__wrapper._active {
+    .portfolio__item-4 {
+      animation: none;
+      opacity: 1;
+    }
+  }
+  .portfolio__wrapper._active {
+    .portfolio__item-5 {
+      animation: none;
+      opacity: 1;
+    }
+  }
+  .portfolio__wrapper._active {
+    .portfolio__item-6 {
+      animation: none;
+      opacity: 1;
+    }
+  }
+}
 @media (max-width: 960px) {
   .header {
     padding-right: 15px;
@@ -193,7 +265,7 @@
 }
 @media (max-width: 854px) {
   .header__bg {
-    height: 517px;
+    height: 490px;
     margin-top: 35px;
     // opacity: .5;
     &-wrapper {
@@ -297,6 +369,9 @@
 @media (max-width: 375px) {
   .header__bg {
     height: 460px;
+  }
+  .header__text{
+    top: 78%;
   }
 }
 @media (max-width: 320px) {
