@@ -1,9 +1,10 @@
 // portfolio--------------------------------------------------------------
 .portfolio {
   border-bottom: 1px solid $main-color;
-  height: 100vh;
+  // height: 100vh;
   padding-top: 50px;
   border-top: 1px solid $main-color;
+  position: relative;
 }
 .portfolio__title {
   position: absolute;
@@ -15,7 +16,7 @@
   mix-blend-mode: difference;
 }
 .portfolio__wrapper {
-  height: 100%;
+  // height: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -29,6 +30,7 @@
   background-size: cover;
   background-position: center;
   margin: 5px;
+  height: 365px;
 }
 .portfolio__item-1 {
   opacity: 0;

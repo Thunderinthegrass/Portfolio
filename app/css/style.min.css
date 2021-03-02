@@ -3660,9 +3660,9 @@ a {
   position: absolute;
   left: 100px;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
+  -webkit-transform: translateY(-50%) rotate(2deg);
+      -ms-transform: translateY(-50%) rotate(2deg);
+          transform: translateY(-50%) rotate(2deg);
   opacity: 0;
   -webkit-animation: header-bg 1s linear 2s forwards;
           animation: header-bg 1s linear 2s forwards;
@@ -3881,7 +3881,6 @@ a {
 }
 
 .about__inner {
-  height: calc(100vh - 60px);
   border-bottom: 1px solid #373841;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -4515,9 +4514,9 @@ textarea.form__input {
 
 .portfolio {
   border-bottom: 1px solid #373841;
-  height: 100vh;
   padding-top: 50px;
   border-top: 1px solid #373841;
+  position: relative;
 }
 
 .portfolio__title {
@@ -4533,7 +4532,6 @@ textarea.form__input {
 }
 
 .portfolio__wrapper {
-  height: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -4547,6 +4545,7 @@ textarea.form__input {
   background-size: cover;
   background-position: center;
   margin: 5px;
+  height: 365px;
 }
 
 .portfolio__item-1 {
@@ -5436,7 +5435,7 @@ textarea.form__input {
 
 @media (max-width: 1408px) {
   .header__bg {
-    height: 610px;
+    height: 570px;
   }
   .header__title {
     font-size: 3.1rem;
@@ -5504,6 +5503,14 @@ textarea.form__input {
               transform: rotate(0deg) translateY(-50%) translateX(70%);
     }
   }
+  .about__title {
+    font-size: 50px;
+    -webkit-transform: translate(20px, 10px);
+        -ms-transform: translate(20px, 10px);
+            transform: translate(20px, 10px);
+    letter-spacing: -1px;
+    font-weight: 600;
+  }
 }
 
 @media (max-width: 1280px) {
@@ -5562,6 +5569,31 @@ textarea.form__input {
   }
   .header__text {
     padding: 23px 100px;
+  }
+  .logo .logo__title {
+    font-size: 18px;
+  }
+  .about__title {
+    font-size: 50px;
+    left: 0;
+    top: 0;
+    -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  .form .form__title {
+    font-size: 23px;
+    padding-top: 5px;
+  }
+  .form .form__input {
+    width: 100%;
+  }
+  .form .form__button {
+    top: 102%;
+    right: 50%;
+    -webkit-transform: translate(50%);
+        -ms-transform: translate(50%);
+            transform: translate(50%);
   }
 }
 
@@ -5629,6 +5661,14 @@ textarea.form__input {
             animation: none;
     opacity: 1;
   }
+  .portfolio__title {
+    font-size: 50px;
+    left: 10px;
+    top: 0;
+    -webkit-transform: translate(0px);
+        -ms-transform: translate(0px);
+            transform: translate(0px);
+  }
 }
 
 @media (max-width: 960px) {
@@ -5685,6 +5725,10 @@ textarea.form__input {
     font-size: 0.95rem;
     line-height: 1.2rem;
   }
+  .portfolio__wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
 }
 
 @media (max-width: 854px) {
@@ -5695,9 +5739,9 @@ textarea.form__input {
   .header__bg-wrapper {
     left: 50%;
     top: 20px;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
+    -webkit-transform: translateX(-50%) rotate(2deg);
+        -ms-transform: translateX(-50%) rotate(2deg);
+            transform: translateX(-50%) rotate(2deg);
   }
   .header__title {
     font-size: 1.7rem;
@@ -5719,6 +5763,34 @@ textarea.form__input {
   }
   .header__text-mask {
     border: 2px solid #373841;
+  }
+  .about__inner {
+    padding: 0 10px 0 10px;
+  }
+  .about__inner .about__item-2 {
+    grid-column: 1/5;
+    grid-row: 1/4;
+  }
+  .about__inner .about__item-1 {
+    grid-column: 1/5;
+    grid-row: 4/7;
+  }
+  .about__inner .about__item-3 {
+    grid-column: 1/5;
+    grid-row: 7/10;
+  }
+  .about__inner .about__item-5 {
+    grid-column: 1/5;
+    grid-row: 10/12;
+  }
+}
+
+@media (max-width: 730px) {
+  .portfolio__wrapper {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    padding-left: 5px;
+    padding-right: 5px;
   }
 }
 
@@ -5793,6 +5865,12 @@ textarea.form__input {
         -ms-transform: translateX(33px);
             transform: translateX(33px);
     width: 165px;
+  }
+  .portfolio__title,
+  .about__title {
+    font-size: 40px;
+    top: 5px;
+    left: 0;
   }
 }
 

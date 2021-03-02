@@ -299,7 +299,7 @@
   position: absolute;
   left: 100px;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%) rotate(2deg);
   opacity: 0;
   animation: header-bg 1s linear 2s forwards;
 }
