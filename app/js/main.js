@@ -1,27 +1,49 @@
 // change language
 let changeLanguage = document.querySelector('.change__language');
-let contentLangRu = [
+let contentLangEn = [
   'наверх',
   'главная',
-  'обо мне',
   'портфолио',
+  'обо мне',
   'выключить глаз',
   'роман насачевский',
   'верстальщик',
   'роман насачевский',
-  'верстальщик'
+  'верстальщик',
+  'портфолио',
+  'обо мне',
+  'Стек веб-технологий',
+  'CSS-анимация',
+  'Кроссбраузерная, адаптивная вёрстка',
+  'БЭМ-методология',
+  'Контакты',
+  'Напиcать мне',
+  'Имя*',
+  'Сообщение',
+  'Отправить',
 ];
 
-let contentLangEn = [
+let contentLangRu = [
   'up',
   'home',
-  'about me',
   'portfolio',
+  'about me',
   'turn off the eye',
   'roman nasachevsky',
   'layout designer',
   'roman nasachevsky',
-  'layout designer'
+  'layout designer',
+  'portfolio',
+  'about me',
+  'Web technology stack',
+  'CSS animation',
+  'Cross-browser, responsive layout',
+  'BEM methodology',
+  'Contacts',
+  'Write me',
+  'Name*',
+  'Massage',
+  'Send',
 ];
 
 let contentItem = document.querySelectorAll('._lang');
@@ -53,13 +75,25 @@ eyeSwitch.onclick = function () {
 let menuBtn = document.querySelector('.menu-btn');
 let menuBtnElem = document.querySelector('.menu-btn__elem');
 let headerMenu = document.querySelector('.header__menu');
+let headerMenuItem = document.querySelectorAll('.header__menu_item');
 
 menuBtn.onclick = () => {
   menuBtn.classList.toggle('menu-btn--active');
   menuBtnElem.classList.toggle('menu-btn__elem--active');
-
   headerMenu.classList.toggle('menu--active');
+}
 
+//скрываем выпадающее меню после выбора пункта меню
+for (let i = 0; i < headerMenuItem.length; i++) {
+  headerMenuItem[i].onclick = () => {
+    let cheskMenuBtnDisplay = window.getComputedStyle(menuBtn).display;//получаем стиль кнопки меню
+    console.log(cheskMenuBtnDisplay);
+    if (cheskMenuBtnDisplay == 'block') {//если кнопка не скрыта, убираем выпадающее меню
+      headerMenu.classList.toggle('menu--active');
+      menuBtn.classList.toggle('menu-btn--active');
+      menuBtnElem.classList.toggle('menu-btn__elem--active');
+    }
+  }
 }
 
 // плавный скролл до якоря
@@ -177,75 +211,75 @@ if (animItems.length > 0) {
 "use strict"
 
 document.addEventListener('DOMContentLoaded', function () {
-	const form = document.getElementById('form');
-	form.addEventListener('submit', formSend);
+  const form = document.getElementById('form');
+  form.addEventListener('submit', formSend);
 
-	async function formSend(e) {
-		e.preventDefault();
+  async function formSend(e) {
+    e.preventDefault();
 
-		let error = formValidate(form);
+    let error = formValidate(form);
 
-		let formData = new FormData(form);
+    let formData = new FormData(form);
 
-		if (error === 0) {
-			form.classList.add('_sending');
-			let response = await fetch('sendmail.php', {
-				method: 'POST',
-				body: formData
-			});
-			if (response.ok) {
-				let result = await response.json();
-				alert(result.message);
-				formPreview.innerHTML = '';
-				form.reset();
-				form.classList.remove('_sending');
-			} else {
-				form.classList.remove('_sending');
-			}
-		} else {
-			alert('Заполните обязательные поля');
-		}
+    if (error === 0) {
+      form.classList.add('_sending');
+      let response = await fetch('sendmail.php', {
+        method: 'POST',
+        body: formData
+      });
+      if (response.ok) {
+        let result = await response.json();
+        alert(result.message);
+        formPreview.innerHTML = '';
+        form.reset();
+        form.classList.remove('_sending');
+      } else {
+        form.classList.remove('_sending');
+      }
+    } else {
+      alert('Заполните обязательные поля');
+    }
 
-	}
+  }
 
 
-	function formValidate(form) {
-		let error = 0;
-		let formReq = document.querySelectorAll('._req');
+  function formValidate(form) {
+    let error = 0;
+    let formReq = document.querySelectorAll('._req');
 
-		for (let index = 0; index < formReq.length; index++) {
-			const input = formReq[index];
-			formRemoveError(input);
+    for (let index = 0; index < formReq.length; index++) {
+      const input = formReq[index];
+      formRemoveError(input);
 
-			if (input.classList.contains('_email')) {
-				if (emailTest(input)) {
-					formAddError(input);
-					error++;
-				}
-			} else if (input.getAttribute("type") === "checkbox" && input.checked === false) {
-				formAddError(input);
-				error++;
-			} else {
-				if (input.value === '') {
-					formAddError(input);
-					error++;
-				}
-			}
-		}
-		return error;
-	}
-	function formAddError(input) {
-		input.parentElement.classList.add('_error');
-		input.classList.add('_error');
-	}
-	function formRemoveError(input) {
-		input.parentElement.classList.remove('_error');
-		input.classList.remove('_error');
-	}
-	//Функция теста email
-	function emailTest(input) {
-		return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
-	}
+      if (input.classList.contains('_email')) {
+        if (emailTest(input)) {
+          formAddError(input);
+          error++;
+        }
+      } else if (input.getAttribute("type") === "checkbox" && input.checked === false) {
+        formAddError(input);
+        error++;
+      } else {
+        if (input.value === '') {
+          formAddError(input);
+          error++;
+        }
+      }
+    }
+    return error;
+  }
+  function formAddError(input) {
+    input.parentElement.classList.add('_error');
+    input.classList.add('_error');
+  }
+  function formRemoveError(input) {
+    input.parentElement.classList.remove('_error');
+    input.classList.remove('_error');
+  }
+  //Функция теста email
+  function emailTest(input) {
+    return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
+  }
 });
 // -----------------------------------------
 

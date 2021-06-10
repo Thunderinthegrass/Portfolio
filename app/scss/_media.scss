@@ -163,10 +163,10 @@
     top: 0;
     transform: translate(0, 0);
   }
-  .about__inner {
-    .about__item-3 {
-    }
-  }
+  // .about__inner {
+  //   .about__item-3 {
+  //   }
+  // }
   .form {
     .form__title {
       font-size: 23px;
@@ -302,8 +302,8 @@
     font-size: 0.95rem;
     line-height: 1.2rem;
   }
-  .portfolio {
-  }
+  // .portfolio {
+  // }
   .portfolio__wrapper {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);

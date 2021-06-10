@@ -5,20 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;300;400;500;800&display=swap"
-    rel="stylesheet">
   <link rel="stylesheet" href="css/style.min.css">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
 </head>
-
 <body>
   <!-- <p>Привет</p> -->
 
   <div class="progress"></div>
   <a href="#" class="btn-totop">
-    <span class="_lang">наверх</span>
+    <span class="_lang">up</span>
   </a href="#">
   <!-- Header -------------------------------->
   <header class="header" id="home">
@@ -34,24 +28,24 @@
         <div class="header__top-inner">
           <nav class="header__menu">
 
-            <a href="#home" class="header__menu_item home _lang">Главная</a>
-            <a href="#about" class="header__menu_item about-me _lang">Обо мне</a>
-            <a href="#portfolio" class="header__menu_item my-portfolio _lang">Портфолио</a>
+            <a href="#home" class="header__menu_item home _lang">home</a>
+            <a href="#portfolio" class="header__menu_item my-portfolio _lang">portfolio</a>
+            <a href="#about" class="header__menu_item about-me _lang">about me</a>
           </nav>
           <div class="header__checkbox-wrapper">
             <div class="lang">
               <div class="lang__rus">
-                <span>ru</span>
+                <span>en</span>
               </div>
               <input class="change__language" type="checkbox">
               <div class="lang__en">
-                <span>en</span>
+                <span>ru</span>
               </div>
             </div>
             <div class="eue-inp">
               <input class="eye-switch" type="checkbox">
               <div class="eye-off">
-                <span class="_lang">выключить глаз</span>
+                <span class="_lang">turn off the eye</span>
               </div>
             </div>
           </div>
@@ -90,10 +84,10 @@
         <div class="header__text-mask _anim-items"></div>
 
         <h1 class="header__title _lang">
-          Роман Насачевский
+          Roman Nasachevsky
         </h1>
         <div class="header__subtitle _lang">
-          верстальщик
+          layout designer
         </div>
       </div>
     </div>
@@ -101,14 +95,14 @@
   <div class="container _anim-items">
     <a href="#home" class="logo">
       <div class="logo__title _lang">
-        Роман Насачевский
+        Roman Nasachevsky
       </div>
       <div class="logo__subtitle _lang">
-        Верстальщик
+        layout designer
       </div>
     </a>
     <section class="portfolio" id="portfolio">
-      <div class="portfolio__title">Портфолио</div>
+      <div class="portfolio__title _lang">Portfolio</div>
       <div class="portfolio__wrapper _anim-items">
         <div class="portfolio__item portfolio__item-1"></div>
         <div class="portfolio__item portfolio__item-2"></div>
@@ -119,7 +113,7 @@
       </div>
     </section>
     <section class="about" id="about">
-      <h2 class="about__title">Обо мне</h2>
+      <h2 class="about__title _lang">About me</h2>
       <div class="about__inner">
         <div class="about__item about__item-2 general _anim-items">
           <!-- Зовут меня Насачевский Роман, живу в замечательном городе Братске. Веб-разработку изучаю более двух лет. Учусь
@@ -127,7 +121,7 @@
           технологии. 31 год, женат. -->
         </div>
         <div class="about__item about__item-1 scills _anim-items">
-          <h3 class="scills__title">Стек веб-технологий</h3>
+          <h3 class="scills__title _lang">Web technology stack</h3>
           <ul class="scills__list">
             <li class="scills__item">
               HTML
@@ -139,15 +133,14 @@
               CSS
               <ul>
                 <li class="scills__subitem">SCSS</li>
+                <li class="scills__subitem">Flexbox</li>
+                <li class="scills__subitem">CSS Grid Layout</li>
                 <li class="scills__subitem">SVG</li>
-                <li class="scills__subitem">CSS-анимация</li>
+                <li class="scills__subitem _lang">CSS animation</li>
               </ul>
             </li>
             <li class="scills__item">
               JavaScript
-              <ul>
-                <li class="scills__subitem">работа с DOM</li>
-              </ul>
             </li>
             <li class="scills__item">
               Gulp
@@ -155,25 +148,32 @@
             <li class="scills__item">
               Git
             </li>
-            <li class="scills__item">
-              Кроссбраузерная, адаптивная вёрстка
+            <li class="scills__item _lang">
+              Cross-browser, responsive layout
             </li>
-            <li class="scills__item">
-              БЭМ-методология
+            <li class="scills__item _lang">
+              BEM metodology
             </li>
           </ul>
         </div>
         <div class="about__item about__item-5 contactss _anim-items">
-          <h3 class="contactss__title">Контакты</h3>
+          <h3 class="contactss__title _lang">Contacts</h3>
           <a href="#" class="contactss__phone">80955951119</a>
           <a href="#" class="contactss__email">nomertelefona1111111111@gmail.com</a>
+          <a href="https://vk.com/id195032902" class="icon vk"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+            <title>
+              vk
+            </title>
+            <path class="icon-vk" d="M29 0h-26c-1.65 0-3 1.35-3 3v26c0 1.65 1.35 3 3 3h26c1.65 0 3-1.35 3-3v-26c0-1.65-1.35-3-3-3zM25.919 22.4l-2.925 0.044c0 0-0.631 0.125-1.456-0.444-1.094-0.75-2.125-2.706-2.931-2.45-0.813 0.256-0.788 2.012-0.788 2.012s0.006 0.375-0.181 0.575c-0.2 0.219-0.6 0.262-0.6 0.262h-1.306c0 0-2.888 0.175-5.431-2.475-2.775-2.887-5.225-8.619-5.225-8.619s-0.144-0.375 0.013-0.556c0.175-0.206 0.644-0.219 0.644-0.219l3.131-0.019c0 0 0.294 0.050 0.506 0.206 0.175 0.125 0.269 0.369 0.269 0.369s0.506 1.281 1.175 2.438c1.306 2.256 1.919 2.75 2.362 2.513 0.644-0.35 0.45-3.194 0.45-3.194s0.012-1.031-0.325-1.488c-0.262-0.356-0.756-0.463-0.969-0.488-0.175-0.025 0.113-0.431 0.488-0.619 0.563-0.275 1.556-0.294 2.731-0.281 0.913 0.006 1.181 0.069 1.538 0.15 1.081 0.262 0.712 1.269 0.712 3.681 0 0.775-0.137 1.863 0.419 2.219 0.238 0.156 0.825 0.025 2.294-2.469 0.694-1.181 1.219-2.569 1.219-2.569s0.113-0.25 0.288-0.356c0.181-0.106 0.425-0.075 0.425-0.075l3.294-0.019c0 0 0.988-0.119 1.15 0.331 0.169 0.469-0.369 1.563-1.712 3.356-2.206 2.944-2.456 2.669-0.619 4.369 1.75 1.625 2.113 2.419 2.175 2.519 0.712 1.2-0.813 1.294-0.813 1.294z">
+            </path>
+          </svg></a>
         </div>
         <div class="about__item about__item-3 form-wrapper _anim-items">
           <div class="form">
             <form action="#" id="form" class="form__body">
-              <h3 class="form__title">Напиcать мне</h3>
+              <h3 class="form__title _lang">Write me</h3>
               <div class="form__item">
-                <label for="formName" class="form__label">Имя*:</label>
+                <label for="formName" class="form__label _lang">Name*:</label>
                 <input id="formName" type="text" name="name" class="form__input _req">
               </div>
               <div class="form__item">
@@ -181,11 +181,11 @@
                 <input id="formEmail" type="text" name="email" class="form__input _req _email">
               </div>
               <div class="form__item">
-                <label for="formMessage" class="form__label">Сообщение:</label>
+                <label for="formMessage" class="form__label _lang">Massage:</label>
                 <textarea name="message" id="formMessage" class="form__input"></textarea>
               </div>
 
-              <button type="submit" class="form__button">Отправить</button>
+              <button type="submit" class="form__button _lang">Send</button>
             </form>
 
           </div>

@@ -231,7 +231,7 @@
 }
 .scills__title {
   text-align: center;
-  font-size: 25px;
+  font-size: 22px;
 }
 .scills__list {
   padding-left: 20px;
@@ -304,6 +304,13 @@
     }
   }
 }
+.icon-vk {
+  fill: $main-color;
+  transition: 0.3s;
+  &:hover {
+    fill: rgb(93, 108, 155);
+  }
+}
 
 // end-about-------------------------
 // form-------------------------------
@@ -351,6 +358,9 @@
   &:focus {
     box-shadow: 0 0 5px #00e1ff, 0 0 10px #00e1ff, 0 0 15px #00e1ff;
   }
+}
+.form__input._error {
+  box-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000;
 }
 textarea.form__input {
   min-height: 120px;

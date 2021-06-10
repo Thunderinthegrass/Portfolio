@@ -893,13 +893,47 @@ img.mfp-img {
   }
 }
 
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Bold"), local("Roboto-Light"), url(../fonts/roboto-bold.woff2) format("woff2"), url(../fonts/roboto-bold.woff) format("woff"), url(../fonts/roboto-bold.ttf);
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/roboto-regular.woff) format("woff"), url(../fonts/roboto-regular.woff2) format("woff2"), url(../fonts/roboto-regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: "normal";
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/roboto-light.woff) format("woff"), url(../fonts/roboto-light.woff2) format("woff2"), url(../fonts/roboto-light.ttf) format("truetype");
+  font-weight: 300;
+  font-style: "normal";
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/roboto-medium.woff) format("woff"), url(../fonts/roboto-medium.woff2) format("woff2"), url(../fonts/roboto-medium.ttf) format("truetype");
+  font-weight: 600;
+  font-style: "normal";
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/roboto-bold.woff) format("woff"), url(../fonts/roboto-bold.woff2) format("woff2"), url(../fonts/roboto-bold.ttf) format("truetype");
+  font-weight: 700;
+  font-style: "normal";
+}
+
 html {
   font-size: 15px;
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
-  font-family: "Fira Sans", sans-serif;
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
   color: #373841;
@@ -4299,7 +4333,7 @@ a {
 
 .scills__title {
   text-align: center;
-  font-size: 25px;
+  font-size: 22px;
 }
 
 .scills__list {
@@ -4380,6 +4414,17 @@ a {
   background-size: cover;
 }
 
+.icon-vk {
+  fill: #373841;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.icon-vk:hover {
+  fill: #5d6c9b;
+}
+
 .form {
   padding: 0 20px;
 }
@@ -4433,6 +4478,11 @@ a {
 .form__input:focus {
   -webkit-box-shadow: 0 0 5px #00e1ff, 0 0 10px #00e1ff, 0 0 15px #00e1ff;
           box-shadow: 0 0 5px #00e1ff, 0 0 10px #00e1ff, 0 0 15px #00e1ff;
+}
+
+.form__input._error {
+  -webkit-box-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000;
+          box-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000;
 }
 
 textarea.form__input {
