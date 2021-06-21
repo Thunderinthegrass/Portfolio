@@ -77,25 +77,23 @@ let menuBtnElem = document.querySelector('.menu-btn__elem');
 let headerMenu = document.querySelector('.header__menu');
 let headerMenuItem = document.querySelectorAll('.header__menu_item');
 
-menuBtn.onclick = () => {
+function menuBtnAnim() {
   menuBtn.classList.toggle('menu-btn--active');
   menuBtnElem.classList.toggle('menu-btn__elem--active');
   headerMenu.classList.toggle('menu--active');
 }
+menuBtn.addEventListener('click', menuBtnAnim);
 
 //скрываем выпадающее меню после выбора пункта меню
-for (let i = 0; i < headerMenuItem.length; i++) {
-  headerMenuItem[i].onclick = () => {
-    let cheskMenuBtnDisplay = window.getComputedStyle(menuBtn).display;//получаем стиль кнопки меню
-    console.log(cheskMenuBtnDisplay);
-    if (cheskMenuBtnDisplay == 'block') {//если кнопка не скрыта, убираем выпадающее меню
-      headerMenu.classList.toggle('menu--active');
-      menuBtn.classList.toggle('menu-btn--active');
-      menuBtnElem.classList.toggle('menu-btn__elem--active');
+function hiddMenu() {
+  let cheskMenuBtnDisplay = window.getComputedStyle(menuBtn).display;//получаем стиль кнопки меню
+    if (cheskMenuBtnDisplay === 'block') {//если кнопка не скрыта, убираем выпадающее меню
+      menuBtnAnim();
     }
-  }
 }
-
+for (let i = 0; i < headerMenuItem.length; i++) {
+  headerMenuItem[i].addEventListener('click', hiddMenu);
+}
 // плавный скролл до якоря
 const anchors = document.querySelectorAll('a[href*="#"]')
 
@@ -282,4 +280,30 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 // -----------------------------------------
+// tuning-----------------
+let tuningBtn = document.querySelector('.tuning-btn');
+// let blindGear = document.querySelector('.blind-gear');
+let tuning = document.querySelector('.tuning');
+let zzzzz = 0;
+
+tuningBtn.addEventListener('click', tuningActive); 
+
+function tuningActive() {
+  tuning.classList.toggle('tuning--active');
+  tuningBtn.classList.toggle('tuning-btn--rotate');
+}
+
+// color-theme---------------------
+let colorThemeRadio = document.querySelectorAll('.color-theme-radio');
+let colorThemeLabel = document.querySelectorAll('.color-theme-label');
+
+function colorThemeSelect() {
+
+}
+
+for (let i = 0; i < colorThemeRadio.length; i++) {
+  if (colorThemeRadio[i].checked == true) {
+    colorThemeLabel[i].style.color = '#ff0000';
+  }
+}
 

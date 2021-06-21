@@ -52,18 +52,19 @@
     z-index: -4;
   }
   &:hover {
-    padding: 15px 0;
-    transform: translateX(-10px);
-    border-top: none;
-    ::before {
-      height: 55px;
-      width: 55px;
-      top: -30px;
-      left: 4.5px;
-      transform: rotate(45deg);
-      border-left: 1px solid #8abe29;
-      border-top: 1px solid #8f10a0;
-    }
+    background: rgb(27, 27, 27);
+    // padding: 15px 0;
+    // transform: translateX(-10px);
+    // border-top: none;
+    // ::before {
+    //   height: 55px;
+    //   width: 55px;
+    //   top: -30px;
+    //   left: 4.5px;
+    //   transform: rotate(45deg);
+    //   border-left: 1px solid #8abe29;
+    //   border-top: 1px solid #8f10a0;
+    // }
   }
 }
 .contacts {
