@@ -73,3 +73,27 @@ a{
 //     transform: translate(35px);
 //   }
 // }
+
+// color-theme---------------
+.main--color{
+  transition: .5s;
+}
+.main--color-light{
+  color: #383942;
+}
+.main--color-dark{
+  color: #aaa6a6;
+  background: #383942;
+  .header__bg-head{
+    fill: #1f1e1e;
+  }
+  .header__text{
+    top: 80%;
+  }
+  .lamp{
+    opacity: 1;
+  }
+  a{
+    background: none;
+  }
+}

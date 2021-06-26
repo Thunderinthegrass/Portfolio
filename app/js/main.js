@@ -87,9 +87,9 @@ menuBtn.addEventListener('click', menuBtnAnim);
 //скрываем выпадающее меню после выбора пункта меню
 function hiddMenu() {
   let cheskMenuBtnDisplay = window.getComputedStyle(menuBtn).display;//получаем стиль кнопки меню
-    if (cheskMenuBtnDisplay === 'block') {//если кнопка не скрыта, убираем выпадающее меню
-      menuBtnAnim();
-    }
+  if (cheskMenuBtnDisplay === 'block') {//если кнопка не скрыта, убираем выпадающее меню
+    menuBtnAnim();
+  }
 }
 for (let i = 0; i < headerMenuItem.length; i++) {
   headerMenuItem[i].addEventListener('click', hiddMenu);
@@ -286,7 +286,7 @@ let tuningBtn = document.querySelector('.tuning-btn');
 let tuning = document.querySelector('.tuning');
 let zzzzz = 0;
 
-tuningBtn.addEventListener('click', tuningActive); 
+tuningBtn.addEventListener('click', tuningActive);
 
 function tuningActive() {
   tuning.classList.toggle('tuning--active');
@@ -294,16 +294,105 @@ function tuningActive() {
 }
 
 // color-theme---------------------
-let colorThemeRadio = document.querySelectorAll('.color-theme-radio');
+let colorThemeInput = document.querySelectorAll('.color-theme-input');
 let colorThemeLabel = document.querySelectorAll('.color-theme-label');
+let mainColor = document.querySelectorAll('.main--color');
+let body = document.querySelector('body');
+let headerText = document.querySelector('.header__text');
 
-function colorThemeSelect() {
-
+function colorThemeLight() {
+  for (let i =   0; i < mainColor.length; i++) {
+    if (mainColor[i].classList.contains('main--color-dark')) {
+      mainColor[i].classList.remove('main--color-dark');
+    }
+    mainColor[i].classList.add('main--color-light');
+  }
+  body.classList.add('main--color-light');
 }
 
-for (let i = 0; i < colorThemeRadio.length; i++) {
-  if (colorThemeRadio[i].checked == true) {
-    colorThemeLabel[i].style.color = '#ff0000';
+function colorThemeDark() {
+  for (let i =   0; i < mainColor.length; i++) {
+    if (mainColor[i].classList.contains('main--color-light')) {
+      mainColor[i].classList.remove('main--color-light');
+    }
+    mainColor[i].classList.add('main--color-dark');
+  }
+  document.querySelector('body').classList.add('main--color-dark');
+}
+
+// function colorThemeColorful() {
+//   for (let i =   0; i < mainColor.length; i++) {
+    
+//   }
+//   document.querySelector('body').classList.toggle('main--color-dark');
+// }
+
+
+colorThemeLabel[0].addEventListener('click', colorThemeLight);
+colorThemeLabel[1].addEventListener('click', colorThemeDark);
+// colorThemeLabel[2].addEventListener('click', colorThemeColorful);
+
+
+// owls------------------------------------------------------------------------------------
+let audioBtn = document.querySelector('.audio__btn');
+let owl = document.querySelector('.owl');
+let owl1 = document.querySelector('.owl1');
+let owl2 = document.querySelector('.owl2');
+
+function randomSound() {
+  let sounds = [owl, owl1, owl2];
+  let sound = sounds[Math.floor(Math.random() * sounds.length)];
+  sound.volume = Math.random() * 1;
+  console.log(sound.volume);
+  sound.play();
+}
+
+let z = 60000;
+
+audioBtn.onclick = function () {
+  audioBtn.classList.toggle('active');
+  if (audioBtn.classList.contains('active')) {
+    setInterval(randomSound, z);
   }
 }
 
+// gnats------------------------------
+document.addEventListener('DOMContentLoaded', function (e) {
+  let scene = document.querySelector(".lamp");
+  if (!!!scene) {
+      return;
+  }
+  let time = 1000;
+  let timeTransitionMin = time * 2;
+  let timeTransitionMax = time * 4;
+  let timeIntervalMin = time;
+  let timeIntervalMax = time * 2;
+  let size = 1.5;
+  for (let i = 0; i < 5; i++) {
+      GWcreatePart(scene);
+  }
+
+
+  function GWcreatePart(scene) {
+      let part = document.createElement('div');
+      part.className = "gw-part";
+      let partItem = document.createElement('div');
+      partItem.className = "gw-part__item";
+      part.appendChild(partItem);
+      scene.appendChild(part);
+
+      setInterval(function () {
+          let tempTime = getRandomInt(timeTransitionMin, timeTransitionMax);
+          part.style.transition = tempTime + "ms all";
+          part.style.transform = 'translateX(' + getRandomInt(-scene.getBoundingClientRect().width / size, scene.getBoundingClientRect().width / size) + 'px) translateY(' + getRandomInt(-scene.getBoundingClientRect().height / size, scene.getBoundingClientRect().height / size) + 'px) rotate(' + getRandomInt(-400, 400) + 'deg)';
+          partItem.style.transition = tempTime / 2 + "ms all";
+        //   partItem.style.backgroundColor = `hsl(${getRandomInt(0, 360)}, ${getRandomInt(80, 100)}%, ${getRandomInt(45, 55)}%)`;
+          // partItem.style.backgroundColor = "#838668";
+          partItem.style.transform = 'translateX(' + getRandomInt(-150, 150) + 'px)  translateY(' + getRandomInt(-150, 150) + 'px)';
+      }, getRandomInt(timeIntervalMin, timeIntervalMax));
+  }
+
+  function getRandomInt(min, max) {
+      return Math.floor(Math.random() * (max - min)) + min;
+  }
+});

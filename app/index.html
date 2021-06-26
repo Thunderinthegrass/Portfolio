@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body class="main--bg">
+<body class="main--bg main--color">
   <!-- <p>Привет</p> -->
 
   <div class="progress"></div>
@@ -19,13 +19,13 @@
   <header class="header" id="home">
     <button class="menu-btn">
       <div class="menu-btn__inner">
-        <div class="menu-btn__elem-top main--bg">
+        <div class="menu-btn__elem-top">
 
         </div>
-        <div class="menu-btn__elem main--bg">
+        <div class="menu-btn__elem">
 
         </div>
-        <div class="menu-btn__elem-bottom main--bg">
+        <div class="menu-btn__elem-bottom">
 
         </div>
       </div>
@@ -42,17 +42,17 @@
           <div class="header__checkbox-wrapper">
             <div class="lang">
               <div class="lang__rus">
-                <span>en</span>
+                <span class="main--color">en</span>
               </div>
               <input class="change__language" type="checkbox">
               <div class="lang__en">
-                <span>ru</span>
+                <span class="main--color">ru</span>
               </div>
             </div>
             <div class="eue-inp">
               <input class="eye-switch" type="checkbox">
               <div class="eye-off">
-                <span class="_lang">turn off the eye</span>
+                <span class="_lang main--color">turn off the eye</span>
               </div>
             </div>
           </div>
@@ -61,25 +61,37 @@
               <path class="cls-1"
                 d="M996.39,501l18.23-75-78-30.63-.79-32.09L1012.31,329,990.6,254.94l-82.86,12.47L891.09,240l49.11-67.9-55.85-53.29L818.83,171l-28.2-15.41,8.58-83.35-75-18.23-30.63,78-32.13.74L627.2,56.31,553.13,78l12.46,82.85-27.41,16.69-67.89-49.11L417,184.31l52.22,65.52L453.81,278l-83.35-8.58-18.23,75,78,30.63.76,32.15-76.47,34.25,21.71,74.07,82.86-12.46,16.71,27.43-49.1,67.9,55.84,53.29,65.52-52.22,28.17,15.35-8.58,83.35,75,18.23,30.63-78,32.1-.68,34.25,76.47,74.07-21.71-12.46-82.86,27.44-16.76L896.57,642l53.29-55.84L897.64,520.6,913,492.41ZM747.81,390.37a64.61,64.61,0,1,1-59.26-69.55A64.61,64.61,0,0,1,747.81,390.37Z"
                 transform="translate(-351.64 -53.46)"></path>
-              <path class="cls-2"
-                d="M996.39,501l18.23-75-78-30.63-.79-32.09L1012.31,329,990.6,254.94l-82.86,12.47L891.09,240l49.11-67.9-55.85-53.29L818.83,171l-28.2-15.41,8.58-83.35-75-18.23-30.63,78-32.13.74L627.2,56.31,553.13,78l12.46,82.85-27.41,16.69-67.89-49.11L417,184.31l52.22,65.52L453.81,278l-83.35-8.58-18.23,75,78,30.63.76,32.15-76.47,34.25,21.71,74.07,82.86-12.46,16.71,27.43-49.1,67.9,55.84,53.29,65.52-52.22,28.17,15.35-8.58,83.35,75,18.23,30.63-78,32.1-.68,34.25,76.47,74.07-21.71-12.46-82.86,27.44-16.76L896.57,642l53.29-55.84L897.64,520.6,913,492.41ZM747.81,390.37a64.61,64.61,0,1,1-59.26-69.55A64.61,64.61,0,0,1,747.81,390.37Z"
-                transform="translate(-351.64 -53.46)"></path>
             </svg>
           </div>
-          <div class="tuning">
-            <div class="tuning__title">Color theme</div>
+          <div class="tuning main--color">
+            <div class="tuning__title main--color">Color theme</div>
             <div class="tuning__inner">
               <div class="color-theme-radio">
-                <input id="radio-1" type="radio" name="radio" value="1" checked>
-                <label class="color-theme-label" for="radio-1">Light theme</label>
+                <input id="radio-1" class="light-theme color-theme-input" type="radio" name="radio" value="1" checked>
+                <label class="color-theme-label main--color" for="radio-1">Light theme</label>
               </div>
-              <div class="color-theme-radio">
-                <input id="radio-2" type="radio" name="radio" value="2">
-                <label class="color-theme-label" for="radio-2">Dark theme</label>
+              <div class="color-theme-radio color-theme-input">
+                <input id="radio-2" class="dark-theme" type="radio" name="radio" value="2">
+                <label class="color-theme-label main--color" for="radio-2">Dark theme</label>
               </div>
-              <div class="color-theme-radio">
-                <input id="radio-3" type="radio" name="radio" value="3">
-                <label class="color-theme-label" for="radio-3">Colorful theme</label>
+              <div class="color-theme-radio color-theme-input">
+                <input id="radio-3" class="colorful-theme" type="radio" name="radio" value="3">
+                <label class="color-theme-label main--color" for="radio-3">Colorful theme</label>
+              </div>
+              <div class="audio">
+                <audio class="owl">
+                  <source src="../../audio/owl.mp3" type="audio/mpeg">
+                    ваш браузер не поддерживает аудио
+                </audio>
+                <audio class="owl1">
+                  <source src="../../audio/owl1.mp3" type="audio/mpeg">
+                    ваш браузер не поддерживает аудио
+                </audio>
+                <audio class="owl2">
+                  <source src="../../audio/owl2.mp3" type="audio/mpeg">
+                    ваш браузер не поддерживает аудио
+                </audio>
+                <button class="audio__btn">Owls</button>
               </div>
             </div>
           </div>
@@ -115,7 +127,7 @@
 
       </div>
       <div class="header__text">
-        <div class="header__text-mask _anim-items"></div>
+        <div class="header__text-mask _anim-items main--color"></div>
 
         <h1 class="header__title _lang main--color">
           Roman Nasachevsky
@@ -123,6 +135,66 @@
         <div class="header__subtitle _lang main--color">
           layout designer
         </div>
+      </div>
+      <div class="lamp">
+        <svg class="lamp__image" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 95.71 412.26">
+          <defs>
+          </defs>
+          <title>
+            lamp
+          </title>
+          <path class="cls-1__lamp" d="M317.81,235.57s-1.88.81-1.94,1.56-.5,1.44,0,2.57,4.44,1,5.56,2.5,1.07-4.57-.62-5.5A9.73,9.73,0,0,0,317.81,235.57Z" transform="translate(-271.43 6.82)" />
+          <path class="cls-1__lamp" d="M317.72,230.23s-1.87.81-1.94,1.56-.5,1.44,0,2.56,4.44,1,5.57,2.5,1.06-4.56-.63-5.5A9.52,9.52,0,0,0,317.72,230.23Z" transform="translate(-271.43 6.82)" />
+          <path class="cls-1__lamp" d="M317.45,224.9s-1.87.82-1.93,1.57a3.89,3.89,0,0,0,0,2.56c.5,1.12,4.43,1,5.56,2.5s1.06-4.56-.63-5.5A9.63,9.63,0,0,0,317.45,224.9Z" transform="translate(-271.43 6.82)" />
+          <path class="cls-1__lamp" d="M317.63,219.79s-1.87.81-1.94,1.56-.5,1.44,0,2.56,4.44,1,5.57,2.5,1.06-4.56-.63-5.5A9.52,9.52,0,0,0,317.63,219.79Z" transform="translate(-271.43 6.82)" />
+          <path class="cls-1__lamp" d="M317.54,214.44s-1.87.81-1.93,1.56a3.92,3.92,0,0,0,0,2.57c.5,1.12,4.43,1,5.56,2.5s1.06-4.57-.63-5.5A9.63,9.63,0,0,0,317.54,214.44Z" transform="translate(-271.43 6.82)" />
+          <path class="cls-1__lamp" d="M317.28,209.12s-1.88.81-1.94,1.56-.5,1.44,0,2.56,4.44,1,5.56,2.5,1.06-4.56-.62-5.5A9.84,9.84,0,0,0,317.28,209.12Z" transform="translate(-271.43 6.82)" />
+          <path class="cls-1__lamp" d="M317.54,204s-1.87.81-1.94,1.56-.5,1.44,0,2.56,4.44,1,5.57,2.5,1.06-4.56-.63-5.5A9.52,9.52,0,0,0,317.54,204Z" transform="translate(-271.43 6.82)" />
+          <path class="cls-1__lamp" d="M317.46,198.63s-1.88.81-1.94,1.56-.5,1.44,0,2.57,4.44,1,5.56,2.5,1.06-4.57-.62-5.5A9.73,9.73,0,0,0,317.46,198.63Z" transform="translate(-271.43 6.82)" />
+          <path class="cls-1__lamp" d="M317.19,193.31s-1.88.81-1.94,1.56-.5,1.44,0,2.56,4.44,1,5.56,2.5,1.07-4.56-.62-5.5A9.84,9.84,0,0,0,317.19,193.31Z" transform="translate(-271.43 6.82)" />
+          <path class="cls-1__lamp" d="M317.37,188.19s-1.88.81-1.94,1.56-.5,1.44,0,2.57,4.44,1,5.56,2.5,1.06-4.57-.62-5.5A9.73,9.73,0,0,0,317.37,188.19Z" transform="translate(-271.43 6.82)" />
+          <path class="cls-1__lamp" d="M317.28,182.85s-1.88.81-1.94,1.56-.5,1.44,0,2.56,4.44,1,5.56,2.5,1.07-4.56-.62-5.5A9.52,9.52,0,0,0,317.28,182.85Z" transform="translate(-271.43 6.82)" />
+          <path class="cls-1__lamp" d="M317.28,177.52s-1.88.82-1.94,1.57-.5,1.43,0,2.56,4.44,1,5.56,2.5,1.07-4.56-.62-5.5A9.73,9.73,0,0,0,317.28,177.52Z" transform="translate(-271.43 6.82)" />
+          <path class="cls-1__lamp" d="M317.63,172.38s-1.87.82-1.94,1.57-.5,1.43,0,2.56,4.44,1,5.57,2.5,1.06-4.56-.63-5.5A9.73,9.73,0,0,0,317.63,172.38Z" transform="translate(-271.43 6.82)" />
+          <path class="cls-1__lamp" d="M317.54,167s-1.87.81-1.93,1.56-.5,1.44,0,2.56,4.43,1,5.56,2.5,1.06-4.56-.63-5.5A9.74,9.74,0,0,0,317.54,167Z" transform="translate(-271.43 6.82)" />
+          <path class="cls-1__lamp" d="M317.28,161.72s-1.88.81-1.94,1.56-.5,1.44,0,2.56,4.44,1,5.56,2.5,1.06-4.56-.62-5.5A9.52,9.52,0,0,0,317.28,161.72Z" transform="translate(-271.43 6.82)" />
+          <path class="cls-1__lamp" d="M317.45,156.6s-1.87.81-1.93,1.56-.5,1.44,0,2.56,4.43,1,5.56,2.5,1.06-4.56-.63-5.5A9.74,9.74,0,0,0,317.45,156.6Z" transform="translate(-271.43 6.82)" />
+          <path class="cls-1__lamp" d="M317.37,151.25s-1.88.82-1.94,1.57-.5,1.43,0,2.56,4.44,1,5.56,2.5,1.06-4.56-.62-5.5A9.73,9.73,0,0,0,317.37,151.25Z" transform="translate(-271.43 6.82)" />
+          <path class="cls-1__lamp" d="M317.1,145.93s-1.88.81-1.94,1.56-.5,1.44,0,2.57,4.44,1,5.56,2.5,1.07-4.57-.62-5.5A9.73,9.73,0,0,0,317.1,145.93Z" transform="translate(-271.43 6.82)" />
+          <path class="cls-1__lamp" d="M317.63,140.79s-1.87.81-1.93,1.56a3.92,3.92,0,0,0,0,2.57c.5,1.12,4.43,1,5.56,2.5s1.06-4.57-.63-5.5A9.63,9.63,0,0,0,317.63,140.79Z" transform="translate(-271.43 6.82)" />
+          <path class="cls-1__lamp" d="M317.55,135.45s-1.88.81-1.94,1.56-.5,1.44,0,2.56,4.44,1,5.56,2.5,1.06-4.56-.62-5.5A9.52,9.52,0,0,0,317.55,135.45Z" transform="translate(-271.43 6.82)" />
+          <path class="cls-1__lamp" d="M317.28,130.12s-1.88.82-1.94,1.57-.5,1.43,0,2.56,4.44,1,5.56,2.5,1.07-4.56-.62-5.5A9.73,9.73,0,0,0,317.28,130.12Z" transform="translate(-271.43 6.82)" />
+          <path class="cls-1__lamp" d="M317.46,125s-1.88.81-1.94,1.56-.5,1.44,0,2.56,4.44,1,5.56,2.5,1.06-4.56-.62-5.5A9.52,9.52,0,0,0,317.46,125Z" transform="translate(-271.43 6.82)" />
+          <path class="cls-1__lamp" d="M317.37,119.66s-1.88.81-1.94,1.56-.5,1.44,0,2.56,4.44,1,5.56,2.5,1.07-4.56-.62-5.5A9.84,9.84,0,0,0,317.37,119.66Z" transform="translate(-271.43 6.82)" />
+          <path class="cls-1__lamp" d="M317.1,114.34s-1.87.81-1.94,1.56-.5,1.44,0,2.56,4.44,1,5.57,2.5,1.06-4.56-.63-5.5A9.84,9.84,0,0,0,317.1,114.34Z" transform="translate(-271.43 6.82)" />
+          <path class="cls-1__lamp" d="M317.37,109.2s-1.88.81-1.94,1.56-.5,1.44,0,2.56,4.44,1,5.56,2.5,1.06-4.56-.62-5.5A9.52,9.52,0,0,0,317.37,109.2Z" transform="translate(-271.43 6.82)" />
+          <path class="cls-1__lamp" d="M317.28,103.85s-1.87.81-1.94,1.56-.5,1.44,0,2.57,4.44,1,5.57,2.5,1.06-4.57-.63-5.5A9.73,9.73,0,0,0,317.28,103.85Z" transform="translate(-271.43 6.82)" />
+          <path class="cls-1__lamp" d="M317,98.53s-1.87.81-1.93,1.56-.5,1.44,0,2.56,4.43,1,5.56,2.5,1.06-4.56-.63-5.5A9.74,9.74,0,0,0,317,98.53Z" transform="translate(-271.43 6.82)" />
+          <path class="cls-1__lamp" d="M317.19,93.41s-1.88.81-1.94,1.56-.5,1.44,0,2.57,4.44,1,5.56,2.5,1.07-4.57-.62-5.5A9.73,9.73,0,0,0,317.19,93.41Z" transform="translate(-271.43 6.82)" />
+          <path class="cls-1__lamp" d="M317.1,88.07s-1.87.81-1.93,1.56-.5,1.44,0,2.56,4.43,1,5.56,2.5,1.06-4.56-.63-5.5A9.43,9.43,0,0,0,317.1,88.07Z" transform="translate(-271.43 6.82)" />
+          <path class="cls-1__lamp" d="M317.1,82.74s-1.87.82-1.93,1.57a3.89,3.89,0,0,0,0,2.56c.5,1.12,4.43,1,5.56,2.5s1.06-4.56-.63-5.5A9.63,9.63,0,0,0,317.1,82.74Z" transform="translate(-271.43 6.82)" />
+          <path class="cls-1__lamp" d="M317.46,77.6s-1.88.82-1.94,1.57-.5,1.43,0,2.56,4.44,1,5.56,2.5,1.06-4.56-.62-5.5A9.73,9.73,0,0,0,317.46,77.6Z" transform="translate(-271.43 6.82)" />
+          <path class="cls-1__lamp" d="M317.37,72.26s-1.88.81-1.94,1.56-.5,1.44,0,2.56,4.44,1,5.56,2.5,1.07-4.56-.62-5.5A9.84,9.84,0,0,0,317.37,72.26Z" transform="translate(-271.43 6.82)" />
+          <path class="cls-1__lamp" d="M317.1,66.94s-1.87.81-1.94,1.56-.5,1.44,0,2.56,4.44,1,5.57,2.5,1.06-4.56-.63-5.5A9.52,9.52,0,0,0,317.1,66.94Z" transform="translate(-271.43 6.82)" />
+          <path class="cls-1__lamp" d="M317.28,61.82s-1.88.81-1.94,1.56-.5,1.44,0,2.56,4.44,1,5.56,2.5,1.07-4.56-.62-5.5A9.84,9.84,0,0,0,317.28,61.82Z" transform="translate(-271.43 6.82)" />
+          <path class="cls-1__lamp" d="M317.19,56.47s-1.87.82-1.94,1.57-.5,1.43,0,2.56,4.44,1,5.57,2.5,1.06-4.56-.63-5.5A9.73,9.73,0,0,0,317.19,56.47Z" transform="translate(-271.43 6.82)" />
+          <path class="cls-1__lamp" d="M316.92,51.15s-1.87.81-1.93,1.56a3.92,3.92,0,0,0,0,2.57c.5,1.12,4.43,1,5.56,2.5s1.06-4.57-.63-5.5A9.63,9.63,0,0,0,316.92,51.15Z" transform="translate(-271.43 6.82)" />
+          <path class="cls-1__lamp" d="M317,46s-1.87.81-1.93,1.56a3.92,3.92,0,0,0,0,2.57c.5,1.12,4.43,1,5.56,2.5s1.06-4.57-.63-5.5A9.63,9.63,0,0,0,317,46Z" transform="translate(-271.43 6.82)" />
+          <path class="cls-1__lamp" d="M316.75,40.69s-1.88.81-1.94,1.56-.5,1.44,0,2.56,4.44,1,5.56,2.5,1.06-4.56-.62-5.5A9.84,9.84,0,0,0,316.75,40.69Z" transform="translate(-271.43 6.82)" />
+          <path class="cls-1__lamp" d="M316.92,35.57s-1.87.81-1.93,1.56-.5,1.44,0,2.56,4.43,1,5.56,2.5,1.06-4.56-.63-5.5A9.74,9.74,0,0,0,316.92,35.57Z" transform="translate(-271.43 6.82)" />
+          <path class="cls-1__lamp" d="M316.84,30.22S315,31,314.9,31.79s-.5,1.43,0,2.56,4.44,1,5.56,2.5,1.06-4.56-.62-5.5A9.73,9.73,0,0,0,316.84,30.22Z" transform="translate(-271.43 6.82)" />
+          <path class="cls-1__lamp" d="M316.84,24.9s-1.88.82-1.94,1.57-.5,1.43,0,2.56,4.44,1,5.56,2.5,1.06-4.56-.62-5.5A9.73,9.73,0,0,0,316.84,24.9Z" transform="translate(-271.43 6.82)" />
+          <path class="cls-1__lamp" d="M317.19,19.76s-1.88.81-1.94,1.56-.5,1.44,0,2.57,4.44,1,5.56,2.5,1.07-4.57-.62-5.5A9.73,9.73,0,0,0,317.19,19.76Z" transform="translate(-271.43 6.82)" />
+          <path class="cls-1__lamp" d="M317.1,14.42s-1.87.81-1.93,1.56-.5,1.44,0,2.56,4.43,1,5.56,2.5,1.06-4.56-.63-5.5A9.43,9.43,0,0,0,317.1,14.42Z" transform="translate(-271.43 6.82)" />
+          <path class="cls-1__lamp" d="M316.84,9.09s-1.88.82-1.94,1.57-.5,1.43,0,2.56,4.44,1,5.56,2.5,1.06-4.56-.62-5.5A9.73,9.73,0,0,0,316.84,9.09Z" transform="translate(-271.43 6.82)" />
+          <path class="cls-1__lamp" d="M317,4s-1.87.81-1.93,1.56-.5,1.44,0,2.56,4.43,1,5.56,2.5S321.7,6,320,5.1A9.43,9.43,0,0,0,317,4Z" transform="translate(-271.43 6.82)" />
+          <path class="cls-1__lamp" d="M316.93-1.37S315.05-.56,315,.19s-.5,1.44,0,2.57,4.44,1,5.56,2.5,1.06-4.57-.62-5.5A9.73,9.73,0,0,0,316.93-1.37Z" transform="translate(-271.43 6.82)" />
+          <path class="cls-1__lamp" d="M316.66-6.69s-1.88.81-1.94,1.56-.5,1.44,0,2.56,4.44,1,5.56,2.5,1.07-4.56-.62-5.5A9.84,9.84,0,0,0,316.66-6.69Z" transform="translate(-271.43 6.82)" />
+          <path class="cls-2__lamp" d="M319.28,405.44c-10.1-.09-29.56-3.38-42.46-25.19-14.25-24.88,4.25-52.38,4.25-52.38s9.13-13.5,11.5-28.54c2-16.66,5.67-17.66,5.67-17.66h42.09s3.67,1,5.67,17.66c2.38,15.05,11.5,28.55,11.5,28.55s18.5,27.5,4.25,52.37c-12.89,21.81-32.35,25.1-42.46,25.19" transform="translate(-271.43 6.82)" />
+          <path class="cls-3__lamp" d="M340.3,279.5,339.79,250a2.12,2.12,0,0,0-2.13-2.08h-37.3a2.12,2.12,0,0,0-2.12,2.12v29.54a2.12,2.12,0,0,0,2.12,2.13h37.81A2.13,2.13,0,0,0,340.3,279.5Z" transform="translate(-271.43 6.82)" />
+          <path class="cls-4__lamp" d="M308,247.88v-6a1.41,1.41,0,0,1,1.42-1.42h20a1.41,1.41,0,0,1,1.41,1.42v6Z" transform="translate(-271.43 6.82)" />
+        </svg>
+        <div class="shadow"></div>
       </div>
     </div>
   </header>
@@ -191,9 +263,9 @@
           </ul>
         </div>
         <div class="about__item about__item-5 contactss _anim-items">
-          <h3 class="contactss__title _lang">Contacts</h3>
-          <a href="#" class="contactss__phone">80955951119</a>
-          <a href="#" class="contactss__email">nomertelefona1111111111@gmail.com</a>
+          <h3 class="contactss__title _lang main--color">Contacts</h3>
+          <a href="#" class="contactss__phone main--color">80955951119</a>
+          <a href="#" class="contactss__email main--color">nomertelefona1111111111@gmail.com</a>
           <a href="https://vk.com/id195032902" class="icon vk"><svg version="1.1" xmlns="http://www.w3.org/2000/svg"
               width="32" height="32" viewBox="0 0 32 32">
               <title>

@@ -10,7 +10,7 @@
   font-weight: 800;
   transform: translate(-50px, 8px);
   text-transform: uppercase;
-  color: $main-color;
+  // color: $main-color;
   mix-blend-mode: difference;
 }
 .about__inner {
@@ -256,13 +256,13 @@
   font-weight: bold;
   line-height: 50px;
   text-align: center;
-  color: $main-color;
+  // color: $main-color;
 }
 
 //form------------------------
 .form-wrapper {
   background: #ffffff;
-  color: $main-color;
+  // color: $main-color;
 }
 
 //contacts
@@ -387,7 +387,7 @@ textarea.form__input {
   outline: none;
   font-size: 18px;
   font-weight: bold;
-  color: #ffffff;
+  // color: #ffffff;
   cursor: pointer;
 }
 // .checkbox__label {
