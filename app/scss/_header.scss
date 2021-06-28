@@ -400,6 +400,7 @@
   transition: 1s;
   animation: header__text 3s linear forwards;
   mix-blend-mode: multiply;
+  background-color: transparent!important;
   &-mask {
     position: absolute;
     top: 0;
@@ -455,6 +456,7 @@
   font-size: 1.7rem;
   // color: $main-color;
   // text-shadow: 0px -2px 2px #d61a05;
+  background: transparent;
 }
 // owls------------------------------------
 .audio__btn {

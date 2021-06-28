@@ -88,11 +88,17 @@ a{
     fill: #1f1e1e;
   }
   .header__text{
-    top: 80%;
+    top: 75%;
   }
   .lamp{
     opacity: 1;
   }
+  a{
+    background: none;
+  }
+}
+.main--color-colorful{
+  color: rgb(12, 250, 4);
   a{
     background: none;
   }

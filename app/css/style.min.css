@@ -1030,7 +1030,7 @@ a {
 }
 
 .main--color-dark .header__text {
-  top: 80%;
+  top: 75%;
 }
 
 .main--color-dark .lamp {
@@ -1038,6 +1038,14 @@ a {
 }
 
 .main--color-dark a {
+  background: none;
+}
+
+.main--color-colorful {
+  color: #0cfa04;
+}
+
+.main--color-colorful a {
   background: none;
 }
 
@@ -1643,6 +1651,7 @@ a {
   -webkit-animation: header__text 3s linear forwards;
           animation: header__text 3s linear forwards;
   mix-blend-mode: multiply;
+  background-color: transparent !important;
 }
 
 .header__text-mask {
@@ -1749,6 +1758,7 @@ a {
 
 .header__subtitle {
   font-size: 1.7rem;
+  background: transparent;
 }
 
 .audio__btn {

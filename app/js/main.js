@@ -299,38 +299,107 @@ let colorThemeLabel = document.querySelectorAll('.color-theme-label');
 let mainColor = document.querySelectorAll('.main--color');
 let body = document.querySelector('body');
 let headerText = document.querySelector('.header__text');
+let bgHead = document.querySelectorAll('.header__bg--head');
 
 function colorThemeLight() {
-  for (let i =   0; i < mainColor.length; i++) {
-    if (mainColor[i].classList.contains('main--color-dark')) {
+  removeEventListener('click', colorThemeColorful);
+  for (let i = 0; i < mainColor.length; i++) {
+    if (mainColor[i].classList.contains('main--color-dark') || mainColor[i].classList.contains('main--color-colorful')) {
       mainColor[i].classList.remove('main--color-dark');
+      mainColor[i].classList.remove('main--color-colorful');
     }
     mainColor[i].classList.add('main--color-light');
+    mainColor[i].style.color = "#383942";
+  }
+  for (let i = 0; i < bgHead.length; i++) {
+    bgHead[i].style.fill = "#383942";
   }
   body.classList.add('main--color-light');
 }
 
 function colorThemeDark() {
-  for (let i =   0; i < mainColor.length; i++) {
-    if (mainColor[i].classList.contains('main--color-light')) {
+  for (let i = 0; i < mainColor.length; i++) {
+    if (mainColor[i].classList.contains('main--color-light') || mainColor[i].classList.contains('main--color-colorful')) {
       mainColor[i].classList.remove('main--color-light');
+      mainColor[i].classList.remove('main--color-colorful');
     }
     mainColor[i].classList.add('main--color-dark');
+    mainColor[i].style.color = "#aaa6a6";
+  }
+  for (let i = 0; i < bgHead.length; i++) {
+    bgHead[i].style.fill = "#1f1e1e";
   }
   document.querySelector('body').classList.add('main--color-dark');
 }
 
-// function colorThemeColorful() {
-//   for (let i =   0; i < mainColor.length; i++) {
-    
-//   }
-//   document.querySelector('body').classList.toggle('main--color-dark');
-// }
+function colorThemeColorful() {
+  function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
+
+  for (let i = 0; i < mainColor.length; i++) {
+    if (mainColor[i].classList.contains('main--color-light') || mainColor[i].classList.contains('main--color-dark')) {
+      mainColor[i].classList.remove('main--color-light');
+      mainColor[i].classList.remove('main--color-dark');
+    }
+    mainColor[i].classList.add('main--color-colorful');
+
+      mainColor[i].style.color = `hsl(${getRandomInt(0, 360)}, ${getRandomInt(80, 100)}%, ${getRandomInt(45, 55)}%)`;
+    let mainColorColorful = document.querySelectorAll('main--color-colorful');
+    console.log(mainColorColorful.length);
+  }
+  for (let i = 0; i < bgHead.length; i++) {
+    bgHead[i].style.fill = `hsl(${getRandomInt(0, 360)}, ${getRandomInt(80, 100)}%, ${getRandomInt(45, 55)}%)`;
+  }
+  document.querySelector('body').classList.add('main--color-colorful');
+}
 
 
 colorThemeLabel[0].addEventListener('click', colorThemeLight);
 colorThemeLabel[1].addEventListener('click', colorThemeDark);
+colorThemeLabel[2].addEventListener('click', colorThemeColorful);
 // colorThemeLabel[2].addEventListener('click', colorThemeColorful);
+
+// gnats------------------------------
+colorThemeLabel[1].addEventListener('click', function (e) {
+  let scene = document.querySelector(".lamp");
+  if (!!!scene) {
+    return;
+  }
+  let time = 1000;
+  let timeTransitionMin = time * 2;
+  let timeTransitionMax = time * 4;
+  let timeIntervalMin = time;
+  let timeIntervalMax = time * 2;
+  let size = 1.5;
+  for (let i = 0; i < 5; i++) {
+    GWcreatePart(scene);
+  }
+
+
+  function GWcreatePart(scene) {
+    let part = document.createElement('div');
+    part.className = "gw-part";
+    let partItem = document.createElement('div');
+    partItem.className = "gw-part__item";
+    part.appendChild(partItem);
+    scene.appendChild(part);
+
+    setInterval(function () {
+      let tempTime = getRandomInt(timeTransitionMin, timeTransitionMax);
+      part.style.transition = tempTime + "ms all";
+      part.style.transform = 'translateX(' + getRandomInt(-scene.getBoundingClientRect().width / size, scene.getBoundingClientRect().width / size) + 'px) translateY(' + getRandomInt(-scene.getBoundingClientRect().height / size, scene.getBoundingClientRect().height / size) + 'px) rotate(' + getRandomInt(-400, 400) + 'deg)';
+      partItem.style.transition = tempTime / 2 + "ms all";
+      //   partItem.style.backgroundColor = `hsl(${getRandomInt(0, 360)}, ${getRandomInt(80, 100)}%, ${getRandomInt(45, 55)}%)`;
+      // partItem.style.backgroundColor = "#838668";
+      partItem.style.transform = 'translateX(' + getRandomInt(-150, 150) + 'px)  translateY(' + getRandomInt(-150, 150) + 'px)';
+    }, getRandomInt(timeIntervalMin, timeIntervalMax));
+  }
+
+  function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
+});
 
 
 // owls------------------------------------------------------------------------------------
@@ -356,43 +425,4 @@ audioBtn.onclick = function () {
   }
 }
 
-// gnats------------------------------
-document.addEventListener('DOMContentLoaded', function (e) {
-  let scene = document.querySelector(".lamp");
-  if (!!!scene) {
-      return;
-  }
-  let time = 1000;
-  let timeTransitionMin = time * 2;
-  let timeTransitionMax = time * 4;
-  let timeIntervalMin = time;
-  let timeIntervalMax = time * 2;
-  let size = 1.5;
-  for (let i = 0; i < 5; i++) {
-      GWcreatePart(scene);
-  }
 
-
-  function GWcreatePart(scene) {
-      let part = document.createElement('div');
-      part.className = "gw-part";
-      let partItem = document.createElement('div');
-      partItem.className = "gw-part__item";
-      part.appendChild(partItem);
-      scene.appendChild(part);
-
-      setInterval(function () {
-          let tempTime = getRandomInt(timeTransitionMin, timeTransitionMax);
-          part.style.transition = tempTime + "ms all";
-          part.style.transform = 'translateX(' + getRandomInt(-scene.getBoundingClientRect().width / size, scene.getBoundingClientRect().width / size) + 'px) translateY(' + getRandomInt(-scene.getBoundingClientRect().height / size, scene.getBoundingClientRect().height / size) + 'px) rotate(' + getRandomInt(-400, 400) + 'deg)';
-          partItem.style.transition = tempTime / 2 + "ms all";
-        //   partItem.style.backgroundColor = `hsl(${getRandomInt(0, 360)}, ${getRandomInt(80, 100)}%, ${getRandomInt(45, 55)}%)`;
-          // partItem.style.backgroundColor = "#838668";
-          partItem.style.transform = 'translateX(' + getRandomInt(-150, 150) + 'px)  translateY(' + getRandomInt(-150, 150) + 'px)';
-      }, getRandomInt(timeIntervalMin, timeIntervalMax));
-  }
-
-  function getRandomInt(min, max) {
-      return Math.floor(Math.random() * (max - min)) + min;
-  }
-});
