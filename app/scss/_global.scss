@@ -85,7 +85,8 @@ a {
 }
 .main--color-light {
   color: #383942;
-}
+  
+  }
 .main--color-dark {
   color: #aaa6a6;
   background: #383942;
@@ -114,6 +115,11 @@ a {
   .form__button{
     border: 1px solid #aaa6a6;
   }
+  .sound-off__icon{
+    .cls-1 {
+      fill: #aaa6a6;
+    }
+  }
 }
 .main--color-colorful {
   // color: rgb(12, 250, 4);
@@ -122,8 +128,12 @@ a {
   }
 }
 .owls-btn--active {
-  color: rgb(11, 203, 236) !important;
+  color: #00d9ff !important;
+  text-shadow: 0 0 5px #00d9ff;
 }
 .bg-none{
   background: transparent;
+}
+.d-none{
+  display: none;
 }

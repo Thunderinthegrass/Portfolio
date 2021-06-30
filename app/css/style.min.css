@@ -1062,16 +1062,25 @@ a {
   border: 1px solid #aaa6a6;
 }
 
+.main--color-dark .sound-off__icon .cls-1 {
+  fill: #aaa6a6;
+}
+
 .main--color-colorful a {
   background: none;
 }
 
 .owls-btn--active {
-  color: #0bcbec !important;
+  color: #00d9ff !important;
+  text-shadow: 0 0 5px #00d9ff;
 }
 
 .bg-none {
   background: transparent;
+}
+
+.d-none {
+  display: none;
 }
 
 .header {
@@ -1106,7 +1115,7 @@ a {
 .blind-gear .cls-1 {
   fill: #373841;
   stroke-width: 10;
-  stroke: #AAA6A6;
+  stroke: #aaa6a6;
 }
 
 .tuning {
@@ -1134,6 +1143,7 @@ a {
   -o-transition: 0.5s linear;
   transition: 0.5s linear;
   font-size: 14px;
+  background: rgba(255, 255, 255, 0.856);
 }
 
 .tuning__title {
@@ -1786,11 +1796,35 @@ a {
   background: transparent;
 }
 
+.audio__btn-wrapper {
+  position: relative;
+}
+
 .audio__btn {
   border: none;
   font: inherit;
   color: inherit;
   background-color: transparent;
+}
+
+.sound-on,
+.sound-off {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  right: 40px;
+}
+
+.sound-on__icon .cls-1 {
+  fill: #00d9ff;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+}
+
+.sound-off__icon .cls-1 {
+  fill: #373841;
+  stroke: white;
+  stroke-miterlimit: 10;
 }
 
 .lamp {

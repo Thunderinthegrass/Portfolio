@@ -414,6 +414,8 @@ let audioBtn = document.querySelector('.audio__btn');
 let owl = document.querySelector('.owl');
 let owl1 = document.querySelector('.owl1');
 let owl2 = document.querySelector('.owl2');
+let soundIconOn = document.querySelector('.sound-on__icon');
+let soundIconOff = document.querySelector('.sound-off__icon');
 // let screamDelayMin = 5000;
 // let screamDelayMax = 100000;
 
@@ -431,7 +433,7 @@ function getRandomInt(min, max) {
 }
 
 
-let z = 60000;
+let z = 30000;
 let owlsFlag = 0;
 let owlsStart;
 
@@ -442,11 +444,15 @@ function owlsStartEnd() {
   if (owlsFlag == 0) {
     // owlsStart = setInterval(randomSound, getRandomInt(screamDelayMin, screamDelayMax));
     owlsStart = setInterval(randomSound, z);
+    soundIconOn.classList.remove('d-none');
+    soundIconOff.classList.add('d-none');
     owlsFlag = 1;
   }
   else if (owlsFlag == 1) {
     audioBtn.classList.remove('owls-btn--active');
     clearInterval(owlsStart);
+    soundIconOff.classList.remove('d-none');
+    soundIconOn.classList.add('d-none');
     owlsFlag = 0;
   }
 }
