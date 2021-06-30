@@ -299,10 +299,10 @@ let colorThemeLabel = document.querySelectorAll('.color-theme-label');
 let mainColor = document.querySelectorAll('.main--color');
 let body = document.querySelector('body');
 let headerText = document.querySelector('.header__text');
-let bgHead = document.querySelectorAll('.header__bg--head');
+let bgHead = document.querySelectorAll('.bg--colorful');
+let brdrColor = document.querySelectorAll('.brdr--color');
 
 function colorThemeLight() {
-  removeEventListener('click', colorThemeColorful);
   for (let i = 0; i < mainColor.length; i++) {
     if (mainColor[i].classList.contains('main--color-dark') || mainColor[i].classList.contains('main--color-colorful')) {
       mainColor[i].classList.remove('main--color-dark');
@@ -318,6 +318,7 @@ function colorThemeLight() {
 }
 
 function colorThemeDark() {
+  gnatsFly();
   for (let i = 0; i < mainColor.length; i++) {
     if (mainColor[i].classList.contains('main--color-light') || mainColor[i].classList.contains('main--color-colorful')) {
       mainColor[i].classList.remove('main--color-light');
@@ -345,12 +346,17 @@ function colorThemeColorful() {
     mainColor[i].classList.add('main--color-colorful');
 
       mainColor[i].style.color = `hsl(${getRandomInt(0, 360)}, ${getRandomInt(80, 100)}%, ${getRandomInt(45, 55)}%)`;
+      document.querySelector('.change__language').style.boxShadow = `0 0 0 3px hsl(${getRandomInt(0, 360)}, ${getRandomInt(80, 100)}%, ${getRandomInt(45, 55)}%)`;
+      document.querySelector('.eye-switch').style.boxShadow = `0 0 0 3px hsl(${getRandomInt(0, 360)}, ${getRandomInt(80, 100)}%, ${getRandomInt(45, 55)}%)`;
     let mainColorColorful = document.querySelectorAll('main--color-colorful');
     console.log(mainColorColorful.length);
   }
   for (let i = 0; i < bgHead.length; i++) {
     bgHead[i].style.fill = `hsl(${getRandomInt(0, 360)}, ${getRandomInt(80, 100)}%, ${getRandomInt(45, 55)}%)`;
   }
+  // for (let i = 0; i < brdrColor.length; i++) {
+  //   brdrColor[i].style.borderColor = `hsl(${getRandomInt(0, 360)}, ${getRandomInt(80, 100)}%, ${getRandomInt(45, 55)}%)`;
+  // }
   document.querySelector('body').classList.add('main--color-colorful');
 }
 
@@ -361,7 +367,7 @@ colorThemeLabel[2].addEventListener('click', colorThemeColorful);
 // colorThemeLabel[2].addEventListener('click', colorThemeColorful);
 
 // gnats------------------------------
-colorThemeLabel[1].addEventListener('click', function (e) {
+function gnatsFly(e) {
   let scene = document.querySelector(".lamp");
   if (!!!scene) {
     return;
@@ -399,14 +405,17 @@ colorThemeLabel[1].addEventListener('click', function (e) {
   function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
   }
-});
+}
 
+// colorThemeLabel[1].addEventListener('click', gnatsFly);
 
 // owls------------------------------------------------------------------------------------
 let audioBtn = document.querySelector('.audio__btn');
 let owl = document.querySelector('.owl');
 let owl1 = document.querySelector('.owl1');
 let owl2 = document.querySelector('.owl2');
+// let screamDelayMin = 5000;
+// let screamDelayMax = 100000;
 
 function randomSound() {
   let sounds = [owl, owl1, owl2];
@@ -414,14 +423,31 @@ function randomSound() {
   sound.volume = Math.random() * 1;
   console.log(sound.volume);
   sound.play();
+  console.log(z);
 }
 
-let z = 60000;
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
 
-audioBtn.onclick = function () {
-  audioBtn.classList.toggle('active');
-  if (audioBtn.classList.contains('active')) {
-    setInterval(randomSound, z);
+
+let z = 60000;
+let owlsFlag = 0;
+let owlsStart;
+
+
+audioBtn.addEventListener('click', owlsStartEnd);
+function owlsStartEnd() {
+  audioBtn.classList.add('owls-btn--active');
+  if (owlsFlag == 0) {
+    // owlsStart = setInterval(randomSound, getRandomInt(screamDelayMin, screamDelayMax));
+    owlsStart = setInterval(randomSound, z);
+    owlsFlag = 1;
+  }
+  else if (owlsFlag == 1) {
+    audioBtn.classList.remove('owls-btn--active');
+    clearInterval(owlsStart);
+    owlsFlag = 0;
   }
 }
 

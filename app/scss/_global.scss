@@ -1,32 +1,37 @@
-html{
+html {
   font-size: 15px;
 }
-body{
-  font-family: 'Roboto', sans-serif;
+body {
+  font-family: "Roboto", sans-serif;
   font-size: 1rem;
   color: $main-color;
 }
 *,
 *::after,
-*::before{
+*::before {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-h1,h2,h3,h4,h5,h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   padding: 0;
 }
-a{
+a {
   text-decoration: none;
   color: $main-color;
 }
-.container{
+.container {
   margin: 0 auto;
   max-width: 1140px;
   width: 100%;
   position: relative;
-  .logo{
+  .logo {
     display: block;
     position: fixed;
     left: 0;
@@ -38,26 +43,26 @@ a{
     background: #ffffffef;
     text-align: center;
     text-transform: uppercase;
-    transition: .5s;
+    transition: 0.5s;
     z-index: 2;
-    &__link{
+    &__link {
       position: absolute;
       left: 0;
       top: 0;
       width: 100%;
       height: 100%;
     }
-    &__title{
+    &__title {
       font-size: 20px;
     }
-    &__subtitle{
+    &__subtitle {
       margin-top: 3px;
       font-size: 11px;
     }
   }
 }
-.container._active{
-  .logo{
+.container._active {
+  .logo {
     animation: logo 1s forwards;
     // transform: rotate(360deg);
     transform: translate(35px);
@@ -75,31 +80,50 @@ a{
 // }
 
 // color-theme---------------
-.main--color{
-  transition: .5s;
+.main--color {
+  transition: 0.5s;
 }
-.main--color-light{
+.main--color-light {
   color: #383942;
 }
-.main--color-dark{
+.main--color-dark {
   color: #aaa6a6;
   background: #383942;
-  .header__bg-head{
+  .header__bg-head {
     fill: #1f1e1e;
   }
-  .header__text{
+  .header__text {
     top: 75%;
   }
-  .lamp{
+  .lamp {
     opacity: 1;
   }
-  a{
+  a {
+    background: none;
+  }
+  .change__language[type="checkbox"]::before,
+  .eye-switch[type="checkbox"]::before {
+    background: #aaa6a6;
+  }
+  .about__item,
+  input,
+  textarea{
+    background: #383942;
+    border: 1px solid #aaa6a6;
+  }
+  .form__button{
+    border: 1px solid #aaa6a6;
+  }
+}
+.main--color-colorful {
+  // color: rgb(12, 250, 4);
+  a {
     background: none;
   }
 }
-.main--color-colorful{
-  color: rgb(12, 250, 4);
-  a{
-    background: none;
-  }
+.owls-btn--active {
+  color: rgb(11, 203, 236) !important;
+}
+.bg-none{
+  background: transparent;
 }
