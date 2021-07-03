@@ -1,7 +1,7 @@
 //Header--------------------------------------
 .header {
   height: 100vh;
-  border-bottom: 1px solid $main-color;
+  border-bottom: 1px solid;
   position: relative;
 }
 .header__wrapper {
@@ -43,7 +43,7 @@
   transform: translateX(300px);
   transition: 0.5s linear;
   font-size: 14px;
-  background: rgba(255, 255, 255, 0.856);
+  // background: rgba(255, 255, 255, 0.856);
   &__title {
     font-size: 17px;
     margin-bottom: 10px;

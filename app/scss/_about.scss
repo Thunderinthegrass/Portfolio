@@ -14,14 +14,14 @@
   mix-blend-mode: difference;
 }
 .about__inner {
-  border-bottom: 1px solid $main-color;
+  border-bottom: 1px solid;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(10, 1fr);
 }
 .about__item {
   background: #ffffff;
-  border: 1px solid $main-color;
+  border: 1px solid;
   mix-blend-mode: difference;
 }
 .about__item-1 {

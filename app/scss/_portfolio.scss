@@ -1,9 +1,9 @@
 // portfolio--------------------------------------------------------------
 .portfolio {
-  border-bottom: 1px solid $main-color;
+  border-bottom: 1px solid;
   // height: 100vh;
   padding-top: 50px;
-  border-top: 1px solid $main-color;
+  border-top: 1px solid;
   position: relative;
 }
 .portfolio__title {
@@ -22,7 +22,7 @@
   grid-template-rows: repeat(2, 1fr);
 }
 .portfolio__item {
-  border: 1px solid $main-color;
+  border: 1px solid;
   background: #ffffff;
   // width: 100%;
   mix-blend-mode: difference;

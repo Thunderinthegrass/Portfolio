@@ -294,6 +294,7 @@ function tuningActive() {
 }
 
 // color-theme---------------------
+let gnatsStop = 0;
 let colorThemeInput = document.querySelectorAll('.color-theme-input');
 let colorThemeLabel = document.querySelectorAll('.color-theme-label');
 let mainColor = document.querySelectorAll('.main--color');
@@ -303,6 +304,9 @@ let bgHead = document.querySelectorAll('.bg--colorful');
 let brdrColor = document.querySelectorAll('.brdr--color');
 
 function colorThemeLight() {
+  document.querySelector('.change__language').style.boxShadow = '0 0 0 3px #373841';
+  document.querySelector('.eye-switch').style.boxShadow = '0 0 0 3px #373841';
+
   for (let i = 0; i < mainColor.length; i++) {
     if (mainColor[i].classList.contains('main--color-dark') || mainColor[i].classList.contains('main--color-colorful')) {
       mainColor[i].classList.remove('main--color-dark');
@@ -315,9 +319,13 @@ function colorThemeLight() {
     bgHead[i].style.fill = "#383942";
   }
   body.classList.add('main--color-light');
+  brdrColor.style.borderColor = "#383942";
 }
 
 function colorThemeDark() {
+  document.querySelector('.change__language').style.boxShadow = '0 0 0 3px #aaa6a6';
+  document.querySelector('.eye-switch').style.boxShadow = '0 0 0 3px #aaa6a6';
+
   gnatsFly();
   for (let i = 0; i < mainColor.length; i++) {
     if (mainColor[i].classList.contains('main--color-light') || mainColor[i].classList.contains('main--color-colorful')) {
@@ -331,6 +339,7 @@ function colorThemeDark() {
     bgHead[i].style.fill = "#1f1e1e";
   }
   document.querySelector('body').classList.add('main--color-dark');
+  brdrColor.style.borderColor = "#00d9ff";
 }
 
 function colorThemeColorful() {
@@ -345,9 +354,9 @@ function colorThemeColorful() {
     }
     mainColor[i].classList.add('main--color-colorful');
 
-      mainColor[i].style.color = `hsl(${getRandomInt(0, 360)}, ${getRandomInt(80, 100)}%, ${getRandomInt(45, 55)}%)`;
-      document.querySelector('.change__language').style.boxShadow = `0 0 0 3px hsl(${getRandomInt(0, 360)}, ${getRandomInt(80, 100)}%, ${getRandomInt(45, 55)}%)`;
-      document.querySelector('.eye-switch').style.boxShadow = `0 0 0 3px hsl(${getRandomInt(0, 360)}, ${getRandomInt(80, 100)}%, ${getRandomInt(45, 55)}%)`;
+    mainColor[i].style.color = `hsl(${getRandomInt(0, 360)}, ${getRandomInt(80, 100)}%, ${getRandomInt(45, 55)}%)`;
+    document.querySelector('.change__language').style.boxShadow = `0 0 0 3px hsl(${getRandomInt(0, 360)}, ${getRandomInt(80, 100)}%, ${getRandomInt(45, 55)}%)`;
+    document.querySelector('.eye-switch').style.boxShadow = `0 0 0 3px hsl(${getRandomInt(0, 360)}, ${getRandomInt(80, 100)}%, ${getRandomInt(45, 55)}%)`;
     let mainColorColorful = document.querySelectorAll('main--color-colorful');
     console.log(mainColorColorful.length);
   }
@@ -358,6 +367,7 @@ function colorThemeColorful() {
   //   brdrColor[i].style.borderColor = `hsl(${getRandomInt(0, 360)}, ${getRandomInt(80, 100)}%, ${getRandomInt(45, 55)}%)`;
   // }
   document.querySelector('body').classList.add('main--color-colorful');
+  brdrColor.style.borderColor = `hsl(${getRandomInt(0, 360)}, ${getRandomInt(80, 100)}%, ${getRandomInt(45, 55)}%)`;
 }
 
 
@@ -370,6 +380,9 @@ colorThemeLabel[2].addEventListener('click', colorThemeColorful);
 function gnatsFly(e) {
   let scene = document.querySelector(".lamp");
   if (!!!scene) {
+    return;
+  }
+  if (gnatsStop === 1) {
     return;
   }
   let time = 1000;
@@ -405,6 +418,8 @@ function gnatsFly(e) {
   function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
   }
+
+  gnatsStop = 1;
 }
 
 // colorThemeLabel[1].addEventListener('click', gnatsFly);

@@ -1085,7 +1085,7 @@ a {
 
 .header {
   height: 100vh;
-  border-bottom: 1px solid #373841;
+  border-bottom: 1px solid;
   position: relative;
 }
 
@@ -1143,7 +1143,6 @@ a {
   -o-transition: 0.5s linear;
   transition: 0.5s linear;
   font-size: 14px;
-  background: rgba(255, 255, 255, 0.856);
 }
 
 .tuning__title {
@@ -1904,7 +1903,7 @@ a {
 }
 
 .about__inner {
-  border-bottom: 1px solid #373841;
+  border-bottom: 1px solid;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(10, 1fr);
@@ -1912,7 +1911,7 @@ a {
 
 .about__item {
   background: #ffffff;
-  border: 1px solid #373841;
+  border: 1px solid;
   mix-blend-mode: difference;
 }
 
@@ -2508,9 +2507,9 @@ textarea.form__input {
 }
 
 .portfolio {
-  border-bottom: 1px solid #373841;
+  border-bottom: 1px solid;
   padding-top: 50px;
-  border-top: 1px solid #373841;
+  border-top: 1px solid;
   position: relative;
 }
 
@@ -2532,7 +2531,7 @@ textarea.form__input {
 }
 
 .portfolio__item {
-  border: 1px solid #373841;
+  border: 1px solid;
   background: #ffffff;
   mix-blend-mode: difference;
   background-repeat: no-repeat;
