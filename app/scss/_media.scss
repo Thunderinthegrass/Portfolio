@@ -102,15 +102,9 @@
 @media (max-width: 1280px) {
   .header__top {
     padding: 10px 15px 0 302px;
-    span {
-      font-size: 1.1rem;
-    }
   }
   .header__menu {
     padding: 0;
-  }
-  .eue-inp {
-    width: 215px;
   }
   .header__title {
     font-size: 2.6rem;
@@ -118,6 +112,9 @@
   .header__text {
     padding: 30px 110px;
     animation: header__text-1536 3s linear forwards;
+  }
+  .header__checkbox-wrapper {
+    padding-right: 75px;
   }
 }
 @media (max-width: 1200px) {
@@ -144,6 +141,9 @@
   }
   .header__text {
     padding: 25px 105px;
+  }
+  .header__checkbox-wrapper {
+    padding-right: 70px;
   }
 }
 @media (max-width: 1152px) {
@@ -175,11 +175,14 @@
     .form__input {
       width: 100%;
     }
-    .form__button{
+    .form__button {
       top: 102%;
       right: 50%;
       transform: translate(50%);
     }
+  }
+  .lamp {
+    width: 400px;
   }
 }
 @media (max-width: 1024px) {
@@ -302,18 +305,29 @@
     font-size: 0.95rem;
     line-height: 1.2rem;
   }
-  // .portfolio {
-  // }
+  .tuning-btn {
+    width: 40px;
+    height: 40px;
+    right: 80px;
+    top: 8px;
+  }
   .portfolio__wrapper {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
+  }
+  .lamp{
+    width: 120px;
+    left: 80%;
+    top: -100px;
+    &__image{
+      height: 70%;
+    }
   }
 }
 @media (max-width: 854px) {
   .header__bg {
     height: 490px;
     margin-top: 35px;
-    // opacity: .5;
     &-wrapper {
       left: 50%;
       top: 20px;
@@ -338,26 +352,6 @@
       border: 2px solid #373841;
     }
   }
-  // @keyframes header__text-854 {
-  //   0% {
-  //     transform: rotate(3deg) translateY(-50%) translateX(10%);
-  //   }
-  //   30% {
-  //     transform: rotate(3deg) translateY(-50%) translateX(-50%);
-  //   }
-  //   67% {
-  //     transform: rotate(3deg) translateY(-50%) translateX(-50%);
-  //   }
-  //   72% {
-  //     transform: rotate(-1deg) translateY(-43%) translateX(-50%);
-  //   }
-  //   78% {
-  //     transform: rotate(0deg) translateY(-52%) translateX(-50%);
-  //   }
-  //   100% {
-  //     transform: rotate(0deg) translateY(-50%) translateX(-50%);
-  //   }
-  // }
   .about__inner {
     padding: 0 10px 0 10px;
     .about__item-2 {
@@ -377,14 +371,36 @@
       grid-row: 10/12;
     }
   }
+  .lamp{
+    width: 20px;
+    left: 85%;
+    top: -150px;
+    &__image{
+      height: 65%;
+    }
+  }
 }
 @media (max-width: 730px) {
+  // .d-none730{
+  //   display: none!important;
+  // }
   .portfolio__wrapper {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(6, 1fr);
     padding-left: 5px;
     padding-right: 5px;
   }
+  // .lamp{
+  //   width: 20px;
+  //   left: 85%;
+  //   top: -150px;
+  //   &__image{
+  //     height: 65%;
+  //   }
+  // }
+}
+@media (max-width: 570px){
+  
 }
 @media (max-width: 484px) {
   .header__text {

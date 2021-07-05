@@ -1034,10 +1034,6 @@ a {
   fill: #1f1e1e;
 }
 
-.main--color-dark .header__text {
-  top: 75%;
-}
-
 .main--color-dark .lamp {
   opacity: 1;
 }
@@ -1064,6 +1060,12 @@ a {
 
 .main--color-dark .sound-off__icon .cls-1 {
   fill: #aaa6a6;
+}
+
+.main--color-dark .menu-btn__elem,
+.main--color-dark .menu-btn__elem-top,
+.main--color-dark .menu-btn__elem-bottom {
+  background: #aaa6a6;
 }
 
 .main--color-colorful a {
@@ -1130,7 +1132,7 @@ a {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 150px;
-  height: 200px;
+  height: 170px;
   position: absolute;
   right: 15px;
   top: 80px;
@@ -1574,7 +1576,7 @@ a {
 }
 
 .lang__rus span {
-  font-size: 15px;
+  font-size: 1rem;
 }
 
 .lang__en,
@@ -1585,7 +1587,7 @@ a {
 
 .lang__en span,
 .eye-off span {
-  font-size: 15px;
+  font-size: 1rem;
 }
 
 .header__bg-wrapper {
@@ -3553,14 +3555,8 @@ textarea.form__input {
   .header__top {
     padding: 10px 15px 0 302px;
   }
-  .header__top span {
-    font-size: 1.1rem;
-  }
   .header__menu {
     padding: 0;
-  }
-  .eue-inp {
-    width: 215px;
   }
   .header__title {
     font-size: 2.6rem;
@@ -3569,6 +3565,9 @@ textarea.form__input {
     padding: 30px 110px;
     -webkit-animation: header__text-1536 3s linear forwards;
             animation: header__text-1536 3s linear forwards;
+  }
+  .header__checkbox-wrapper {
+    padding-right: 75px;
   }
 }
 
@@ -3596,6 +3595,9 @@ textarea.form__input {
   }
   .header__text {
     padding: 25px 105px;
+  }
+  .header__checkbox-wrapper {
+    padding-right: 70px;
   }
 }
 
@@ -3630,6 +3632,9 @@ textarea.form__input {
     -webkit-transform: translate(50%);
         -ms-transform: translate(50%);
             transform: translate(50%);
+  }
+  .lamp {
+    width: 400px;
   }
 }
 
@@ -3761,9 +3766,23 @@ textarea.form__input {
     font-size: 0.95rem;
     line-height: 1.2rem;
   }
+  .tuning-btn {
+    width: 40px;
+    height: 40px;
+    right: 80px;
+    top: 8px;
+  }
   .portfolio__wrapper {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
+  }
+  .lamp {
+    width: 120px;
+    left: 80%;
+    top: -100px;
+  }
+  .lamp__image {
+    height: 70%;
   }
 }
 
@@ -3818,6 +3837,14 @@ textarea.form__input {
   .about__inner .about__item-5 {
     grid-column: 1/5;
     grid-row: 10/12;
+  }
+  .lamp {
+    width: 20px;
+    left: 85%;
+    top: -150px;
+  }
+  .lamp__image {
+    height: 65%;
   }
 }
 

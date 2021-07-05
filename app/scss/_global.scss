@@ -94,7 +94,7 @@ a {
     fill: #1f1e1e;
   }
   .header__text {
-    top: 75%;
+    // top: 75%;
   }
   .lamp {
     opacity: 1;
@@ -119,6 +119,11 @@ a {
     .cls-1 {
       fill: #aaa6a6;
     }
+  }
+  .menu-btn__elem,
+  .menu-btn__elem-top,
+  .menu-btn__elem-bottom{
+    background: #aaa6a6;
   }
 }
 .main--color-colorful {

@@ -34,7 +34,7 @@
   align-items: center;
   flex-direction: column;
   width: 150px;
-  height: 200px;
+  height: 170px;
   position: absolute;
   right: 15px;
   top: 80px;
@@ -329,7 +329,7 @@
   overflow: visible;
   position: relative;
   span {
-    font-size: 15px;
+    font-size: 1rem;
   }
 }
 .lang__en,
@@ -337,7 +337,7 @@
   text-transform: uppercase;
   overflow: visible;
   span {
-    font-size: 15px;
+    font-size: 1rem;
   }
 }
 // .header__bg-wrapper._active{

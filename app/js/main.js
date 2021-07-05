@@ -185,27 +185,6 @@ if (animItems.length > 0) {
 }
 
 //form-------------------------------------------------------------
-// $(document).ready(function() {
-
-// 	//E-mail Ajax Send
-// 	$("form").submit(function() { //Change
-// 		var th = $(this);
-// 		$.ajax({
-// 			type: "POST",
-// 			url: "mail.php", //Change
-// 			data: th.serialize()
-// 		}).done(function() {
-// 			alert("Thank you!");
-// 			setTimeout(function() {
-// 				// Done Functions
-// 				th.trigger("reset");
-// 			}, 1000);
-// 		});
-// 		return false;
-// 	});
-
-// });
-//========================================
 "use strict"
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -279,10 +258,9 @@ document.addEventListener('DOMContentLoaded', function () {
     return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
   }
 });
-// -----------------------------------------
+
 // tuning-----------------
 let tuningBtn = document.querySelector('.tuning-btn');
-// let blindGear = document.querySelector('.blind-gear');
 let tuning = document.querySelector('.tuning');
 let zzzzz = 0;
 
@@ -302,6 +280,7 @@ let body = document.querySelector('body');
 let headerText = document.querySelector('.header__text');
 let bgHead = document.querySelectorAll('.bg--colorful');
 let brdrColor = document.querySelectorAll('.brdr--color');
+let headerBgWrapper = document.querySelector('.header__bg-wrapper');
 
 function colorThemeLight() {
   document.querySelector('.change__language').style.boxShadow = '0 0 0 3px #373841';
@@ -340,6 +319,8 @@ function colorThemeDark() {
   }
   document.querySelector('body').classList.add('main--color-dark');
   brdrColor.style.borderColor = "#00d9ff";
+
+
 }
 
 function colorThemeColorful() {
@@ -374,7 +355,6 @@ function colorThemeColorful() {
 colorThemeLabel[0].addEventListener('click', colorThemeLight);
 colorThemeLabel[1].addEventListener('click', colorThemeDark);
 colorThemeLabel[2].addEventListener('click', colorThemeColorful);
-// colorThemeLabel[2].addEventListener('click', colorThemeColorful);
 
 // gnats------------------------------
 function gnatsFly(e) {
@@ -422,7 +402,6 @@ function gnatsFly(e) {
   gnatsStop = 1;
 }
 
-// colorThemeLabel[1].addEventListener('click', gnatsFly);
 
 // owls------------------------------------------------------------------------------------
 let audioBtn = document.querySelector('.audio__btn');
