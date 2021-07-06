@@ -85,36 +85,28 @@ function menuBtnAnim() {
 menuBtn.addEventListener('click', menuBtnAnim);
 
 //скрываем выпадающее меню после выбора пункта меню
-function rrrrrr() {
-  menuBtn.style.backgroundColor = "#ff0000";
-}
 function hiddMenu() {
   let cheskMenuBtnDisplay = window.getComputedStyle(menuBtn).display;//получаем стиль кнопки меню
-    console.log(cheskMenuBtnDisplay);
-    if (cheskMenuBtnDisplay === 'block') {//если кнопка не скрыта, убираем выпадающее меню
-      headerMenu.classList.toggle('menu--active');
-      menuBtn.classList.toggle('menu-btn--active');
-      menuBtnElem.classList.toggle('menu-btn__elem--active');
-    }
+  if (cheskMenuBtnDisplay === 'block') {//если кнопка не скрыта, убираем выпадающее меню
+    menuBtnAnim();
+  }
 }
 for (let i = 0; i < headerMenuItem.length; i++) {
   headerMenuItem[i].addEventListener('click', hiddMenu);
-  headerMenuItem[i].addEventListener('click', rrrrrr);
-  // headerMenuItem[i].addEventListener('touchend',hiddMenu);
 }
 // плавный скролл до якоря
-// const anchors = document.querySelectorAll('a[href*="#"]')
+const anchors = document.querySelectorAll('a[href*="#"]')
 
-// for (let anchor of anchors) {
-//   anchor.addEventListener("click", function (event) {
-//     event.preventDefault();
-//     const blockID = anchor.getAttribute('href')
-//     document.querySelector('' + blockID).scrollIntoView({
-//       behavior: "smooth",
-//       block: "start"
-//     })
-//   })
-// }
+for (let anchor of anchors) {
+  anchor.addEventListener("click", function (event) {
+    event.preventDefault();
+    const blockID = anchor.getAttribute('href')
+    document.querySelector('' + blockID).scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    })
+  })
+}
 
 // progress-bar--------------------------------------------
 
@@ -193,27 +185,6 @@ if (animItems.length > 0) {
 }
 
 //form-------------------------------------------------------------
-// $(document).ready(function() {
-
-// 	//E-mail Ajax Send
-// 	$("form").submit(function() { //Change
-// 		var th = $(this);
-// 		$.ajax({
-// 			type: "POST",
-// 			url: "mail.php", //Change
-// 			data: th.serialize()
-// 		}).done(function() {
-// 			alert("Thank you!");
-// 			setTimeout(function() {
-// 				// Done Functions
-// 				th.trigger("reset");
-// 			}, 1000);
-// 		});
-// 		return false;
-// 	});
-
-// });
-//========================================
 "use strict"
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -287,5 +258,98 @@ document.addEventListener('DOMContentLoaded', function () {
     return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
   }
 });
-// -----------------------------------------
+
+// tuning-----------------
+let tuningBtn = document.querySelector('.tuning-btn');
+let tuning = document.querySelector('.tuning');
+let zzzzz = 0;
+
+tuningBtn.addEventListener('click', tuningActive);
+
+function tuningActive() {
+  tuning.classList.toggle('tuning--active');
+  tuningBtn.classList.toggle('tuning-btn--rotate');
+}
+
+// color-theme---------------------
+let gnatsStop = 0;
+let colorThemeInput = document.querySelectorAll('.color-theme-input');
+let colorThemeLabel = document.querySelectorAll('.color-theme-label');
+let mainColor = document.querySelectorAll('.main--color');
+let body = document.querySelector('body');
+let headerText = document.querySelector('.header__text');
+let bgHead = document.querySelectorAll('.bg--colorful');
+let brdrColor = document.querySelectorAll('.brdr--color');
+let headerBgWrapper = document.querySelector('.header__bg-wrapper');
+
+function colorThemeLight() {
+  document.querySelector('.change__language').style.boxShadow = '0 0 0 3px #373841';
+  document.querySelector('.eye-switch').style.boxShadow = '0 0 0 3px #373841';
+
+  for (let i = 0; i < mainColor.length; i++) {
+    if (mainColor[i].classList.contains('main--color-dark') || mainColor[i].classList.contains('main--color-colorful')) {
+      mainColor[i].classList.remove('main--color-dark');
+      mainColor[i].classList.remove('main--color-colorful');
+    }
+    mainColor[i].classList.add('main--color-light');
+    mainColor[i].style.color = "#383942";
+  }
+  for (let i = 0; i < bgHead.length; i++) {
+    bgHead[i].style.fill = "#383942";
+  }
+  body.classList.add('main--color-light');
+}
+
+function colorThemeDark() {
+  document.querySelector('.change__language').style.boxShadow = '0 0 0 3px #aaa6a6';
+  document.querySelector('.eye-switch').style.boxShadow = '0 0 0 3px #aaa6a6';
+
+  for (let i = 0; i < mainColor.length; i++) {
+    if (mainColor[i].classList.contains('main--color-light') || mainColor[i].classList.contains('main--color-colorful')) {
+      mainColor[i].classList.remove('main--color-light');
+      mainColor[i].classList.remove('main--color-colorful');
+    }
+    mainColor[i].classList.add('main--color-dark');
+    mainColor[i].style.color = "#aaa6a6";
+  }
+  for (let i = 0; i < bgHead.length; i++) {
+    bgHead[i].style.fill = "#1f1e1e";
+  }
+  document.querySelector('body').classList.add('main--color-dark');
+
+
+}
+
+function colorThemeColorful() {
+  function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
+
+  for (let i = 0; i < mainColor.length; i++) {
+    if (mainColor[i].classList.contains('main--color-light') || mainColor[i].classList.contains('main--color-dark')) {
+      mainColor[i].classList.remove('main--color-light');
+      mainColor[i].classList.remove('main--color-dark');
+    }
+    mainColor[i].classList.add('main--color-colorful');
+
+    mainColor[i].style.color = `hsl(${getRandomInt(0, 360)}, ${getRandomInt(80, 100)}%, ${getRandomInt(45, 55)}%)`;
+    document.querySelector('.change__language').style.boxShadow = `0 0 0 3px hsl(${getRandomInt(0, 360)}, ${getRandomInt(80, 100)}%, ${getRandomInt(45, 55)}%)`;
+    document.querySelector('.eye-switch').style.boxShadow = `0 0 0 3px hsl(${getRandomInt(0, 360)}, ${getRandomInt(80, 100)}%, ${getRandomInt(45, 55)}%)`;
+    let mainColorColorful = document.querySelectorAll('main--color-colorful');
+    console.log(mainColorColorful.length);
+  }
+  for (let i = 0; i < bgHead.length; i++) {
+    bgHead[i].style.fill = `hsl(${getRandomInt(0, 360)}, ${getRandomInt(80, 100)}%, ${getRandomInt(45, 55)}%)`;
+  }
+  document.querySelector('body').classList.add('main--color-colorful');
+}
+
+
+colorThemeLabel[0].addEventListener('click', colorThemeLight);
+colorThemeLabel[1].addEventListener('click', colorThemeDark);
+colorThemeLabel[2].addEventListener('click', colorThemeColorful);
+
+
+
+
 

@@ -1034,10 +1034,6 @@ a {
   fill: #1f1e1e;
 }
 
-.main--color-dark .lamp {
-  opacity: 1;
-}
-
 .main--color-dark a {
   background: none;
 }
@@ -1826,65 +1822,6 @@ a {
   fill: #373841;
   stroke: white;
   stroke-miterlimit: 10;
-}
-
-.lamp {
-  position: absolute;
-  left: 50%;
-  height: 80%;
-  width: 500px;
-  z-index: -1;
-  opacity: 0;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-  overflow: visible;
-}
-
-.lamp__image {
-  height: 100%;
-  position: absolute;
-  right: 50%;
-  bottom: 30%;
-  -webkit-transform: translateX(50%);
-      -ms-transform: translateX(50%);
-          transform: translateX(50%);
-}
-
-.lamp .shadow {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  border-radius: 100%;
-  right: 50%;
-  bottom: 35%;
-  -webkit-transform: translateX(50%);
-      -ms-transform: translateX(50%);
-          transform: translateX(50%);
-  z-index: -2;
-  -webkit-box-shadow: 0 0 150px 200px #646464;
-          box-shadow: 0 0 150px 200px #646464;
-}
-
-.cls-1__lamp {
-  fill: #2a2929;
-  stroke: #191819;
-  stroke-miterlimit: 10;
-  stroke-width: 0.25px;
-}
-
-.cls-2__lamp {
-  fill: #f5f5f5;
-  -webkit-box-shadow: 0 0 15px #646464;
-          box-shadow: 0 0 15px #646464;
-}
-
-.cls-3__lamp {
-  fill: #1f1e1e;
-}
-
-.cls-4__lamp {
-  fill: #272727;
 }
 
 .about {
@@ -3633,9 +3570,6 @@ textarea.form__input {
         -ms-transform: translate(50%);
             transform: translate(50%);
   }
-  .lamp {
-    width: 400px;
-  }
 }
 
 @media (max-width: 1024px) {
@@ -3776,14 +3710,6 @@ textarea.form__input {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
   }
-  .lamp {
-    width: 120px;
-    left: 80%;
-    top: -100px;
-  }
-  .lamp__image {
-    height: 70%;
-  }
 }
 
 @media (max-width: 854px) {
@@ -3837,14 +3763,6 @@ textarea.form__input {
   .about__inner .about__item-5 {
     grid-column: 1/5;
     grid-row: 10/12;
-  }
-  .lamp {
-    width: 20px;
-    left: 85%;
-    top: -150px;
-  }
-  .lamp__image {
-    height: 65%;
   }
 }
 
