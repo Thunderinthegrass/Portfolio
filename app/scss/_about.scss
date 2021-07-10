@@ -381,43 +381,11 @@ textarea.form__input {
   justify-content: center;
   align-items: center;
   padding: 0 20px;
-  // background: $main-color;
   color: #ffffff;
   border-radius: 3px;
-  border: 1 px solid;
+  border: 1px solid;
   outline: none;
   font-size: 18px;
   font-weight: bold;
-  // color: #ffffff;
   cursor: pointer;
 }
-// .checkbox__label {
-//   font-size: 16px;
-//   line-height: 140%;
-//   display: inline-flex;
-//   align-items: center;
-//   position: relative;
-//   cursor: pointer;
-//   &::before {
-//     content: "";
-//     align-self: flex-start;
-//     margin-right: 10px;
-//     flex: 0 0 24px;
-//     height: 24px;
-//     background: rgb(255, 255, 255);
-//     border-radius: 3px;
-//   }
-//   &::after {
-//     content: "";
-//     transform: scale(0);
-//     transition: 0.3s;
-//     // flex: 0 0 10px;
-//     width: 20px;
-//     height: 20px;
-//     background: #00e1ff;
-//     position: absolute;
-//     left: 2px;
-//     top: 2px;
-//     clip-path: polygon(18% 30%, 0 55%, 51% 100%, 100% 18%, 78% 0, 44% 53%);
-//   }
-// }

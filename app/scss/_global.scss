@@ -85,13 +85,21 @@ a {
 }
 .main--color-light {
   color: #383942;
-  
+  .menu-btn__elem,
+  .menu-btn__elem-top,
+  .menu-btn__elem-bottom {
+    background: #383942 !important;
   }
+  .lang-slider,
+  .eye-slider {
+    background: #383942 !important;
+  }
+}
 .main--color-dark {
   color: #aaa6a6;
   background: #383942;
   .header__bg-head {
-    fill: #1f1e1e;
+    fill: #2c2b2b;
   }
   a {
     background: none;
@@ -100,39 +108,45 @@ a {
   .eye-switch[type="checkbox"]::before {
     background: #aaa6a6;
   }
-  .about__item,
-  input,
-  textarea{
+  .about__item {
     background: #383942;
     border: 1px solid #aaa6a6;
+    input,
+    textarea {
+      background: #383942;
+      border: 1px solid #aaa6a6;
+    }
   }
-  .form__button{
+  .form__button {
     border: 1px solid #aaa6a6;
   }
-  .sound-off__icon{
+  .sound-off__icon {
     .cls-1 {
       fill: #aaa6a6;
     }
   }
   .menu-btn__elem,
   .menu-btn__elem-top,
-  .menu-btn__elem-bottom{
+  .menu-btn__elem-bottom {
+    background: #aaa6a6 !important;
+  }
+  .lang-slider,
+  .eye-slider {
+    background: #aaa6a6 !important;
+  }
+  .btn-totop{
     background: #aaa6a6;
+    color: #383942;
   }
 }
 .main--color-colorful {
-  // color: rgb(12, 250, 4);
   a {
     background: none;
   }
 }
-.owls-btn--active {
-  color: #00d9ff !important;
-  text-shadow: 0 0 5px #00d9ff;
-}
-.bg-none{
+.bg-none {
   background: transparent;
 }
-.d-none{
+.d-none {
   display: none;
 }

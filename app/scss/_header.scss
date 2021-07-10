@@ -34,7 +34,7 @@
   align-items: center;
   flex-direction: column;
   width: 150px;
-  height: 170px;
+  height: 220px;
   position: absolute;
   right: 15px;
   top: 80px;
@@ -43,7 +43,6 @@
   transform: translateX(300px);
   transition: 0.5s linear;
   font-size: 14px;
-  // background: rgba(255, 255, 255, 0.856);
   &__title {
     font-size: 17px;
     margin-bottom: 10px;
@@ -230,71 +229,87 @@
 }
 .header__checkbox-wrapper {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
 }
 .lang {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  width: 83px;
+  height: 18px;
   position: relative;
-  width: 108px;
-  left: -30px;
-  // background: rgb(155, 7, 7);
+  margin-top: 20px;
+  &__rus{
+    position: absolute;
+    font-size: 1rem;  
+    left: 0;
+    line-height: 12px;
+  }
+  &__en{
+    position: absolute;
+    font-size: 1rem;
+    right: 0;
+    line-height: 12px;
+  }
 }
 .eue-inp {
-  width: 195px;
+  width: 150px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
   position: relative;
-  // width: 364px;
-  // background: rgb(155, 7, 7);
+  margin-top: 15px;
+  span{
+    display: inline-block;
+    margin-top: 5px;
+  }
 }
 .change__language[type="checkbox"] {
   display: inline-block;
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(56%);
   z-index: 3;
-  width: 50px;
-  height: 20px;
+  width: 40px;
+  height: 15px;
+  top: 0;
   -webkit-appearance: none;
   outline: none;
   border-radius: 2px;
   box-shadow: 0 0 0 3px #7a7b85;
   cursor: pointer;
 }
-.eye-switch[type="checkbox"] {
-  display: inline-block;
-  position: static;
-  left: 50%;
-  // transform: translateX(-50%);
-  z-index: 3;
-  width: 50px;
-  height: 20px;
-  -webkit-appearance: none;
-  outline: none;
-  border-radius: 2px;
-  box-shadow: 0 0 0 3px #7a7b85;
-  cursor: pointer;
-}
-.change__language[type="checkbox"]::before,
-.eye-switch[type="checkbox"]::before {
-  content: "";
+.lang-slider {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 20px;
-  height: 20px;
+  left: 20px;
+  width: 15px;
+  height: 15px;
   background: $main-color;
   border-radius: 2px;
   transform: scale(0.98, 0.96);
   transition: 0.4s;
   animation: change-language 0.4s linear 1 forwards;
 }
-.eye-switch[type="checkbox"]::before {
-  top: 1px;
+.eye-switch[type="checkbox"] {
+  display: inline-block;
+  z-index: 3;
+  width: 40px;
+  height: 15px;
+  -webkit-appearance: none;
+  outline: none;
+  border-radius: 2px;
+  box-shadow: 0 0 0 3px #7a7b85;
+  cursor: pointer;
+}
+.eye-slider{
+  position: absolute;
+  top: 0;
+  left: 53px;
+  width: 12px;
+  height: 15px;
+  background: $main-color;
+  border-radius: 2px;
+  transform: scale(0.98, 0.96);
+  transition: 0.4s;
+  animation: change-language 0.4s linear 1 forwards;
 }
 @keyframes change-language {
   0% {
@@ -309,32 +324,37 @@
     width: 20px;
   }
 }
-.change__language:checked[type="checkbox"]::before,
-.eye-switch:checked[type="checkbox"]::before {
+.lang-slider--checked {
   animation: change-language-checked 0.4s linear 1 forwards;
+}
+.eye-slider--checked{
+  animation: change-eye-checked 0.4s linear 1 forwards;
 }
 @keyframes change-language-checked {
   0% {
   }
   50% {
-    width: 37px;
+    width: 33px;
   }
   100% {
-    transform: translateX(30px);
+    transform: translateX(24px);
     width: 20px;
   }
 }
-.lang__rus {
-  text-transform: uppercase;
-  overflow: visible;
-  position: relative;
-  span {
-    font-size: 1rem;
+@keyframes change-eye-checked {
+  0% {
+  }
+  50% {
+    width: 33px;
+  }
+  100% {
+    transform: translateX(23px);
+    width: 20px;
   }
 }
 .lang__en,
 .eye-off {
-  text-transform: uppercase;
+  // text-transform: uppercase;
   overflow: visible;
   span {
     font-size: 1rem;
@@ -355,6 +375,7 @@
   height: 800px;
   &-head {
     fill: $main-color;
+    transition: 5s;
   }
   .eye {
     fill: $main-color;
@@ -450,43 +471,9 @@
 }
 .header__title {
   font-size: 3.3rem;
-  // color: $main-color;
   background: transparent;
 }
 .header__subtitle {
   font-size: 1.7rem;
-  // color: $main-color;
-  // text-shadow: 2px 2px 2px #d61a05;
   background: transparent;
-}
-// owls------------------------------------
-.audio__btn-wrapper {
-  position: relative;
-}
-.audio__btn {
-  border: none;
-  font: inherit;
-  color: inherit;
-  background-color: transparent;
-}
-.sound-on,
-.sound-off {
-  position: absolute;
-  width: 18px;
-  height: 18px;
-  right: 40px;
-}
-.sound-on__icon{
-  .cls-1 {
-    fill: #00d9ff;
-    stroke: #fff;
-    stroke-miterlimit: 10;
-  }
-}
-.sound-off__icon{
-  .cls-1 {
-    fill: $main-color;
-    stroke: rgb(255, 255, 255);
-    stroke-miterlimit: 10;
-  }
 }
