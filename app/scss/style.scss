@@ -32,7 +32,7 @@
   display: inline-block;
   right: 20px;
   bottom: 20px;
-  padding: 15px 20px;
+  padding: 6px 15px;
   background: $main-color;
   border-radius: 2px;
   z-index: 5;
@@ -40,31 +40,8 @@
   transition: 0.5s;
   color: #ffffff;
   display: none;
-  ::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 0;
-    width: 50px;
-    height: 50px;
-    transform: translateX(-50%);
-    transition: 0.5s;
-    z-index: -4;
-  }
   &:hover {
-    background: rgb(27, 27, 27);
-    // padding: 15px 0;
-    // transform: translateX(-10px);
-    // border-top: none;
-    // ::before {
-    //   height: 55px;
-    //   width: 55px;
-    //   top: -30px;
-    //   left: 4.5px;
-    //   transform: rotate(45deg);
-    //   border-left: 1px solid #8abe29;
-    //   border-top: 1px solid #8f10a0;
-    // }
+    background: rgb(209, 14, 14);
   }
 }
 .contacts {

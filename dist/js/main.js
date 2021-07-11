@@ -1,5 +1,7 @@
 // change language
 let changeLanguage = document.querySelector('.change__language');
+let eyeSlider = document.querySelector('.eye-slider');
+let langSlider = document.querySelector('.lang-slider');
 let contentLangEn = [
   'наверх',
   'главная',
@@ -57,6 +59,12 @@ changeLanguage.onclick = () => {
       contentItem[k].textContent = contentLangRu[k];
     }
   }
+  if (changeLanguage.checked){
+    langSlider.classList.add('lang-slider--checked');
+  }
+  else{
+    langSlider.classList.remove('lang-slider--checked');
+  }
 }
 //eye
 let eyeSwitch = document.querySelector('.eye-switch');
@@ -65,9 +73,11 @@ eyeSwitch.onclick = function () {
   let eye = document.querySelector('.eye');
   if (eyeSwitch.checked) {
     eye.classList.remove('eye-red');
+    eyeSlider.classList.add('eye-slider--checked');
   }
   else {
     eye.classList.add('eye-red');
+    eyeSlider.classList.remove('eye-slider--checked');
   }
 }
 
@@ -281,6 +291,7 @@ let headerText = document.querySelector('.header__text');
 let bgHead = document.querySelectorAll('.bg--colorful');
 let brdrColor = document.querySelectorAll('.brdr--color');
 let headerBgWrapper = document.querySelector('.header__bg-wrapper');
+let elemBg = document.querySelectorAll('.elem--bg');
 
 function colorThemeLight() {
   document.querySelector('.change__language').style.boxShadow = '0 0 0 3px #373841';
@@ -340,6 +351,9 @@ function colorThemeColorful() {
   }
   for (let i = 0; i < bgHead.length; i++) {
     bgHead[i].style.fill = `hsl(${getRandomInt(0, 360)}, ${getRandomInt(80, 100)}%, ${getRandomInt(45, 55)}%)`;
+  }
+  for (let i = 0; i < elemBg.length; i++) {
+    elemBg[i].style.background = `hsl(${getRandomInt(0, 360)}, ${getRandomInt(80, 100)}%, ${getRandomInt(45, 55)}%)`;
   }
   document.querySelector('body').classList.add('main--color-colorful');
 }
