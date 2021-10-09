@@ -36,7 +36,7 @@ a {
   display: block;
   position: fixed;
   left: 0;
-  top: 4px;
+  top: 10px;
   transform: translate(-1000px);
   padding: 7px 15px;
   border: 3px solid $main-color;
@@ -65,7 +65,7 @@ a {
   .logo {
     animation: logo 1s forwards;
     // transform: rotate(360deg);
-    transform: translate(12px);
+    transform: translate(57px);
   }
 }
 

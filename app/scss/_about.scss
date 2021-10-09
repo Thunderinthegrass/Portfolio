@@ -269,12 +269,20 @@
 .contactss {
   text-align: center;
   padding: 15px;
+  &__wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__item{
+    margin-top: 15px;
+  }
   &__phone {
     display: inline-block;
     position: relative;
     padding-left: 22px;
     line-height: 22px;
-    margin-top: 15px;
     &::before {
       position: absolute;
       width: 22px;
@@ -291,7 +299,6 @@
     position: relative;
     padding-left: 25px;
     line-height: 22px;
-    margin-top: 15px;
     &::before {
       position: absolute;
       width: 22px;
