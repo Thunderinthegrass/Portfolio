@@ -1,0 +1,213 @@
+.preloaders-body {
+  background: transparent;
+}
+
+.preloader-item {
+  height: 300px;
+  border: 1px solid #ff8888;
+  border-left: 0;
+  border-right: 0;
+}
+
+.circle-of-balls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.circle-of-balls__wrapper {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.circle-of-balls__ball {
+  width: 30px;
+  height: 30px;
+  background: #c1e6d6;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.circle-of-balls__ball-1 {
+  -webkit-transform: rotate(36deg) translateY(-60px) rotate(-36deg);
+      -ms-transform: rotate(36deg) translateY(-60px) rotate(-36deg);
+          transform: rotate(36deg) translateY(-60px) rotate(-36deg);
+}
+
+.circle-of-balls__ball-2 {
+  -webkit-transform: rotate(72deg) translateY(-60px) rotate(-72deg);
+      -ms-transform: rotate(72deg) translateY(-60px) rotate(-72deg);
+          transform: rotate(72deg) translateY(-60px) rotate(-72deg);
+}
+
+.circle-of-balls__ball-3 {
+  -webkit-transform: rotate(108deg) translateY(-60px) rotate(-108deg);
+      -ms-transform: rotate(108deg) translateY(-60px) rotate(-108deg);
+          transform: rotate(108deg) translateY(-60px) rotate(-108deg);
+}
+
+.circle-of-balls__ball-4 {
+  -webkit-transform: rotate(144deg) translateY(-60px) rotate(-144deg);
+      -ms-transform: rotate(144deg) translateY(-60px) rotate(-144deg);
+          transform: rotate(144deg) translateY(-60px) rotate(-144deg);
+}
+
+.circle-of-balls__ball-5 {
+  -webkit-transform: rotate(180deg) translateY(-60px) rotate(-180deg);
+      -ms-transform: rotate(180deg) translateY(-60px) rotate(-180deg);
+          transform: rotate(180deg) translateY(-60px) rotate(-180deg);
+}
+
+.circle-of-balls__ball-6 {
+  -webkit-transform: rotate(216deg) translateY(-60px) rotate(-216deg);
+      -ms-transform: rotate(216deg) translateY(-60px) rotate(-216deg);
+          transform: rotate(216deg) translateY(-60px) rotate(-216deg);
+}
+
+.circle-of-balls__ball-7 {
+  -webkit-transform: rotate(252deg) translateY(-60px) rotate(-252deg);
+      -ms-transform: rotate(252deg) translateY(-60px) rotate(-252deg);
+          transform: rotate(252deg) translateY(-60px) rotate(-252deg);
+}
+
+.circle-of-balls__ball-8 {
+  -webkit-transform: rotate(288deg) translateY(-60px) rotate(-288deg);
+      -ms-transform: rotate(288deg) translateY(-60px) rotate(-288deg);
+          transform: rotate(288deg) translateY(-60px) rotate(-288deg);
+}
+
+.circle-of-balls__ball-9 {
+  -webkit-transform: rotate(324deg) translateY(-60px) rotate(-324deg);
+      -ms-transform: rotate(324deg) translateY(-60px) rotate(-324deg);
+          transform: rotate(324deg) translateY(-60px) rotate(-324deg);
+}
+
+.circle-of-balls__ball-10 {
+  -webkit-transform: rotate(360deg) translateY(-60px) rotate(-360deg);
+      -ms-transform: rotate(360deg) translateY(-60px) rotate(-360deg);
+          transform: rotate(360deg) translateY(-60px) rotate(-360deg);
+}
+
+.ball-active {
+  opacity: .5;
+}
+
+.circle-gradient {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.circle-gradient__wrapper {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  background: -webkit-gradient(linear, left top, right top, from(#04d6d0), color-stop(#02fa14), color-stop(#bfd604), to(#d62404));
+  background: -o-linear-gradient(left, #04d6d0, #02fa14, #bfd604, #d62404);
+  background: linear-gradient(to right, #04d6d0, #02fa14, #bfd604, #d62404);
+  position: relative;
+  -webkit-animation: circle-gradient 1s linear infinite;
+          animation: circle-gradient 1s linear infinite;
+}
+
+.circle-gradient__inner {
+  position: absolute;
+  width: 85px;
+  height: 85px;
+  background: #fff;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@-webkit-keyframes circle-gradient {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes circle-gradient {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.shadow-gradient {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.shadow-gradient__inner {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px -8px 3px #e90d0d, 8px 0px 3px #0ac7f1, 0px 8px 3px #16bd13, -8px 0px 3px #e9cd0d;
+          box-shadow: 0px -8px 3px #e90d0d, 8px 0px 3px #0ac7f1, 0px 8px 3px #16bd13, -8px 0px 3px #e9cd0d;
+  -webkit-animation: circle-shadow 1s linear infinite;
+          animation: circle-shadow 1s linear infinite;
+}
+
+@-webkit-keyframes circle-shadow {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes circle-shadow {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}

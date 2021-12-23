@@ -1,0 +1,36 @@
+.active {
+  background: #38FFFF;
+  color: #fff;
+}
+
+.btns-wrapper {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.btns-wrapper .btns {
+  width: 300px;
+  height: 300px;
+  margin: 15px;
+  border: none;
+  border-radius: 2px;
+  background: #055fe7;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.count-cont {
+  position: absolute;
+  left: 50%;
+  top: 50px;
+  color: #00ff00;
+}

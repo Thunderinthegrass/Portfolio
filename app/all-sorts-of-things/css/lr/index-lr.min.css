@@ -1,0 +1,71 @@
+body {
+  color: #fff;
+  background: #fff;
+}
+
+.container {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.container .lr {
+  width: 300px;
+  height: 300px;
+  background: #000;
+  margin: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+  cursor: pointer;
+}
+
+.container .lr:hover {
+  -webkit-transform: perspective(300px) scale(1.2);
+          transform: perspective(300px) scale(1.2);
+  background: #ece311;
+}
+
+.container .lr-1 {
+  background: #1ccbb1;
+}
+
+.container .lr-2 {
+  background: #ec0e79;
+}
+
+.container .lr a {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 150px;
+  font-weight: bold;
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../../css/style.min.css">
+  <link rel="stylesheet" href="../../css/algorithms/binary-search.min.css">
+  <title>binary-search</title>
+</head>
+<body>
+
+<section class="binary-search algorithms-section">
+  <h3 class="h3">Linear search</h3>
+  <div class="binary-search__arr"></div>
+  <div class="binary-search__result"></div>
+</section>
+<pre class="t1">
+const arr = [1,2,3,4,5,6,7,8];  <br>
+<br>
+
+function searchElement(arr, elem) {  <br>
+  for (let i = 0; i < arr.length; i++) {<br>
+    if (arr[i] === elem) {  <br>
+      return i;  <br>
+    }  <br>
+  }  <br>
+  return -1;  <br>
+}  <br>
+console.log(searchElement(arr, 5));  <br>
+</pre>
+<span class="t1-inner"></span>
+<!-- // linear search
+function searchElement(arr, elem) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === elem) {
+      return i;
+    }
+  }
+  return -1;
+}
+console.log(searchElement(arr, 5));
+
+//binary search
+function binarySearch(arr, elem) {
+  let left = -1;
+  let right = arr.length;//8
+
+  while ((right - left) > 1) {
+    const mid = Math.floor((left + right) / 2);//3
+
+    if (arr[mid] === elem) {
+      return mid;
+    }
+    if (arr[mid] > elem) {
+      right = mid;
+    }
+    else {
+      left = mid;
+    }
+  }
+  return -1;
+}
+console.log(binarySearch(arr, 8));
+
+
+const arr1 = [1,12,15,8,17,2,4,9,3,3,3,12,8,3,4,5,3,3,4,9,2,3];
+arr1.sort((a, b) => a - b);
+// console.log(arr1);
+
+function countFreq(arr, el) {
+  const posEl = binarySearch(arr, el);
+
+  if (posEl === -1) {
+    return 0;
+  }
+
+  let i = posEl;
+  while (arr[i] === el) {
+    i--;
+  }
+
+  let j = posEl;
+  while (arr[j] === el) {
+    j++;
+  }
+
+  return j - i - 1;
+}
+
+console.log(countFreq(arr1, 3));
+
+
+// counter of letters in a line
+let x = 'aaabbbcccdfff';
+let y = 'eeerrrtttflglllllllltotoottitttpeeeeeeggg';
+let x1 = '';
+let count = 0;
+
+function countStr(str) {
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === str[i+1]) {
+      count++;
+    }
+    else{
+      if (count == 0) {
+        x1 += `${str[i]} `;
+      }
+      else{
+        x1 += `${str[i] + (count + 1)} `;
+        count = 0;
+      }
+    }
+  }
+  console.log(x1);
+}
+countStr(y); -->
+
+
+  <script src="../../js/algorithms/binary-search.js"></script>
+</body>
+</html>

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лабораторные работы</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;300;400;500;800&display=swap"
+  rel="stylesheet">
+  <link rel="stylesheet" href="../../css/lr/lr.min.css">
+  <link rel="stylesheet" href="../../css/style.min.css">
+  <link
+  href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+  rel="stylesheet">
+</head>
+
+<body>
+  <div class="logo">
+    <a href="index-lr.html">Back</a>
+  </div>
+  <h1 class="main-title">Лабораторная работа 2</h1>
+  <section class="begin">
+    <div class="container">
+      <h2>Основы работы с DOM в JavaScript</h2>
+
+      <div class="task task-1">
+        <h3>Задание 1</h3>
+        <p>Создать вэб-страничку с кнопкой "Нажми меня". При нажатии на кнопку должно выдаваться сообщение "Привет!".</p>
+        <button class="btn btn-1">Жмяк</button>
+      </div>
+
+      <div class="task task-2">
+        <h3>Задание 2</h3>
+        <p>Создать вэб-страничку с кнопкой "Нажми меня" и полем ввода, содержащим текст "???". При нажатии на кнопку текст в поле ввода должен замениться на "!!!"</p>
+        <button class="btn btn-2">Жмяк</button>
+        <div class="out out-2">???</div>
+      </div>
+
+      <!-- <div class="task task-3">
+      <h3>Задание 3</h3>
+      <p>Сделать веб-страничку, в которой двум переменным пользователь присвоит числовые значения, а затем выведет на экран с поясняющей надписью - произведение этих переменных, потом сумму этих переменных. Например, "Произведение 2 и 3 равно 6. Сумма 2 и 3 равно 5".</p>
+      <input type="text" class="inp inp-3" placeholder="Введите переменную a">
+      <input type="text" class="inp inp-3" placeholder="Введите переменную b">
+      <button class="btn btn-3">Жмяк</button>
+      <div class="out out-3"></div>
+    </div> -->
+
+    <div class="task task-4">
+      <h3>Задание 4</h3>
+      <p>Создать вэб-страничку с кнопкой "Нажми меня" и полем ввода, содержащим число. При нажатии на кнопку вывести сообщение с квадратом введённого числа, если число не введено - сообщить "Ошибка ввода!"</p>
+      <input type="text" class="inp inp-4" placeholder="Введите число">
+      <button class="btn btn-4">Жмяк</button>
+      <div class="out out-4"></div>
+    </div>
+
+    <div class="task task-5">
+      <h3>Задание 5</h3>
+      <p>Создать вэб-страничку с кнопкой "Нажми меня" и двумя полями ввода, содержащими произвольный текст. По нажатию на кнопку тексты в полях ввода должны меняться.</p>
+      <input type="text" class="inp inp-5" placeholder="Введите текст">
+      <input type="text" class="inp inp-5" placeholder="Введите текст">
+      <button class="btn btn-5">Жмяк</button>
+    </div>
+    <div class="task task-6">
+      <h3>Задание 6</h3>
+      <p>Создать вэб-страничку с кнопкой "Нажми меня". При каждом нажатии в кнопке должно отображаться сколько раз ее нажали.</p>
+      <button class="btn btn-6">Жмяк</button>
+      <div class="out out-6"></div>
+    </div>
+    <!-- <div class="task task-7">
+    <h3>Задание 7</h3>
+    <p>Сделать страничку, в которой пользователь вводит целое число, если число равно нулю, то должно вывести сообщение "ноль" Пример - введено число 0 - вывод "ноль".</p>
+    <input type="text" class="inp inp-7" placeholder="Введите число">
+    <button class="btn btn-7">Жмяк</button>
+    <div class="out out-7"></div>
+  </div> -->
+  <div class="task task-8">
+    <h3>Задание 8</h3>
+    <p>Создать вэб-страничку с кнопками "Заблокировать" и "Разблокировать" и поле ввода с произвольным тестом. При нажатии на "Заблокировать" должно блокироваться поле для ввода, "Разблокировать" - поле для ввода должно становиться доступным для ввода.</p>
+    <input type="text" class="inp inp-8" placeholder="Введите что-нибудь">
+    <button class="btn btn-8">Заблокировать</button>
+    <button class="btn btn-8">Разблокировать</button>
+  </div>
+  <div class="task task-9">
+    <h3>Задание 9</h3>
+    <p>Создать вэб-страничку с абзацем (тег P), при клике мышкой должно появиться сообщение.</p>
+    <p class="p-9">Нажимать сюда</p>
+  </div>
+  <div class="task task-10">
+    <h3>Задание 10</h3>
+    <p>Так же как и в 9 задаче, сообщение должно появиться при наведении курсора мыши и его убирании в сторону от выделенной области.</p>
+    <p class="p-10">Наведите мышкой</p>
+  </div>
+  <div class="task task-11">
+    <h3>Задание 11</h3>
+    <p>Создать вэб-страничку с выделенной областью, содержащую картинку и кнопку. При нажатию на кнопку картинка должна меняться.</p>
+    <div class="img-wrapper">
+      <img src="img/1.jpg" alt="Закат" class="img-11">
+    </div>
+    <button class="btn btn-11">Жмяк</button>
+  </div>
+  <div class="task task-12">
+    <h3>Задание 12</h3>
+    <p>Создать вэб-страничку с полем ввода, содержащим произвольный текст. При нажатии на поле ввода должно выводится сообщение с текстом поля ввода. (использование this)</p>
+    <input type="text" class="inp inp-12">
+    <div class="out out-12"></div>
+  </div>
+  <div class="task task-13">
+    <h3>Задание 13</h3>
+    <p>Создать вэб-страничку с кнопкой "Нажми меня". При нажатии на кнопку текст меняется на "Меня больше не нажать" и кнопка должна заблокироваться. (this)</p>
+    <button class="btn btn-13">Жмяк</button>
+  </div>
+  <div class="task task-14">
+    <h3>Задание 14</h3>
+    <p>Создать вэб-страничку с кнопкой "Нажми меня" и полем тега SPAN с произвольным текстом. При нажатии на кнопку текст должен стать "жирным" (тег B). (Знание outerHTML,  innerHTML)</p>
+    <button class="btn btn-14">Жмяк</button>
+    <span class="out out-14">Немного текста</span>
+  </div>
+  <div class="task task-15">
+    <h3>Задание 15</h3>
+    <p>Дан HTML код. Поменяйте содержимое абзацев на их порядковый номер в коде (создать кнопку с событием).</p>
+    <div class="code-img-wrapper">
+      <img src="img/code.jpg" alt="HTML-код">
+    </div>
+    <h2>Заголовок, не поменяется.</h2>
+    <p class="p-15">Абзац, поменяется.</p>
+    <p class="p-15">Абзац, поменяется.</p>
+    <p class="p-15">Абзац, поменяется.</p>
+    <button class="btn btn-15">Жмяк</button>
+  </div>
+  <div class="task task-16">
+    <h3>Задание 16</h3>
+    <p>Дан HTML код. Поменяйте содержимое элементов с классом zzz на их порядковый номер в коде (создайте кнопку).</p>
+    <div class="code-img-wrapper">
+      <img src="img/code-1.jpg" alt="HTML-код">
+    </div>
+    <h2 class="zzz">Заголовок с классом zzz.</h2>
+    <p class="zzz">Абзац с классом zzz.</p>
+    <p class="zzz">Абзац с классом zzz.</p>
+    <p>Просто абзац, не поменяется.</p>
+    <button class="btn btn-16">Жмяк</button>
+  </div>
+  <div class="task task-17">
+    <h3>Задание 17</h3>
+    <p>Дан HTML код. Поменяйте содержимое абзацев с классом zzz на их порядковый номер в коде.</p>
+    <div class="code-img-wrapper">
+      <img src="img/code-2.jpg" alt="HTML-код">
+    </div>
+    <h2 class="zzz">Заголовок с классом zzz, не поменяется.</h2>
+    <p class="zzz">Абзац с классом zzz.</p>
+    <p class="zzz">Абзац с классом zzz.</p>
+    <p>Просто абзац, не поменяется.</p>
+    <button class="btn btn-17">Жмяк</button>
+  </div>
+  <div class="task task-18">
+    <h3>Задание 18</h3>
+    <p>Создать вэб-страничку с кнопкой "Нажми меня". При нажатии на кнопку выводится текущие день, месяц и год в формате 'год-месяц-день'. (вам понадобятся следующие методы объекта Date: getFullYear, getMonth, getDate, getHours, getMinutes, getSeconds.)</p>
+    <button class="btn btn-18">Жмяк</button>
+    <div class="out out-18"></div>
+  </div>
+  <div class="task task-19">
+    <h3>Задание 19</h3>
+    <p>Создать вэб-страничку с кнопкой "Нажми меня". При нажатии на кнопку выводится текущий месяц по-русски.</p>
+    <button class="btn btn-19">Жмяк</button>
+    <div class="out out-19"></div>
+  </div>
+  <div class="task task-20">
+    <h3>Задание 20</h3>
+    <p>Создать вэб-страничку с кнопкой "Нажми меня". При нажатии на кнопку выводится сообщение - текущее время и дата в формате '12:59:59 31.01.2021'. Для решения этой задачи напишите функцию, которая будет добавлять 0 перед днями и месяцами, которые состоят из одной цифры (из 1.1.2021 сделает 01.01.2021)</p>
+    <button class="btn btn-20">Жмяк</button>
+    <div class="out out-20"></div>
+  </div>
+  <div class="task task-21">
+    <h3>Задание 21</h3>
+    <p>
+      Создать вэб-страничку с кнопкой "Нажми меня". При нажатии на кнопку выводится сообщение - номер текущего дня недели. (метод getDay)
+    </p>
+    <button class="btn btn-21">Жмяк</button>
+    <div class="out out-21"></div>
+  </div>
+  <div class="task task-22">
+    <h3>Задание 22</h3>
+    <p>Создать вэб-страничку с кнопкой "Нажми меня". При нажатии на кнопку выводится сообщение - Выведите на экран количество часов, прошедшее между 1 марта 1988 года и текущим моментом с помощью Date.parse.</p>
+    <button class="btn btn-22">Жмяк</button>
+    <div class="out out-22"></div>
+  </div>
+  <div class="task task-23">
+    <h3>Задание 23</h3>
+    <p>Создать вэб-страничку с кнопкой "Нажми меня". При нажатии на кнопку выводится сообщение - количество секунд, которое осталось до конца дня.</p>
+    <button class="btn btn-23">Жмяк</button>
+    <div class="out out-23"></div>
+  </div>
+  <div class="task task-24">
+    <h3>Задание 24</h3>
+    <p>Создать вэб-страничку с тикающими часами.</p>
+    <div class="clock-wrapper">
+      <div class="clock">
+        <div class="hour">
+          <div class="hr" id="hr"></div>
+        </div>
+        <div class="min">
+          <div class="mn" id="mn"></div>
+        </div>
+        <div class="sec">
+          <div class="sc" id="sc"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="task task-25">
+    <h3>Задание 25</h3>
+    <p>Создать вэб-страничку со слайдером - циклично меняющимися картинками, не менее трех.</p>
+    <div class="img1-wrapper">
+      <img src="img/1.jpg" alt="Закат" class="img-25">
+    </div>
+  </div>
+  <div class="task task-26">
+    <h3>Задание26</h3>
+    <p>Создать "карусель" картинок - три картинки подряд в одну линию, каждую секунду последовательно меняющиеся местами. (smiley)(sad)(wink) >(sad)(wink)(smiley)>(wink)(smiley)(sad)>(smiley)(sad)(wink)</p>
+    <div class="wrapper-26">
+      <div class="wrapper4">
+        <img src="img/4.jpg" alt="Закат2" class="img-26-4">
+      </div>
+      <div class="wrapper3">
+        <img src="img/3.jpg" alt="Закат2" class="img-26-3">
+      </div>
+      <div class="wrapper2">
+        <img src="img/2.jpg" alt="Закат1" class="img-26-2">
+      </div>
+      <div class="wrapper1">
+        <img src="img/1.jpg" alt="Закат1" class="img-26-1">
+      </div>
+    </div>
+  </div>
+  <div class="task task-27">
+    <h3>Задание 27</h3>
+    <p>Создать вэб-страничку с отсчетом до полуночи сегодняшнего дня. (в произвольной форме)</p>
+    <div class="out out-27"></div>
+  </div>
+  <div class="task task-28">
+    <h3>Задание 28</h3>
+    <p>Даны картинки. Привяжите к каждой картинке событие, чтобы по клику на картинку алертом выводился ее src. (elem.onclick)</p>
+    <div class="wrapper-28">
+      <div class="wrapper4">
+        <img src="img/4.jpg" alt="Закат2" class="img-28">
+      </div>
+      <div class="wrapper3">
+        <img src="img/3.jpg" alt="Закат2" class="img-28">
+      </div>
+      <div class="wrapper2">
+        <img src="img/2.jpg" alt="Закат1" class="img-28">
+      </div>
+      <div class="wrapper1">
+        <img src="img/1.jpg" alt="Закат1" class="img-28">
+      </div>
+    </div>
+  </div>
+  <div class="task task-29">
+    <h3>Задание 29</h3>
+    <p>Даны ссылки. Привяжите всем ссылкам событие - по наведению на ссылку в атрибут title запишется ее текст.</p>
+    <a href="lr.html" class="link-29">Первая ссылка</a>
+    <a href="index-lr.html" class="link-29">Вторая ссылка</a>
+    <a href="https://www.youtube.com/" class="link-29">Третья ссылка</a>
+  </div>
+  <div class="task task-30">
+    <h3>Задание 30</h3>
+    <p>Привяжите всем ссылкам событие - по наведению на ссылку в конец ее текста дописывается ее href в круглых скобках</p>
+    <a href="lr.html" class="link-30">Первая ссылка</a>
+    <a href="index-lr.html" class="link-30">Вторая ссылка</a>
+    <a href="https://www.youtube.com/" class="link-30">Третья ссылка</a>
+  </div>
+  <div class="task task-31">
+    <h3>Задание 31</h3>
+    <p>Дополните предыдущую задачу: после первого наведению на ссылку следует отвязать от нее событие, которое добавляет href в конец текста</p>
+    <a href="lr.html" class="link-31">Первая ссылка</a>
+    <a href="index-lr.html" class="link-31">Вторая ссылка</a>
+    <a href="https://www.youtube.com/" class="link-31">Третья ссылка</a>
+  </div>
+  <div class="task task-32">
+    <h3>Задание 32</h3>
+    <p> Привяжите всем полям ввода следующее событие - по потери фокуса каждое поле ввода выводит свое value в абзац с id="test".</p>
+    <input type="text" class="inp inp-32" value="1" placeholder="Введите что-нибудь">
+    <input type="text" class="inp inp-32" value="2" placeholder="Введите что-нибудь">
+    <input type="text" class="inp inp-32" value="3" placeholder="Введите что-нибудь">
+    <div class="out out-32"></div>
+  </div>
+  <div class="task task-33">
+    <h3>Задание 33</h3>
+    <p>Для всех полей ввода сделайте так, чтобы они выводили свой value сообщением при нажатии на любой из них, но только по первому нажатию. Повторное нажатие на поле ввода не должно вызывать реакции.</p>
+    <input type="text" class="inp inp-33" value="1" placeholder="Введите что-нибудь">
+    <input type="text" class="inp inp-33" value="2" placeholder="Введите что-нибудь">
+    <input type="text" class="inp inp-33" value="3" placeholder="Введите что-нибудь">
+    <div class="out out-33"></div>
+  </div>
+  <div class="task task-34">
+    <h3>Задание 34</h3>
+    <p>Даны абзацы с числами. По нажатию на абзац в нем должен появится квадрат числа, которое он содержит.</p>
+    <div class="out out-34">5</div>
+    <div class="out out-34">7</div>
+    <div class="out out-34">12</div>
+  </div>
+  <div class="task task-35">
+    <h3>Задание 35</h3>
+    <p>Даны поля ввода (3). Сделайте так, чтобы все поля ввода по потери фокуса проверяли свое содержимое на правильное количество символов. Сколько символов должно быть в поле, указывается в атрибуте data-length. Если вбито правильное количество, то граница поля становится зеленой, если неправильное - красной.</p>
+    <input type="text" class="inp inp-35" data-length="8" placeholder="Введите что-нибудь">
+    <input type="text" class="inp inp-35" data-length="10" placeholder="Введите что-нибудь">
+    <input type="text" class="inp inp-35" data-length="12" placeholder="Введите что-нибудь">
+  </div>
+  <div class="task task-36">
+    <h3>Задание 36</h3>
+    <p>Даны несколько тегов DIV. По первому нажатию на каждый див он красится красным фоном, по второму красится обратно и так далее каждый клик происходит чередование фона. Сделайте так, чтобы было две функции: одна красит в красный цвет, другая в зеленый и они сменяли друг друга через removeEventListener</p>
+    <div class="out out-36"></div>
+    <div class="out out-36"></div>
+    <div class="out out-36"></div>
+  </div>
+  <h2>Задачи с классами:</h2>
+  <div class="task task-37">
+    <h3>Задание 37-42</h3>
+    <p>37. Дан элемент #elem. Добавьте ему класс www.</p>
+    <p>38. Дан элемент #elem. Удалите у него класс www.</p>
+    <p>39. Дан элемент #elem. Проверьте наличие у него класса www.</p>
+    <p>40. Дан элемент #elem. Добавьте ему класс www, если его нет и удалите - если есть.</p>
+    <p>41. Дан элемент #elem. Узнайте количество его классов.</p>
+    <p>42. Дан элемент #elem. Выведите последовательно сообщением его классы.</p>
+    <div id="elem">Элемент #elem</div>
+    <div class="out out-37"></div>
+  </div>
+  <h2>Задачи на работу с css:</h2>
+  <div class="task task-43">
+    <h3>Задание 43</h3>
+    <p>Дан элемент #elem. Сделайте его красного цвета, размером 30px, добавьте ему границу. Решите задачу с помощью свойства cssText.</p>
+    <div class="out out-43"></div>
+  </div>
+  <h2>Теперь на tagName:</h2>
+  <div class="task task-44">
+    <h3>Задание 44</h3>
+    <p>Дан элемент #elem. По клику на него выведите название его тега.</p>
+    <div class="out out-44"></div>
+  </div>
+  <div class="task task-45">
+    <h3>Задание 45</h3>
+    <p>Дан элемент #elem. По клику на него выведите название его тега в нижнем регистре.</p>
+    <div class="out out-45"></div>
+  </div>
+  <div class="task task-46">
+    <h3>Задание 46</h3>
+    <p>Даны элементы с классом www. Добавьте каждому элементу в конец название его тега в нижнем регистре.</p>
+    <button class="btn btn-46 www46">Жмяк</button>
+    <div class="out out-46 www46"></div>
+  </div>
+  <h2>Вставка элементов через appendChild. Для решения задач данного блока вам понадобятся следующие методы: createElement, appendChild.</h2>
+  <div class="task task-47">
+    <h3>Задание 47</h3>
+    <p>Дан ol. Вставьте ему в конец li с текстом 'пункт'.</p>
+    <button class="btn btn-47">Жмяк</button>
+    <ol class="out out-47">
+      <li>12</li>
+      <li>230</li>
+    </ol>
+  </div>
+  <div class="task task-48">
+    <h3>Задание 48</h3>
+    <p>Дан ul. Дан массив. Вставьте элементы этого массива в конец ul так, чтобы каждый элемент стоял в своем li.</p>
+    <button class="btn btn-48">Жмяк</button>
+    <ul class="out out-48"></ul>
+  </div>
+  <h2>Потомки. Для решения задач данного блока вам понадобятся следующие свойства: firstElementChild, lastElementChild, children.</h2>
+  <div class="task task-49">
+    <h3>Задание 49</h3>
+    <p>Дан элемент #elem. Найдите первого потомка этого элемента и сделайте его текст красного цвета.</p>
+    <button class="btn btn-49">Жмяк</button>
+    <div class="out out-49"></div>
+  </div>
+  <div class="task task-50">
+    <h3>Задание 50</h3>
+    <p>Дан элемент #elem. Найдите последнего потомка этого элемента и сделайте его текст красного цвета.</p>
+    <button class="btn btn-50">Жмяк</button>
+    <p class="out out-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam aut sequi, sint perferendis harum adipisci inventore temporibus commodi molestiae libero a, modi dolore accusantium autem. Pariatur excepturi numquam facere earum.>Maxime porro, beatae a veritatis dignissimos neque! Doloribus quas vel odit temporibus ipsam assumenda perspiciatis animi rerum mollitia, culpa hic fugit repellendus dignissimos sit in, veniam officiis perferendis voluptatum consectetur!
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam aut sequi, sint perferendis harum adipisci inventore temporibus commodi molestiae libero a, modi dolore accusantium autem. Pariatur excepturi numquam facere earum.>Maxime porro, beatae a veritatis dignissimos neque! Doloribus quas vel odit temporibus ipsam assumenda perspiciatis animi rerum mollitia, culpa hic fugit repellendus dignissimos sit in, veniam officiis perferendis voluptatum consectetur!
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam aut sequi, sint perferendis harum adipisci inventore temporibus commodi molestiae libero a, modi dolore accusantium autem. Pariatur excepturi numquam facere earum.>Maxime porro, beatae a veritatis dignissimos neque! Doloribus quas vel odit temporibus ipsam assumenda perspiciatis animi rerum mollitia, culpa hic fugit repellendus dignissimos sit in, veniam officiis perferendis voluptatum consectetur!
+    </p>
+  </div>
+  <div class="task task-51">
+    <h3>Задание 51</h3>
+    <p>Дан элемент #elem. Найдите всех потомков этого элемента и добавьте им в конец текст '!'.</p>
+    <button class="btn btn-51">Жмяк</button>
+    <div class="out out-51"></div>
+  </div>
+  <h2>Соседи. Для решения задач данного блока вам понадобятся следующие свойства: previousElementSibling, nextElementSibling.</h2>
+  <div class="task task-52">
+    <h3>Задание 52</h3>
+    <p>Дан элемент #elem. Найдите его соседа сверху и добавьте ему в конец текст '!'.</p>
+    <button class="btn btn-52">Жмяк</button>
+    <div class="out out-52"></div>
+  </div>
+  <div class="task task-53">
+    <h3>Задание 53</h3>
+    <p>Дан элемент #elem. Найдите его соседа снизу и добавьте ему в конец текст '!'.</p>
+    <button class="btn btn-53">Жмяк</button>
+    <div class="out out-53"></div>
+  </div>
+  <div class="task task-54">
+    <h3>Задание 54</h3>
+    <p>Дан элемент #elem. Найдите его соседа снизу его соседа снизу (следующий элемент за соседним) и добавьте ему в конец текст '!'.</p>
+    <button class="btn btn-54">Жмяк</button>
+    <div class="out out-54"></div>
+    <div class="out out-54"></div>
+  </div>
+  <h2>Родители. Для решения задач данного блока вам понадобятся следующие свойства: parentElement, parentNode.</h2>
+  <div class="task task-55">
+    <h3>Задание 55</h3>
+    <p>Дан элемент #elem. Найдите его родителя и покрасьте его в красный цвет.</p>
+    <button class="btn btn-55">Жмяк</button>
+    <div class="out out-55"></div>
+  </div>
+  <div class="task task-56">
+    <h3>Задание 56</h3>
+    <p>Дан элемент #elem. Найдите родителя его родителя и покрасьте его в красный цвет.</p>
+    <button class="btn btn-56">Жмяк</button>
+    <div class="out out-56"></div>
+  </div>
+  <h2>Метрики windows</h2>
+  <div class="task task-57">
+    <h3>Задание57</h3>
+    <p>Дана кнопка. По нажатию на эту кнопку выведите высоту окна браузера.</p>
+    <button class="btn btn-57">Жмяк</button>
+    <div class="out out-57"></div>
+  </div>
+  <div class="task task-58">
+    <h3>Задание 58</h3>
+    <p>Дана кнопка. По нажатию на эту кнопку прокрутите окно браузера до самого низа.</p>
+    <button class="btn btn-58">Жмяк</button>
+    <div class="out out-58"></div>
+  </div>
+  <div class="task task-59">
+    <h3>Задание 59</h3>
+    <p>Дана кнопка. По нажатию на эту кнопку узнайте, есть ли у окна браузера вертикальная прокрутка.</p>
+    <button class="btn btn-59">Жмяк</button>
+    <div class="out out-59"></div>
+  </div>
+  <h2>Объект Event</h2>
+  <div class="task task-60">
+    <h3>Задание 60</h3>
+    <p></p>
+    <input class="inp inp-60" placeholder="Текст вводить сюда"></input>
+    <div class="out out-60"></div>
+  </div>
+  <div class="task task-61">
+    <h3>Задание 61</h3>
+    <p>Дан элемент. Сделайте так, чтобы по клику на него он красился в красный цвет, но только если в момент клика нажата клавиша Ctrl</p>
+    <button class="btn btn-61">Жмяк</button>
+  </div>
+  <div class="task task-62">
+    <h3>Задание 62</h3>
+    <p>Дан элемент. Сделайте так, чтобы при клике на него и нажатой клавише Ctrl - в его текст записывалось '1', при нажатой клавише Alt - '2', а при нажатой клавише Shift - '3'</p>
+    <button class="btn btn-62">Жмяк</button>
+    <div class="out out-62"></div>
+  </div>
+</div>
+</div>
+</section>
+</div>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- <script src="js/libs.min.js"></script> -->
+<script src="../../js/lr/lr-2.js"></script>
+</body>
+
+</html>

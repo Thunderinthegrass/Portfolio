@@ -1,0 +1,21 @@
+.wrapper {
+  position: relative;
+}
+
+.closures-title {
+  color: #e04747;
+  font-size: 25px;
+  font-weight: bold;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.out, .out-1, .out-2 {
+  width: 100%;
+  height: 50px;
+  font-size: 35px;
+  line-height: 50px;
+  background: #fff;
+  text-align: center;
+  margin: 10px 0;
+}

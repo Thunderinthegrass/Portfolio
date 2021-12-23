@@ -1,0 +1,29 @@
+body {
+  background: #282C34;
+  color: #ABB2BF;
+  font-size: 14px;
+  padding: 0 150px;
+}
+
+.purple {
+  color: #C678DD;
+}
+
+.binary-search {
+  padding: 20px 0;
+}
+
+.algorithms-section {
+  border-bottom: 1px solid;
+  border-top: 1px solid;
+  border-color: #ABB2BF;
+}
+
+.t1 {
+  display: none;
+}
+
+.t1-inner {
+  font-family: monospace, monospace;
+  color: #fff;
+}

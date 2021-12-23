@@ -1,0 +1,108 @@
+.recursion-body {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.rect {
+  height: 100px;
+  width: 100px;
+  background: #33dde0;
+  display: inline-block;
+}
+
+.recursion-wrapper {
+  width: 800px;
+  height: 800px;
+  border: 20px solid #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.recursion-item {
+  width: 10px;
+  height: 10px;
+  border: 20px solid #fff;
+  position: absolute;
+  background-image: url(../../img/pumpkins/pumpkin-1.svg);
+}
+
+.tunnel-wrapper {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.tunnel__item {
+  width: 50px;
+  height: 50px;
+  border: 35px solid transparent;
+  border-radius: 50%;
+  position: absolute;
+  -webkit-transform: translate(200px, 200px);
+      -ms-transform: translate(200px, 200px);
+          transform: translate(200px, 200px);
+  -webkit-animation: tunnel__item 3s linear 1;
+          animation: tunnel__item 3s linear 1;
+}
+
+@-webkit-keyframes tunnel__item {
+  0% {
+  }
+  5% {
+    border: 20px solid #252530;
+  }
+  30% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    width: 150vw;
+    height: 150vw;
+    border: 190px  solid #68687d;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+@keyframes tunnel__item {
+  0% {
+  }
+  5% {
+    border: 20px solid #252530;
+  }
+  30% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    width: 150vw;
+    height: 150vw;
+    border: 190px  solid #68687d;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}

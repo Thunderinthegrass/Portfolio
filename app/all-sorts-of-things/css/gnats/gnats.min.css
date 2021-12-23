@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  background-color: #838668;
+  background-color: #050a36;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+}
+
+.gw-parts-scene {
+  width: 20vw;
+  height: 80vh;
+  overflow: hidden;
+  position: relative;
+  overflow: visible;
+}
+
+.gw-part {
+  background-color: white;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: calc(50% - 10px);
+  left: calc(50% - 10px);
+  -webkit-transform: translateX(0) translateY(0);
+      -ms-transform: translateX(0) translateY(0);
+          transform: translateX(0) translateY(0);
+  -webkit-transition-timing-function: linear;
+       -o-transition-timing-function: linear;
+          transition-timing-function: linear;
+  /* transition-delay: 500ms; */
+}
+
+.gw-part__item {
+  content: "";
+  display: block;
+  background-color: white;
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+  overflow: hidden;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  -webkit-transition-timing-function: ease-in;
+       -o-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+}

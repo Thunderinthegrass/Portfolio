@@ -1,0 +1,32 @@
+body {
+  padding: 30px;
+  background: #282C34;
+}
+
+.algorithms {
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.algorithms__menu-link {
+  display: inline-block;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #8AB070;
+  -webkit-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s;
+}
+
+.algorithms__menu-link:hover {
+  color: #E06C75;
+}
