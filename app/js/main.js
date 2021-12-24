@@ -363,7 +363,42 @@ colorThemeLabel[0].addEventListener('click', colorThemeLight);
 colorThemeLabel[1].addEventListener('click', colorThemeDark);
 colorThemeLabel[2].addEventListener('click', colorThemeColorful);
 
+function fireworks() {
+  let newYear = document.querySelector('.new-year');
 
+  function createElem() {
+    let red = Math.round(Math.random(1) * 255);
+    let green = Math.round(Math.random(1) * 255);
+    let blue = Math.round(Math.random(1) * 255);
+
+    let posLeft = Math.round(Math.random(1) * 90);
+    let posTop = Math.round(Math.random(1) * 90);
+
+
+
+    let z = document.createElement('div');
+    z.classList.add('async-elem');
+    newYear.appendChild(z);
+    z.style.left = `${posLeft}%`;
+    z.style.top = `${posTop}%`;
+    z.style.background = `rgb(${red}, ${green}, ${blue})`;
+    // if (red < 255 && green < 255 && blue < 255) {
+      // red++;
+      // green++;
+      // blue++;
+    // }
+  }
+
+  setInterval(createElem, 1000);
+
+
+  setTimeout(function() {
+    setInterval(function() {
+      newYear.firstChild.remove();
+    }, 1000);
+  },4000)
+}
+fireworks();
 
 
 

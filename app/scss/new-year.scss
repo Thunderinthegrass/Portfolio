@@ -1,0 +1,70 @@
+.new-year {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  right: 60px;
+  top: 10px;
+}
+.tree__wrapper {
+  height: 100px;
+  position: absolute;
+  right: 75px;
+  top: 10px;
+  img {
+    height: 100%;
+  }
+}
+p {
+  color: #aca4a4;
+  line-height: 25px;
+  font-size: 20px;
+  padding: 10px;
+}
+strong {
+  color: #fff;
+}
+.btn {
+  display: inline-block;
+  color: #fff;
+  padding: 10px;
+  background: #57d467;
+  margin-left: 50px;
+  border-radius: 2px;
+  cursor: pointer;
+  z-index: 1;
+}
+.async-title {
+  color: #9de047;
+  font-size: 25px;
+  font-weight: bold;
+  margin: 20px 0;
+  text-align: center;
+}
+.async-elem {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  position: absolute;
+  animation: firework 2s linear forwards;
+  // z-index: -1;
+}
+@keyframes firework {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+  }
+}
+.counter {
+  display: inline-block;
+  width: 100px;
+  height: 20px;
+  background: #fff;
+}
