@@ -1,0 +1,111 @@
+.garlang {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110px;
+  background: #09113d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.garlang__item {
+  position: relative;
+  width: 10px;
+  height: 20px;
+  border-radius: 0 0 5px 5px;
+  -webkit-animation: garlang 3s linear infinite;
+          animation: garlang 3s linear infinite;
+}
+
+.garlang__item::before {
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 5px;
+  top: 0;
+  left: 50%;
+  border-radius: 0 0 5px 5px;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.garlang__item:nth-child(4n+1) {
+  background: #fe4962;
+  -webkit-box-shadow: 3px 3px 12px #fe4961da, -3px -3px 12px #fe4961da, -3px 3px 12px #fe4961da, 3px -3px 12px #fe4961da;
+          box-shadow: 3px 3px 12px #fe4961da, -3px -3px 12px #fe4961da, -3px 3px 12px #fe4961da, 3px -3px 12px #fe4961da;
+}
+
+.garlang__item:nth-child(4n+1)::before {
+  background: #fda170;
+}
+
+.garlang__item:nth-child(4n+2) {
+  position: relative;
+  width: 10px;
+  height: 20px;
+  background: #23ff8f;
+  -webkit-box-shadow: 3px 3px 12px #7EFFAF, -3px -3px 12px #7EFFAF, -3px 3px 12px #7EFFAF, 3px -3px 12px #7EFFAF;
+          box-shadow: 3px 3px 12px #7EFFAF, -3px -3px 12px #7EFFAF, -3px 3px 12px #7EFFAF, 3px -3px 12px #7EFFAF;
+}
+
+.garlang__item:nth-child(4n+2)::before {
+  background: #98f7bc;
+}
+
+.garlang__item:nth-child(4n+3) {
+  position: relative;
+  width: 10px;
+  height: 20px;
+  background: #FEC308;
+  -webkit-box-shadow: 3px 3px 12px #fec508dc, -3px -3px 12px #fec508dc, -3px 3px 12px #fec508dc, 3px -3px 12px #fec508dc;
+          box-shadow: 3px 3px 12px #fec508dc, -3px -3px 12px #fec508dc, -3px 3px 12px #fec508dc, 3px -3px 12px #fec508dc;
+}
+
+.garlang__item:nth-child(4n+3)::before {
+  background: #f5ecce;
+}
+
+.garlang__item:nth-child(4n+4) {
+  position: relative;
+  width: 10px;
+  height: 20px;
+  background: #2ab5e8;
+  -webkit-box-shadow: 3px 3px 12px #89D2E7, -3px -3px 12px #89D2E7, -3px 3px 12px #89D2E7, 3px -3px 12px #89D2E7;
+          box-shadow: 3px 3px 12px #89D2E7, -3px -3px 12px #89D2E7, -3px 3px 12px #89D2E7, 3px -3px 12px #89D2E7;
+}
+
+.garlang__item:nth-child(4n+4)::before {
+  background: #89D2E7;
+}
+
+@-webkit-keyframes garlang {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes garlang {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

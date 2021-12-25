@@ -382,11 +382,6 @@ function fireworks() {
     z.style.left = `${posLeft}%`;
     z.style.top = `${posTop}%`;
     z.style.background = `rgb(${red}, ${green}, ${blue})`;
-    // if (red < 255 && green < 255 && blue < 255) {
-      // red++;
-      // green++;
-      // blue++;
-    // }
   }
 
   setInterval(createElem, 1000);
@@ -400,5 +395,19 @@ function fireworks() {
 }
 fireworks();
 
+function garlang() {
+  let item = document.querySelectorAll('.garlang__item');
 
+  item.forEach((elem, index) => {
+    let randRot = Math.round(Math.random(1) * 40);
+    let randOffset = Math.round(Math.random(1) * 15);
 
+    if(index % 2 == 1) {
+      elem.style.transform = `translateY(${randOffset}px) rotate(${randRot}deg)`;
+    }
+    else{
+      elem.style.transform = `translateY(-${randOffset}px) rotate(-${randRot}deg)`;
+    }
+  })
+}
+garlang();
