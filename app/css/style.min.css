@@ -2427,6 +2427,20 @@ strong {
   background: #fff;
 }
 
+.stop-audio {
+  position: absolute;
+  top: 120px;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  background: #01074e;
+  border: none;
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1;
+}
+
 .garlang {
   position: fixed;
   top: 0;
@@ -2449,8 +2463,8 @@ strong {
   width: 10px;
   height: 20px;
   border-radius: 0 0 5px 5px;
-  -webkit-animation: garlang 3s linear infinite;
-          animation: garlang 3s linear infinite;
+  -webkit-animation: garlang 10s linear infinite;
+          animation: garlang 10s linear infinite;
 }
 
 .garlang__item::before {
@@ -2486,7 +2500,7 @@ strong {
 }
 
 .garlang__item:nth-child(4n+2)::before {
-  background: #98f7bc;
+  background: #abf8c9;
 }
 
 .garlang__item:nth-child(4n+3) {
@@ -2517,25 +2531,37 @@ strong {
 
 @-webkit-keyframes garlang {
   0% {
+    opacity: 0;
+  }
+  40% {
     opacity: 1;
   }
   50% {
-    opacity: 0;
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
   }
   100% {
-    opacity: 1;
+    opacity: 0;
   }
 }
 
 @keyframes garlang {
   0% {
+    opacity: 0;
+  }
+  40% {
     opacity: 1;
   }
   50% {
-    opacity: 0;
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
   }
   100% {
-    opacity: 1;
+    opacity: 0;
   }
 }
 

@@ -59,10 +59,10 @@ changeLanguage.onclick = () => {
       contentItem[k].textContent = contentLangRu[k];
     }
   }
-  if (changeLanguage.checked){
+  if (changeLanguage.checked) {
     langSlider.classList.add('lang-slider--checked');
   }
-  else{
+  else {
     langSlider.classList.remove('lang-slider--checked');
   }
 }
@@ -387,11 +387,11 @@ function fireworks() {
   setInterval(createElem, 1000);
 
 
-  setTimeout(function() {
-    setInterval(function() {
+  setTimeout(function () {
+    setInterval(function () {
       newYear.firstChild.remove();
     }, 1000);
-  },4000)
+  }, 4000)
 }
 fireworks();
 
@@ -402,12 +402,25 @@ function garlang() {
     let randRot = Math.round(Math.random(1) * 40);
     let randOffset = Math.round(Math.random(1) * 15);
 
-    if(index % 2 == 1) {
+    if (index % 2 == 1) {
       elem.style.transform = `translateY(${randOffset}px) rotate(${randRot}deg)`;
     }
-    else{
+    else {
       elem.style.transform = `translateY(-${randOffset}px) rotate(-${randRot}deg)`;
     }
   })
 }
 garlang();
+
+function firework() {
+  let sound = document.querySelector('.firework');
+
+  document.addEventListener('click', ready);
+  function ready() {
+    setTimeout(() => {
+      sound.play();
+      sound.volume = 0.5;
+    }, 5000)
+  }
+}
+firework();
