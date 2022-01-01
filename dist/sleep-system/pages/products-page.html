@@ -1,0 +1,1655 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.min.css">
+  <link rel="stylesheet" href="../css/libs.min.css">
+  <title>sleep-system</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__top">
+        <a href="../index.html" class="header__logo-wrapper">
+          <img src="../img/png/logo.png" class="header__logo" alt="Логотип">
+        </a>
+        <div class="header__phones">
+          <a class="header__phone" href="tel:+78124253757">+7 812 425 37 57</a>
+          <a class="header__phone" href="tel:+79117943496">+7 911 794 34 96</a>
+        </div>
+        <div class="header__since">
+          <span>Since 1999</span>
+        </div>
+        <div class="header__search header-search">
+          <input type="text" class="header-search__input" placeholder="Поиск по товарам">
+          <button class="header-search__btn">
+            <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.69 56.69">
+              <path
+                d="M216.54-51.83,201.31-67.07a22.91,22.91,0,0,0,5.14-14.49,23,23,0,0,0-23-23,23,23,0,0,0-23,23,23,23,0,0,0,23,23A22.84,22.84,0,0,0,198-63.75L213.21-48.5a2.36,2.36,0,0,0,1.64.66,2.37,2.37,0,0,0,2.37-2.37A2.31,2.31,0,0,0,216.54-51.83ZM183.43-63.42a18.1,18.1,0,0,1-18.1-18.11,18.1,18.1,0,0,1,18.1-18.11,18.11,18.11,0,0,1,18.11,18.11A18.11,18.11,0,0,1,183.43-63.42Z"
+                transform="translate(-160.53 104.53)" />
+            </svg>
+          </button>
+        </div>
+        <div class="header__buttons">
+          <a href="#" class="header__buttons-link header__buttons-compare">
+            <img src="../img/svg/header-icons/header-compare.svg" class="header__compare-icon" alt="Сравнение">
+            <span class="header__buttons-text">сравнение</span>
+          </a>
+          <a href="#" class="header__buttons-link header__buttons-favorites">
+            <img src="../img/svg/header-icons/header-favorites.svg" class="header__favorites-icon" alt="Избранное">
+            <span class="header__buttons-text">избранное</span>
+          </a>
+          <a href="#" class="header__buttons-link header__buttons-basket">
+            <span class="header__basket-bell">5</span>
+            <img src="../img/svg/header-icons/header-basket.svg" class="header__basket-icon" alt="Корзина">
+            <span class="header__buttons-text">корзина</span>
+          </a>
+        </div>
+        <button class="header__mobile-menu-btn">
+          <img src="../img/svg/header-icons/mobile-menu-btn.svg" alt="Кнопка мобильного меню">
+        </button>
+      </div>
+    </div>
+    <nav class="header__nav">
+      <div class="container">
+        <ul class="header__nav-list">
+          <li class="header__nav-item"><a href="#" class="header__nav-link">Магазины</a></li>
+          <li class="header__nav-item"><a href="#" class="header__nav-link">Бренды</a></li>
+          <li class="header__nav-item"><a href="#" class="header__nav-link">Матрасы</a></li>
+          <li class="header__nav-item"><a href="#" class="header__nav-link">Подушки</a></li>
+          <li class="header__nav-item"><a href="#" class="header__nav-link">Кровати</a></li>
+          <li class="header__nav-item"><a href="#" class="header__nav-link">Текстиль</a></li>
+          <li class="header__nav-item"><a href="#" class="header__nav-link">Аксессуары</a></li>
+          <li class="header__nav-item"><a href="#" class="header__nav-link">Акции</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <div class="breadcrumbs">
+    <div class="container">
+      <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item"> <a class="breadcrumbs__link" href="../index.html">Главная</a></li>
+        <li class="breadcrumbs__item"> <span class="breadcrumbs__current">Матрасы</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="products-page">
+    <div class="container">
+      <div class="products-page__title">
+        <h1 class="title">Матрасы</h1>
+        <span class="products-count">101 товар</span>
+      </div>
+      <div class="products-page__content">
+        <div class="products-filters">
+          <div class="products-filters__container">
+            <div class="products-filters__item filter-size">
+              <div class="products-filters__title-wrapper">
+                <h3 class="products-filters__title-text">Размер</h3>
+              </div>
+              <div class="products-filters__size-wrapper">
+                <div class="products-filters__size products-filters__size-width">
+                  <span class="products-filters__size-text">Ширина</span>
+                  <div class="products-filters__size-input-wrapper">
+                    <input type="text" class="products-filters__size-input" placeholder="Все">
+                    <button class="increase-size__btn"></button>
+                  </div>
+                </div>
+                <div class="products-filters__size products-filters__size-length">
+                  <span class="products-filters__size-text">Длина</span>
+                  <div class="products-filters__size-input-wrapper">
+                    <input type="text" class="products-filters__size-input" placeholder="Все">
+                    <button class="increase-size__btn"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="products-filters__item products-filters__price">
+              <div class="products-filters__title-wrapper">
+                <h3 class="products-filters__title-text">Цена</h3>
+              </div>
+              <div class="price-slider">
+                <div class="line-1"></div>
+                <div class="line-2"></div>
+                <div class="left-dot dot">
+
+                </div>
+                <div class="right-dot dot">
+
+                </div>
+              </div>
+              <div class="price-slider__inputs">
+                <div class="price-slider__input-wrapper">
+                  <input type="text" class="price-slider__from" value="3 000">
+                </div>
+                <div class="price-slider__input-wrapper">
+                  <input type="text" class="price-slider__to" value="42000">
+                </div>
+              </div>
+            </div>
+            <div class="products-filters__item products-filters__hardness">
+              <div class="products-filters__title-wrapper">
+                <h3 class="products-filters__title-text">Жёсткость</h3>
+              </div>
+              <div class="products-filters__hardness-wrapper">
+                <div class="hardness__item">
+                  <input class="filter-radio" type="radio" name="hardness-checkbox" id="hardness__high" checked>
+                  <label for="hardness__high" class="filter__label">
+                    <span class="hardness__radio-text">Высокая</span>
+                  </label>
+                </div>
+                <div class="hardness__item">
+                  <input class="filter-radio" type="radio" name="hardness-checkbox" id="hardness__medium">
+                  <label for="hardness__medium" class="filter__label">
+                    <span class="hardness__radio-text">Средняя</span>
+                  </label>
+                </div>
+                <div class="hardness__item">
+                  <input class="filter-radio" type="radio" name="hardness-checkbox" id="hardness__low">
+                  <label for="hardness__low" class="filter__label">
+                    <span class="hardness__radio-text">Низкая</span>
+                  </label>
+                </div>
+                <div class="hardness__item">
+                  <input class="filter-radio" type="radio" name="hardness-checkbox" id="hardness__different">
+                  <label for="hardness__different" class="filter__label">
+                    <span class="hardness__radio-text">Разная жёсткость сторон</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="products-filters__item products-filters__type">
+              <div class="products-filters__title-wrapper">
+                <h3 class="products-filters__title-text">Тип</h3>
+              </div>
+              <div class="products-filters__list">
+                <div class="products-filters__list-item">
+                  <input class="filter-checkbox" type="checkbox" name="type-checkbox" id="type-checkbox-child">
+                  <label for="type-checkbox-child" class="filter-checkbox__label">
+                    <span class="hardness__radio-text">Детский</span>
+                  </label>
+                </div>
+                <div class="products-filters__list-item">
+                  <input class="filter-checkbox" type="checkbox" name="type-checkbox" id="type-checkbox-for-sofa">
+                  <label for="type-checkbox-for-sofa" class="filter-checkbox__label">
+                    <span class="hardness__radio-text">Для дивана</span>
+                  </label>
+                </div>
+                <div class="products-filters__list-item">
+                  <input class="filter-checkbox" type="checkbox" name="type-checkbox" id="type-checkbox-round">
+                  <label for="type-checkbox-round" class="filter-checkbox__label">
+                    <span class="hardness__radio-text">Круглый</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="products-filters__item products-filters__springs">
+              <div class="products-filters__title-wrapper">
+                <h3 class="products-filters__title-text">Количество пружин</h3>
+              </div>
+              <div class="products-filters__list">
+                <div class="products-filters__list-item">
+                  <input class="filter-checkbox" type="checkbox" name="type-checkbox" id="216-springs">
+                  <label for="216-springs" class="filter-checkbox__label">
+                    <span class="hardness__radio-text">216 пружин</span>
+                  </label>
+                </div>
+                <div class="products-filters__list-item">
+                  <input class="filter-checkbox" type="checkbox" name="type-checkbox" id="420-springs">
+                  <label for="420-springs" class="filter-checkbox__label">
+                    <span class="hardness__radio-text">420 пружин</span>
+                  </label>
+                </div>
+                <div class="products-filters__list-item">
+                  <input class="filter-checkbox" type="checkbox" name="type-checkbox" id="500-springs">
+                  <label for="500-springs" class="filter-checkbox__label">
+                    <span class="hardness__radio-text">500 пружин</span>
+                  </label>
+                </div>
+                <div class="products-filters__list-item">
+                  <input class="filter-checkbox" type="checkbox" name="type-checkbox" id="512-springs">
+                  <label for="512-springs" class="filter-checkbox__label">
+                    <span class="hardness__radio-text">512 пружин</span>
+                  </label>
+                </div>
+                <div class="products-filters__list-item">
+                  <input class="filter-checkbox" type="checkbox" name="type-checkbox" id="620-springs">
+                  <label for="620-springs" class="filter-checkbox__label">
+                    <span class="hardness__radio-text">620 пружин</span>
+                  </label>
+                </div>
+                <div class="products-filters__list-item">
+                  <input class="filter-checkbox" type="checkbox" name="type-checkbox" id="1000-springs">
+                  <label for="1000-springs" class="filter-checkbox__label">
+                    <span class="hardness__radio-text">1000 пружин</span>
+                  </label>
+                </div>
+                <div class="products-filters__list-item">
+                  <input class="filter-checkbox" type="checkbox" name="type-checkbox" id="1020-springs">
+                  <label for="1020-springs" class="filter-checkbox__label">
+                    <span class="hardness__radio-text">1020 пружин</span>
+                  </label>
+                </div>
+                <div class="products-filters__list-item">
+                  <input class="filter-checkbox" type="checkbox" name="type-checkbox" id="2000-springs">
+                  <label for="2000-springs" class="filter-checkbox__label">
+                    <span class="hardness__radio-text">2000 пружин</span>
+                  </label>
+                </div>
+                <div class="products-filters__list-item">
+                  <input class="filter-checkbox" type="checkbox" name="type-checkbox" id="more-2000-springs">
+                  <label for="more-2000-springs" class="filter-checkbox__label">
+                    <span class="hardness__radio-text">более 2000 пружин</span>
+                  </label>
+                </div>
+                <div class="products-filters__list-item">
+                  <input class="filter-checkbox" type="checkbox" name="type-checkbox" id="no-springs">
+                  <label for="no-springs" class="filter-checkbox__label">
+                    <span class="hardness__radio-text">без пружин</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="products-filters__item products-filters__component">
+              <div class="products-filters__title-wrapper">
+                <h3 class="products-filters__title-text">В составе</h3>
+              </div>
+              <div class="products-filters__list">
+                <div class="products-filters__list-item">
+                  <input class="filter-checkbox" type="checkbox" name="type-checkbox" id="ormafoam">
+                  <label for="ormafoam" class="filter-checkbox__label">
+                    <span class="hardness__radio-text">Ormafoam</span>
+                  </label>
+                </div>
+                <div class="products-filters__list-item">
+                  <input class="filter-checkbox" type="checkbox" name="type-checkbox" id="elastic-foam">
+                  <label for="elastic-foam" class="filter-checkbox__label">
+                    <span class="hardness__radio-text">Высокоэластичная пена</span>
+                  </label>
+                </div>
+                <div class="products-filters__list-item">
+                  <input class="filter-checkbox" type="checkbox" name="type-checkbox" id="coconut-coir">
+                  <label for="coconut-coir" class="filter-checkbox__label">
+                    <span class="hardness__radio-text">Кокосовая койра</span>
+                  </label>
+                </div>
+                <div class="products-filters__list-item">
+                  <input class="filter-checkbox" type="checkbox" name="type-checkbox" id="horsehair">
+                  <label for="horsehair" class="filter-checkbox__label">
+                    <span class="hardness__radio-text">Конский волос</span>
+                  </label>
+                </div>
+                <div class="products-filters__list-item">
+                  <input class="filter-checkbox" type="checkbox" name="type-checkbox" id="latex">
+                  <label for="latex" class="filter-checkbox__label">
+                    <span class="hardness__radio-text">Латекс</span>
+                  </label>
+                </div>
+                <div class="products-filters__list-item">
+                  <input class="filter-checkbox" type="checkbox" name="type-checkbox" id="hollcon">
+                  <label for="hollcon" class="filter-checkbox__label">
+                    <span class="hardness__radio-text">Холлкон</span>
+                  </label>
+                </div>
+                <div class="products-filters__list-item">
+                  <input class="filter-checkbox" type="checkbox" name="type-checkbox" id="memory-material">
+                  <label for="memory-material" class="filter-checkbox__label">
+                    <span class="hardness__radio-text">Материал с эффектом «памяти»</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="products-filters__item products-filters__package">
+              <div class="products-filters__title-wrapper">
+                <h3 class="products-filters__title-text">Упаковка в рулон</h3>
+              </div>
+              <div class="products-filters__list">
+                <div class="products-filters__list-item">
+                  <input class="filter-checkbox" type="radio" name="type-radio-package" id="type-radio-yes">
+                  <label for="type-radio-yes" class="filter-checkbox__label">
+                    <span class="hardness__radio-text">Да</span>
+                  </label>
+                </div>
+                <div class="products-filters__list-item">
+                  <input class="filter-checkbox" type="radio" name="type-radio-package" id="type-radio-no">
+                  <label for="type-radio-no" class="filter-checkbox__label">
+                    <span class="hardness__radio-text">Нет</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="products-filters__item products-filters__brand">
+              <div class="products-filters__title-wrapper">
+                <h3 class="products-filters__title-text">Бренд</h3>
+              </div>
+              <div class="products-filters__list">
+                <div class="products-filters__list-item">
+                  <input class="filter-checkbox" type="checkbox" name="type-checkbox" id="tempur">
+                  <label for="tempur" class="filter-checkbox__label">
+                    <span class="hardness__radio-text">Tempur</span>
+                  </label>
+                </div>
+                <div class="products-filters__list-item">
+                  <input class="filter-checkbox" type="checkbox" name="type-checkbox" id="verda">
+                  <label for="verda" class="filter-checkbox__label">
+                    <span class="hardness__radio-text">Verda</span>
+                  </label>
+                </div>
+                <div class="products-filters__list-item">
+                  <input class="filter-checkbox" type="checkbox" name="type-checkbox" id="belabedding">
+                  <label for="belabedding" class="filter-checkbox__label">
+                    <span class="hardness__radio-text">Belabedding</span>
+                  </label>
+                </div>
+                <div class="products-filters__list-item">
+                  <input class="filter-checkbox" type="checkbox" name="type-checkbox" id="froli">
+                  <label for="froli" class="filter-checkbox__label">
+                    <span class="hardness__radio-text">Froli</span>
+                  </label>
+                </div>
+                <div class="products-filters__list-item">
+                  <input class="filter-checkbox" type="checkbox" name="type-checkbox" id="bella-donna">
+                  <label for="bella-donna" class="filter-checkbox__label">
+                    <span class="hardness__radio-text">Bella Donna</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="products-filters__item products-filters__age">
+              <div class="products-filters__title-wrapper">
+                <h3 class="products-filters__title-text">Возраст</h3>
+              </div>
+              <div class="products-filters__list">
+                <div class="products-filters__list-item">
+                  <input class="filter-checkbox" type="checkbox" name="type-checkbox" id="for-adults">
+                  <label for="for-adults" class="filter-checkbox__label">
+                    <span class="hardness__radio-text">для взрослых</span>
+                  </label>
+                </div>
+                <div class="products-filters__list-item">
+                  <input class="filter-checkbox" type="checkbox" name="type-checkbox" id="for-elderly">
+                  <label for="for-elderly" class="filter-checkbox__label">
+                    <span class="hardness__radio-text">для пожилых</span>
+                  </label>
+                </div>
+                <div class="products-filters__list-item">
+                  <input class="filter-checkbox" type="checkbox" name="type-checkbox" id="for-kids-0-3">
+                  <label for="for-kids-0-3" class="filter-checkbox__label">
+                    <span class="hardness__radio-text">для детеё 0-3</span>
+                  </label>
+                </div>
+                <div class="products-filters__list-item">
+                  <input class="filter-checkbox" type="checkbox" name="type-checkbox" id="for-kids-4-12">
+                  <label for="for-kids-4-12" class="filter-checkbox__label">
+                    <span class="hardness__radio-text">для детей 4-12</span>
+                  </label>
+                </div>
+                <div class="products-filters__list-item">
+                  <input class="filter-checkbox" type="checkbox" name="type-checkbox" id="for-teenagers">
+                  <label for="for-teenagers" class="filter-checkbox__label">
+                    <span class="hardness__radio-text">для подростков 13 и старше</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="products-filters__item products-filters__height">
+              <div class="products-filters__title-wrapper">
+                <h3 class="products-filters__title-text">Высота матраса</h3>
+              </div>
+              <div class="height-slider">
+                <div class="line-1"></div>
+                <div class="line-2"></div>
+                <div class="left-dot dot">
+
+                </div>
+                <div class="right-dot dot">
+
+                </div>
+              </div>
+              <div class="height-slider__inputs">
+                <div class="height-slider__input-wrapper">
+                  <input type="text" class="height-slider__from" value="6">
+                </div>
+                <div class="height-slider__input-wrapper">
+                  <input type="text" class="height-slider__to" value="44">
+                </div>
+              </div>
+            </div>
+            <div class="products-filters__item products-filters__weight">
+              <div class="products-filters__title-wrapper">
+                <h3 class="products-filters__title-text">Max. вес на спальное место</h3>
+              </div>
+              <div class="weight-slider">
+                <div class="line-1"></div>
+                <div class="line-2"></div>
+                <div class="left-dot dot">
+
+                </div>
+                <div class="right-dot dot">
+
+                </div>
+              </div>
+              <div class="weight-slider__inputs">
+                <div class="weight-slider__input-wrapper">
+                  <input type="text" class="weight-slider__from" value="50">
+                </div>
+                <div class="weight-slider__input-wrapper">
+                  <input type="text" class="weight-slider__to" value="200">
+                </div>
+              </div>
+            </div>
+            <button class="reset-filter-btn">сбросить фильтр</button>
+          </div>
+        </div>
+        <div class="products-page__list">
+          <div class="products-page__top-filter top-filter">
+            <div class="top-filter__inner">
+              <div class="top-filter__btn">
+                <span>Фильтр</span>
+              </div>
+              <span class="top-filter__title">Сортировать</span>
+              <div class="top-filter__dropdown-wrapper">
+                <span class="top-filter__dropdown-title">По умолчанию</span>
+              </div>
+            </div>
+          </div>
+          <div class="products-page__catalog">
+            <div class="products-page__catalog-wrapper">
+              <div class="product-prev product--sale">
+                <span class="product-prev__sale">
+                  -20%
+                </span>
+                <a href="product-card.html" class="product-prev__img-wrapper">
+                  <img src="../img/products/product-1.png" alt="">
+                </a>
+                <ul class="product-prev__star-list star-list">
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                </ul>
+                <a href="product-card.html" class="product-prev__title">
+                  Матрас Tempur Original Supreme
+                </a>
+                <span class="product-prev__subtitle">
+                  
+                </span>
+                <span class="product-prev__size">
+                  
+                </span>
+                <div class="product-prev__price">
+                  <span class="product-prev__price-old">
+                    123 000 ₽
+                  </span>
+                  <span class="product-prev__price-current">
+                    110 700 ₽
+                  </span>
+                </div>
+                <div class="product-prev__buttons">
+                  <a href="#" class="product-prev__compare">
+                    <img src="../img/svg/product-prev/product-compare.svg" alt="сравнение"
+                      class="product-prev__compare-icon">
+                  </a>
+                  <a href="#" class="product-prev__favorites">
+                    <img src="../img/svg/product-prev/product-favorites.svg" alt="избранное"
+                      class="product-prev__favorites-icon">
+                  </a>
+                  <a href="#" class="product-prev__basket">
+                    <span class="product-prev__basket-bell">+</span>
+                    <img src="../img/svg/product-prev/product-basket.svg" alt="корзина"
+                      class="product-prev__basket-icon">
+                  </a>
+                </div>
+              </div>
+              <div class="product-prev product--sale">
+                <span class="product-prev__sale">
+                  -20%
+                </span>
+                <a href="#" class="product-prev__img-wrapper">
+                  <img src="../img/content/hits/product-prev-img.jpg" alt="">
+                </a>
+                <ul class="product-prev__star-list star-list">
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                </ul>
+                <a href="#" class="product-prev__title">
+                  Ортопедическое основание Froli TF 2
+                </a>
+                <span class="product-prev__subtitle">
+                  Универсальная средняя жесткость
+                </span>
+                <span class="product-prev__size">
+                  380x90
+                </span>
+                <div class="product-prev__price">
+                  <span class="product-prev__price-old">
+                    50 900Р
+                  </span>
+                  <span class="product-prev__price-current">
+                    30 900Р
+                  </span>
+                </div>
+                <div class="product-prev__buttons">
+                  <a href="#" class="product-prev__compare">
+                    <img src="../img/svg/product-prev/product-compare.svg" alt="сравнение"
+                      class="product-prev__compare-icon">
+                  </a>
+                  <a href="#" class="product-prev__favorites">
+                    <img src="../img/svg/product-prev/product-favorites.svg" alt="избранное"
+                      class="product-prev__favorites-icon">
+                  </a>
+                  <a href="#" class="product-prev__basket">
+                    <span class="product-prev__basket-bell">+</span>
+                    <img src="../img/svg/product-prev/product-basket.svg" alt="корзина"
+                      class="product-prev__basket-icon">
+                  </a>
+                </div>
+              </div>
+              <div class="product-prev product--sale">
+                <span class="product-prev__sale">
+                  -20%
+                </span>
+                <a href="#" class="product-prev__img-wrapper">
+                  <img src="../img/content/hits/product-prev-img.jpg" alt="">
+                </a>
+                <ul class="product-prev__star-list star-list">
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                </ul>
+                <a href="#" class="product-prev__title">
+                  Ортопедическое основание Froli TF 2
+                </a>
+                <span class="product-prev__subtitle">
+                  Универсальная средняя жесткость
+                </span>
+                <span class="product-prev__size">
+                  380x90
+                </span>
+                <div class="product-prev__price">
+                  <span class="product-prev__price-old">
+                    50 900Р
+                  </span>
+                  <span class="product-prev__price-current">
+                    30 900Р
+                  </span>
+                </div>
+                <div class="product-prev__buttons">
+                  <a href="#" class="product-prev__compare">
+                    <img src="../img/svg/product-prev/product-compare.svg" alt="сравнение"
+                      class="product-prev__compare-icon">
+                  </a>
+                  <a href="#" class="product-prev__favorites">
+                    <img src="../img/svg/product-prev/product-favorites.svg" alt="избранное"
+                      class="product-prev__favorites-icon">
+                  </a>
+                  <a href="#" class="product-prev__basket">
+                    <span class="product-prev__basket-bell">+</span>
+                    <img src="../img/svg/product-prev/product-basket.svg" alt="корзина"
+                      class="product-prev__basket-icon">
+                  </a>
+                </div>
+              </div>
+              <div class="product-prev product--sale">
+                <span class="product-prev__sale">
+                  -20%
+                </span>
+                <a href="#" class="product-prev__img-wrapper">
+                  <img src="../img/content/hits/product-prev-img.jpg" alt="">
+                </a>
+                <ul class="product-prev__star-list star-list">
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                </ul>
+                <a href="#" class="product-prev__title">
+                  Ортопедическое основание Froli TF 2
+                </a>
+                <span class="product-prev__subtitle">
+                  Универсальная средняя жесткость
+                </span>
+                <span class="product-prev__size">
+                  380x90
+                </span>
+                <div class="product-prev__price">
+                  <span class="product-prev__price-old">
+                    50 900Р
+                  </span>
+                  <span class="product-prev__price-current">
+                    30 900Р
+                  </span>
+                </div>
+                <div class="product-prev__buttons">
+                  <a href="#" class="product-prev__compare">
+                    <img src="../img/svg/product-prev/product-compare.svg" alt="сравнение"
+                      class="product-prev__compare-icon">
+                  </a>
+                  <a href="#" class="product-prev__favorites">
+                    <img src="../img/svg/product-prev/product-favorites.svg" alt="избранное"
+                      class="product-prev__favorites-icon">
+                  </a>
+                  <a href="#" class="product-prev__basket">
+                    <span class="product-prev__basket-bell">+</span>
+                    <img src="../img/svg/product-prev/product-basket.svg" alt="корзина"
+                      class="product-prev__basket-icon">
+                  </a>
+                </div>
+              </div>
+              <div class="product-prev product--sale">
+                <span class="product-prev__sale">
+                  -20%
+                </span>
+                <a href="#" class="product-prev__img-wrapper">
+                  <img src="../img/content/hits/product-prev-img.jpg" alt="">
+                </a>
+                <ul class="product-prev__star-list star-list">
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                </ul>
+                <a href="#" class="product-prev__title">
+                  Ортопедическое основание Froli TF 2
+                </a>
+                <span class="product-prev__subtitle">
+                  Универсальная средняя жесткость
+                </span>
+                <span class="product-prev__size">
+                  380x90
+                </span>
+                <div class="product-prev__price">
+                  <span class="product-prev__price-old">
+                    50 900Р
+                  </span>
+                  <span class="product-prev__price-current">
+                    30 900Р
+                  </span>
+                </div>
+                <div class="product-prev__buttons">
+                  <a href="#" class="product-prev__compare">
+                    <img src="../img/svg/product-prev/product-compare.svg" alt="сравнение"
+                      class="product-prev__compare-icon">
+                  </a>
+                  <a href="#" class="product-prev__favorites">
+                    <img src="../img/svg/product-prev/product-favorites.svg" alt="избранное"
+                      class="product-prev__favorites-icon">
+                  </a>
+                  <a href="#" class="product-prev__basket">
+                    <span class="product-prev__basket-bell">+</span>
+                    <img src="../img/svg/product-prev/product-basket.svg" alt="корзина"
+                      class="product-prev__basket-icon">
+                  </a>
+                </div>
+              </div>
+              <div class="product-prev product--sale">
+                <span class="product-prev__sale">
+                  -20%
+                </span>
+                <a href="#" class="product-prev__img-wrapper">
+                  <img src="../img/content/hits/product-prev-img.jpg" alt="">
+                </a>
+                <ul class="product-prev__star-list star-list">
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                </ul>
+                <a href="#" class="product-prev__title">
+                  Ортопедическое основание Froli TF 2
+                </a>
+                <span class="product-prev__subtitle">
+                  Универсальная средняя жесткость
+                </span>
+                <span class="product-prev__size">
+                  380x90
+                </span>
+                <div class="product-prev__price">
+                  <span class="product-prev__price-old">
+                    50 900Р
+                  </span>
+                  <span class="product-prev__price-current">
+                    30 900Р
+                  </span>
+                </div>
+                <div class="product-prev__buttons">
+                  <a href="#" class="product-prev__compare">
+                    <img src="../img/svg/product-prev/product-compare.svg" alt="сравнение"
+                      class="product-prev__compare-icon">
+                  </a>
+                  <a href="#" class="product-prev__favorites">
+                    <img src="../img/svg/product-prev/product-favorites.svg" alt="избранное"
+                      class="product-prev__favorites-icon">
+                  </a>
+                  <a href="#" class="product-prev__basket">
+                    <span class="product-prev__basket-bell">+</span>
+                    <img src="../img/svg/product-prev/product-basket.svg" alt="корзина"
+                      class="product-prev__basket-icon">
+                  </a>
+                </div>
+              </div>
+              <div class="product-prev">
+                <span class="product-prev__sale">
+
+                </span>
+                <a href="#" class="product-prev__img-wrapper">
+                  <img src="../img/content/hits/product-prev-img.jpg" alt="">
+                </a>
+                <ul class="product-prev__star-list star-list">
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                </ul>
+                <a href="#" class="product-prev__title">
+                  Ортопедическое основание Froli TF 2
+                </a>
+                <span class="product-prev__subtitle">
+                  Универсальная средняя жесткость
+                </span>
+                <span class="product-prev__size">
+                  380x90
+                </span>
+                <div class="product-prev__price">
+                  <span class="product-prev__price-old">
+                    50 900Р
+                  </span>
+                  <span class="product-prev__price-current">
+                    30 900Р
+                  </span>
+                </div>
+                <div class="product-prev__buttons">
+                  <a href="#" class="product-prev__compare">
+                    <img src="../img/svg/product-prev/product-compare.svg" alt="сравнение"
+                      class="product-prev__compare-icon">
+                  </a>
+                  <a href="#" class="product-prev__favorites">
+                    <img src="../img/svg/product-prev/product-favorites.svg" alt="избранное"
+                      class="product-prev__favorites-icon">
+                  </a>
+                  <a href="#" class="product-prev__basket">
+                    <span class="product-prev__basket-bell">+</span>
+                    <img src="../img/svg/product-prev/product-basket.svg" alt="корзина"
+                      class="product-prev__basket-icon">
+                  </a>
+                </div>
+              </div>
+              <div class="product-prev">
+                <span class="product-prev__sale">
+
+                </span>
+                <a href="#" class="product-prev__img-wrapper">
+                  <img src="../img/content/hits/product-prev-img.jpg" alt="">
+                </a>
+                <ul class="product-prev__star-list star-list">
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                </ul>
+                <a href="#" class="product-prev__title">
+                  Ортопедическое основание Froli TF 2
+                </a>
+                <span class="product-prev__subtitle">
+                  Универсальная средняя жесткость
+                </span>
+                <span class="product-prev__size">
+                  380x90
+                </span>
+                <div class="product-prev__price">
+                  <span class="product-prev__price-old">
+
+                  </span>
+                  <span class="product-prev__price-current">
+                    30 900Р
+                  </span>
+                </div>
+                <div class="product-prev__buttons">
+                  <a href="#" class="product-prev__compare">
+                    <img src="../img/svg/product-prev/product-compare.svg" alt="сравнение"
+                      class="product-prev__compare-icon">
+                  </a>
+                  <a href="#" class="product-prev__favorites">
+                    <img src="../img/svg/product-prev/product-favorites.svg" alt="избранное"
+                      class="product-prev__favorites-icon">
+                  </a>
+                  <a href="#" class="product-prev__basket">
+                    <span class="product-prev__basket-bell">+</span>
+                    <img src="../img/svg/product-prev/product-basket.svg" alt="корзина"
+                      class="product-prev__basket-icon">
+                  </a>
+                </div>
+              </div>
+              <div class="product-prev">
+                <span class="product-prev__sale">
+
+                </span>
+                <a href="#" class="product-prev__img-wrapper">
+                  <img src="../img/content/hits/product-prev-img.jpg" alt="">
+                </a>
+                <ul class="product-prev__star-list star-list">
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                </ul>
+                <a href="#" class="product-prev__title">
+                  Ортопедическое основание Froli TF 2
+                </a>
+                <span class="product-prev__subtitle">
+                  Универсальная средняя жесткость
+                </span>
+                <span class="product-prev__size">
+                  380x90
+                </span>
+                <div class="product-prev__price">
+                  <span class="product-prev__price-old">
+
+                  </span>
+                  <span class="product-prev__price-current">
+                    30 900Р
+                  </span>
+                </div>
+                <div class="product-prev__buttons">
+                  <a href="#" class="product-prev__compare">
+                    <img src="../img/svg/product-prev/product-compare.svg" alt="сравнение"
+                      class="product-prev__compare-icon">
+                  </a>
+                  <a href="#" class="product-prev__favorites">
+                    <img src="../img/svg/product-prev/product-favorites.svg" alt="избранное"
+                      class="product-prev__favorites-icon">
+                  </a>
+                  <a href="#" class="product-prev__basket">
+                    <span class="product-prev__basket-bell">+</span>
+                    <img src="../img/svg/product-prev/product-basket.svg" alt="корзина"
+                      class="product-prev__basket-icon">
+                  </a>
+                </div>
+              </div>
+              <div class="product-prev">
+                <span class="product-prev__sale">
+
+                </span>
+                <a href="#" class="product-prev__img-wrapper">
+                  <img src="../img/content/hits/product-prev-img.jpg" alt="">
+                </a>
+                <ul class="product-prev__star-list star-list">
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                </ul>
+                <a href="#" class="product-prev__title">
+                  Ортопедическое основание Froli TF 2
+                </a>
+                <span class="product-prev__subtitle">
+                  Универсальная средняя жесткость
+                </span>
+                <span class="product-prev__size">
+                  380x90
+                </span>
+                <div class="product-prev__price">
+                  <span class="product-prev__price-old">
+
+                  </span>
+                  <span class="product-prev__price-current">
+                    30 900Р
+                  </span>
+                </div>
+                <div class="product-prev__buttons">
+                  <a href="#" class="product-prev__compare">
+                    <img src="../img/svg/product-prev/product-compare.svg" alt="сравнение"
+                      class="product-prev__compare-icon">
+                  </a>
+                  <a href="#" class="product-prev__favorites">
+                    <img src="../img/svg/product-prev/product-favorites.svg" alt="избранное"
+                      class="product-prev__favorites-icon">
+                  </a>
+                  <a href="#" class="product-prev__basket">
+                    <span class="product-prev__basket-bell">+</span>
+                    <img src="../img/svg/product-prev/product-basket.svg" alt="корзина"
+                      class="product-prev__basket-icon">
+                  </a>
+                </div>
+              </div>
+              <div class="product-prev">
+                <span class="product-prev__sale">
+
+                </span>
+                <a href="#" class="product-prev__img-wrapper">
+                  <img src="../img/content/hits/product-prev-img.jpg" alt="">
+                </a>
+                <ul class="product-prev__star-list star-list">
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                </ul>
+                <a href="#" class="product-prev__title">
+                  Ортопедическое основание Froli TF 2
+                </a>
+                <span class="product-prev__subtitle">
+                  Универсальная средняя жесткость
+                </span>
+                <span class="product-prev__size">
+                  380x90
+                </span>
+                <div class="product-prev__price">
+                  <span class="product-prev__price-old">
+
+                  </span>
+                  <span class="product-prev__price-current">
+                    30 900Р
+                  </span>
+                </div>
+                <div class="product-prev__buttons">
+                  <a href="#" class="product-prev__compare">
+                    <img src="../img/svg/product-prev/product-compare.svg" alt="сравнение"
+                      class="product-prev__compare-icon">
+                  </a>
+                  <a href="#" class="product-prev__favorites">
+                    <img src="../img/svg/product-prev/product-favorites.svg" alt="избранное"
+                      class="product-prev__favorites-icon">
+                  </a>
+                  <a href="#" class="product-prev__basket">
+                    <span class="product-prev__basket-bell">+</span>
+                    <img src="../img/svg/product-prev/product-basket.svg" alt="корзина"
+                      class="product-prev__basket-icon">
+                  </a>
+                </div>
+              </div>
+              <div class="product-prev">
+                <span class="product-prev__sale">
+
+                </span>
+                <a href="#" class="product-prev__img-wrapper">
+                  <img src="../img/content/hits/product-prev-img.jpg" alt="">
+                </a>
+                <ul class="product-prev__star-list star-list">
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                </ul>
+                <a href="#" class="product-prev__title">
+                  Ортопедическое основание Froli TF 2
+                </a>
+                <span class="product-prev__subtitle">
+                  Универсальная средняя жесткость
+                </span>
+                <span class="product-prev__size">
+                  380x90
+                </span>
+                <div class="product-prev__price">
+                  <span class="product-prev__price-old">
+
+                  </span>
+                  <span class="product-prev__price-current">
+                    30 900Р
+                  </span>
+                </div>
+                <div class="product-prev__buttons">
+                  <a href="#" class="product-prev__compare">
+                    <img src="../img/svg/product-prev/product-compare.svg" alt="сравнение"
+                      class="product-prev__compare-icon">
+                  </a>
+                  <a href="#" class="product-prev__favorites">
+                    <img src="../img/svg/product-prev/product-favorites.svg" alt="избранное"
+                      class="product-prev__favorites-icon">
+                  </a>
+                  <a href="#" class="product-prev__basket">
+                    <span class="product-prev__basket-bell">+</span>
+                    <img src="../img/svg/product-prev/product-basket.svg" alt="корзина"
+                      class="product-prev__basket-icon">
+                  </a>
+                </div>
+              </div>
+              <div class="product-prev">
+                <span class="product-prev__sale">
+
+                </span>
+                <a href="#" class="product-prev__img-wrapper">
+                  <img src="../img/content/hits/product-prev-img.jpg" alt="">
+                </a>
+                <ul class="product-prev__star-list star-list">
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                </ul>
+                <a href="#" class="product-prev__title">
+                  Ортопедическое основание Froli TF 2
+                </a>
+                <span class="product-prev__subtitle">
+                  Универсальная средняя жесткость
+                </span>
+                <span class="product-prev__size">
+                  380x90
+                </span>
+                <div class="product-prev__price">
+                  <span class="product-prev__price-old">
+
+                  </span>
+                  <span class="product-prev__price-current">
+                    30 900Р
+                  </span>
+                </div>
+                <div class="product-prev__buttons">
+                  <a href="#" class="product-prev__compare">
+                    <img src="../img/svg/product-prev/product-compare.svg" alt="сравнение"
+                      class="product-prev__compare-icon">
+                  </a>
+                  <a href="#" class="product-prev__favorites">
+                    <img src="../img/svg/product-prev/product-favorites.svg" alt="избранное"
+                      class="product-prev__favorites-icon">
+                  </a>
+                  <a href="#" class="product-prev__basket">
+                    <span class="product-prev__basket-bell">+</span>
+                    <img src="../img/svg/product-prev/product-basket.svg" alt="корзина"
+                      class="product-prev__basket-icon">
+                  </a>
+                </div>
+              </div>
+              <div class="product-prev">
+                <span class="product-prev__sale">
+
+                </span>
+                <a href="#" class="product-prev__img-wrapper">
+                  <img src="../img/content/hits/product-prev-img.jpg" alt="">
+                </a>
+                <ul class="product-prev__star-list star-list">
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                </ul>
+                <a href="#" class="product-prev__title">
+                  Ортопедическое основание Froli TF 2
+                </a>
+                <span class="product-prev__subtitle">
+                  Универсальная средняя жесткость
+                </span>
+                <span class="product-prev__size">
+                  380x90
+                </span>
+                <div class="product-prev__price">
+                  <span class="product-prev__price-old">
+
+                  </span>
+                  <span class="product-prev__price-current">
+                    30 900Р
+                  </span>
+                </div>
+                <div class="product-prev__buttons">
+                  <a href="#" class="product-prev__compare">
+                    <img src="../img/svg/product-prev/product-compare.svg" alt="сравнение"
+                      class="product-prev__compare-icon">
+                  </a>
+                  <a href="#" class="product-prev__favorites">
+                    <img src="../img/svg/product-prev/product-favorites.svg" alt="избранное"
+                      class="product-prev__favorites-icon">
+                  </a>
+                  <a href="#" class="product-prev__basket">
+                    <span class="product-prev__basket-bell">+</span>
+                    <img src="../img/svg/product-prev/product-basket.svg" alt="корзина"
+                      class="product-prev__basket-icon">
+                  </a>
+                </div>
+              </div>
+              <div class="product-prev">
+                <a href="#" class="product-prev__img-wrapper">
+                  <img src="../img/content/hits/product-prev-img.jpg" alt="">
+                </a>
+                <ul class="product-prev__star-list star-list">
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                  <li>
+                    <img src="../img/svg/star.svg" alt="звезда">
+                  </li>
+                </ul>
+                <a href="#" class="product-prev__title">
+                  Ортопедическое основание Froli TF 2
+                </a>
+                <span class="product-prev__subtitle">
+                  Универсальная средняя жесткость
+                </span>
+                <span class="product-prev__size">
+                  380x90
+                </span>
+                <div class="product-prev__price">
+                  <span class="product-prev__price-old">
+                    30 900Р
+                  </span>
+                  <span class="product-prev__price-current">
+                    30 900Р
+                  </span>
+                </div>
+                <div class="product-prev__buttons">
+                  <a href="#" class="product-prev__compare">
+                    <img src="../img/svg/product-prev/product-compare.svg" alt="сравнение"
+                      class="product-prev__compare-icon">
+                  </a>
+                  <a href="#" class="product-prev__favorites">
+                    <img src="../img/svg/product-prev/product-favorites.svg" alt="избранное"
+                      class="product-prev__favorites-icon">
+                  </a>
+                  <a href="#" class="product-prev__basket">
+                    <span class="product-prev__basket-bell">+</span>
+                    <img src="../img/svg/product-prev/product-basket.svg" alt="корзина"
+                      class="product-prev__basket-icon">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="view-more__wrapper">
+              <button class="view-more__btn">
+                <span>Показать ещё</span>
+              </button>
+            </div>
+          </div>
+          <div class="products-page__pagination pagination-widgets">
+            <div class="container">
+              <ul class="pagination-widgets__pages">
+                <li class="pagination-widgets__page"><a href="#"
+                    class="pagination-widgets__link pagination-widgets__link--active">1</a></li>
+                <li class="pagination-widgets__page"><a href="#" class="pagination-widgets__link ">2</a></li>
+                <li class="pagination-widgets__page"><a href="#" class="pagination-widgets__link ">3</a></li>
+                <li class="pagination-widgets__page"><a href="#" class="pagination-widgets__link ">...</a></li>
+                <li class="pagination-widgets__page"><a href="#" class="pagination-widgets__link ">10</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="recommendations">
+    <div class="container">
+      <h2 class="recommendations__title">Рекоммендации для вас</h2>
+      <div class="recommendations__wrapper">
+        <div class="recommendations__item">
+          <div class="product-prev">
+            <span class="product-prev__sale">
+              скидка
+            </span>
+            <div class="product-prev__img-wrapper">
+              <a href="#" class="product-prev__img-link">
+                <img src="../img/content/recommendations/recommendations-1.png" alt="Ортопедическая подушка Easy Clean">
+              </a>
+            </div>
+            <a href="#" class="product-prev__title">
+              Ортопедическая подушка Easy Clean
+            </a>
+            <div class="product-prev__price">
+              <span class="product-prev__price-old">
+                18 490 ₽
+              </span>
+              <span class="product-prev__price-current">
+                15 716,50 ₽
+              </span>
+            </div>
+            <div class="product-prev__buttons">
+              <a href="#" class="product-prev__compare">
+                <img src="../img/svg/product-prev/product-compare.svg" alt="сравнение"
+                  class="product-prev__compare-icon">
+              </a>
+              <a href="#" class="product-prev__favorites">
+                <img src="../img/svg/product-prev/product-favorites.svg" alt="избранное"
+                  class="product-prev__favorites-icon">
+              </a>
+              <a href="#" class="product-prev__basket">
+                <span class="product-prev__basket-bell">+</span>
+                <img src="../img/svg/product-prev/product-basket.svg" alt="корзина" class="product-prev__basket-icon">
+              </a>
+            </div>
+            <button class="add-to-basket__btn">
+              <span>Добавить в корзину</span>
+            </button>
+          </div>
+          <div class="recommendations-mask"></div>
+        </div>
+        <div class="recommendations__item">
+          <div class="product-prev">
+            <span class="product-prev__sale">
+              скидка
+            </span>
+            <div class="product-prev__img-wrapper">
+              <a href="#" class="product-prev__img-link">
+                <img src="../img/content/recommendations/recommendations-2.png" alt="Ортопедическая подушка Easy Clean">
+              </a>
+            </div>
+            <a href="#" class="product-prev__title">
+              Ортопедическая дорожная подушка Tempur Travel Pillow
+            </a>
+            <div class="product-prev__price">
+              <span class="product-prev__price-old">
+                11 490 ₽
+              </span>
+              <span class="product-prev__price-current">
+                9 192 ₽
+              </span>
+            </div>
+            <div class="product-prev__buttons">
+              <a href="#" class="product-prev__compare">
+                <img src="../img/svg/product-prev/product-compare.svg" alt="сравнение"
+                  class="product-prev__compare-icon">
+              </a>
+              <a href="#" class="product-prev__favorites">
+                <img src="../img/svg/product-prev/product-favorites.svg" alt="избранное"
+                  class="product-prev__favorites-icon">
+              </a>
+              <a href="#" class="product-prev__basket">
+                <span class="product-prev__basket-bell">+</span>
+                <img src="../img/svg/product-prev/product-basket.svg" alt="корзина" class="product-prev__basket-icon">
+              </a>
+            </div>
+            <button class="add-to-basket__btn">
+              <span>Добавить в корзину</span>
+            </button>
+          </div>
+          <div class="recommendations-mask recommendations-mask--active"></div>
+        </div>
+        <div class="recommendations__item">
+          <div class="product-prev">
+            <span class="product-prev__sale">
+              скидка
+            </span>
+            <div class="product-prev__img-wrapper">
+              <a href="#" class="product-prev__img-link">
+                <img src="../img/content/recommendations/recommendations-3.png" alt="Ортопедическая подушка Easy Clean">
+              </a>
+            </div>
+            <a href="#" class="product-prev__title">
+              Простыни Bella Donna Jersey
+            </a>
+            <div class="product-prev__price">
+              <span class="product-prev__price-old">
+                6 975 ₽
+              </span>
+              <span class="product-prev__price-current">
+                6 277,50 ₽
+              </span>
+            </div>
+            <div class="product-prev__buttons">
+              <a href="#" class="product-prev__compare">
+                <img src="../img/svg/product-prev/product-compare.svg" alt="сравнение"
+                  class="product-prev__compare-icon">
+              </a>
+              <a href="#" class="product-prev__favorites">
+                <img src="../img/svg/product-prev/product-favorites.svg" alt="избранное"
+                  class="product-prev__favorites-icon">
+              </a>
+              <a href="#" class="product-prev__basket">
+                <span class="product-prev__basket-bell">+</span>
+                <img src="../img/svg/product-prev/product-basket.svg" alt="корзина" class="product-prev__basket-icon">
+              </a>
+            </div>
+            <button class="add-to-basket__btn">
+              <span>Добавить в корзину</span>
+            </button>
+          </div>
+          <div class="recommendations-mask"></div>
+        </div>
+        <div class="recommendations__arrow recommendations__arrow-prev">
+          <svg width="13" height="22" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 1L0.999998 11L12 21" stroke="white" stroke-width="2" stroke-linejoin="round" />
+          </svg>
+        </div>
+        <div class="recommendations__arrow recommendations__arrow-next">
+          <svg width="13" height="22" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 1L0.999998 11L12 21" stroke="white" stroke-width="2" stroke-linejoin="round" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="footer__main">
+      <div class="container">
+        <div class="footer__item">
+          <div class="footer__contacts">
+            <p class="footer__contacts-title">Контакты</p>
+            <a href="#" class="footer__shops-link">Магазины</a>
+            <a href="tel:+7 812 425 37 57" class="footer__phone">+7 812 425 37 57</a>
+            <a href="#" class="footer__whatsapp-link">Написать в WhatsApp</a>
+            <div class="footer__social">
+              <a href="#" class="footer__social-link footer__social-link--inst"></a>
+              <a href="#" class="footer__social-link footer__social-link--youtube"></a>
+              <a href="#" class="footer__social-link footer__social-link--fb"></a>
+              <a href="#" class="footer__social-link footer__social-link--vk"></a>
+              <a href="#" class="footer__social-link footer__social-link--ok"></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__item">
+          <div class="footer__nav-title">Товары</div>
+          <ul class="footer__nav">
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Матрасы</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Кровати</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Подушки</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Основания</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Текстиль</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Аксессуары</a></li>
+          </ul>
+        </div>
+        <div class="footer__item">
+          <div class="footer__nav-title">Покупателям</div>
+          <ul class="footer__nav">
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Как купить</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Доставка</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Гарантия</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Конфиденциальность</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Правовые аспекты</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Подарочный сертификат</a></li>
+          </ul>
+        </div>
+        <div class="footer__item">
+          <div class="footer__nav-title">Sleep System</div>
+          <ul class="footer__nav">
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">История компании</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Новости</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Партнёрам</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Вакансии</a></li>
+          </ul>
+        </div>
+        <div class="footer__item">
+          <div class="footer__nav-title">Ваша выгода</div>
+          <ul class="footer__nav">
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Акции</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Домашний тест-драйв</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer__mobile">
+      <div class="footer__mobile-item">
+        <div class="footer__mobile-nav">
+          <div class="footer__mobile-nav-title">Товары</div>
+          <ul class="footer__mobile-nav-list">
+            <li class="footer__mobile-nav-item">
+              <a href="#" class="footer__mobile-nav-link">Матрасы</a>
+            </li>
+            <li class="footer__mobile-nav-item">
+              <a href="#" class="footer__mobile-nav-link">Кровати</a>
+            </li>
+            <li class="footer__mobile-nav-item">
+              <a href="#" class="footer__mobile-nav-link">Подушки</a>
+            </li>
+            <li class="footer__mobile-nav-item">
+              <a href="#" class="footer__mobile-nav-link">Основания</a>
+            </li>
+            <li class="footer__mobile-nav-item">
+              <a href="#" class="footer__mobile-nav-link">Текстиль</a>
+            </li>
+            <li class="footer__mobile-nav-item">
+              <a href="#" class="footer__mobile-nav-link">Аксессуары</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__mobile-nav">
+          <div class="footer__mobile-nav-title">Покупателям</div>
+          <ul class="footer__mobile-nav-list">
+            <li class="footer__mobile-nav-item">
+              <a href="#" class="footer__mobile-nav-link">Как купить</a>
+            </li>
+            <li class="footer__mobile-nav-item">
+              <a href="#" class="footer__mobile-nav-link">Доставка</a>
+            </li>
+            <li class="footer__mobile-nav-item">
+              <a href="#" class="footer__mobile-nav-link">Гарантия</a>
+            </li>
+            <li class="footer__mobile-nav-item">
+              <a href="#" class="footer__mobile-nav-link">Конфиденциальность</a>
+            </li>
+            <li class="footer__mobile-nav-item">
+              <a href="#" class="footer__mobile-nav-link">Правовые аспекты</a>
+            </li>
+            <li class="footer__mobile-nav-item">
+              <a href="#" class="footer__mobile-nav-link">Подарочный сертификат</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__mobile-nav">
+          <div class="footer__mobile-nav-title">Ваша выгода</div>
+          <ul class="footer__mobile-nav-list">
+            <li class="footer__mobile-nav-item">
+              <a href="#" class="footer__mobile-nav-link">Акции</a>
+            </li>
+            <li class="footer__mobile-nav-item">
+              <a href="#" class="footer__mobile-nav-link">Домашний тест-драйв</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__mobile-nav">
+          <div class="footer__mobile-nav-title">О нас</div>
+          <ul class="footer__mobile-nav-list">
+
+          </ul>
+        </div>
+        <div class="footer__mobile-nav">
+          <div class="footer__mobile-nav-title">Контакты</div>
+          <ul class="footer__mobile-nav-list">
+
+          </ul>
+        </div>
+      </div>
+      <div class="footer__mobile-item footer__mobile-contacts">
+        <a href="tel:+7 812 425 37 57" class="footer__mobile-phone">+7 812 425 37 57</a>
+        <a class="footer__mobile-mail" href="mailto:info@sleeps.ru">info@sleeps.ru</a>
+        <div class="footer__mobile-social">
+          <a href="#" class="footer__mobile-social-icon footer__mobile-telegram">
+            <img src="../img/svg/icons-social-mobile/telegram.svg" alt="">
+          </a>
+          <a href="#" class="footer__mobile-social-icon footer__mobile-whatsapp">
+            <img src="../img/svg/icons-social-mobile/whats-app.svg" alt="">
+          </a>
+          <a href="#" class="footer__mobile-social-icon footer__mobile-viber">
+            <img src="../img/svg/icons-social-mobile/viber.svg" alt="">
+          </a>
+        </div>
+        <a href="#" class="footer__mobile-whatsapp-link">Написать в WhatsApp</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <div class="footer__bottom-item">
+          <a href="#" class="footer__logo">
+            <img src="../img/png/footer-logo.png" alt="">
+          </a>
+          <span class="copyright">© Интернет-магазин ортопедических матрасов, подушек, кроватей и аксессуаров для сна,
+            2013–2021</span>
+        </div>
+        <div class="footer__bottom-item">
+          <div class="footer__bottom-info">
+            <span>ИП: Иванов А. А.</span>
+            <span>ИНН: 780500128111</span>
+            <span>ОГРНИП: 315784700110133</span>
+            <a href="#" class="privacy-policy">Политика конфиденциальности</a>
+          </div>
+        </div>
+        <div class="footer__bottom-item">
+          <a href="#" class="yandex-market-link">
+            <img src="../img/png/yandex.png" alt="логотип яндекс-маркет">
+          </a>
+          <a href="#" class="yandex-market-link-mobile">
+            <img src="../img/png/yandex-footer.png" alt="логотип яндекс-маркет">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.min.js"> </script>
+</body>
+
+</html>

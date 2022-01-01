@@ -18,6 +18,7 @@ let contentLangEn = [
   'CSS-анимация',
   'Кроссбраузерная, адаптивная вёрстка',
   'БЭМ-методология',
+  'Pixel Perfect',
   'Контакты',
   'Напиcать мне',
   'Имя*',
@@ -41,6 +42,7 @@ let contentLangRu = [
   'CSS animation',
   'Cross-browser, responsive layout',
   'BEM methodology',
+  'Pixel Perfect',
   'Contacts',
   'Write me',
   'Name*',
@@ -414,13 +416,27 @@ garlang();
 
 function firework() {
   let sound = document.querySelector('.firework');
+  let soundOff = document.querySelector('.stop-audio');
+  let count = 0;
 
   document.addEventListener('click', ready);
+
   function ready() {
-    setTimeout(() => {
-      sound.play();
-      sound.volume = 0.5;
-    }, 5000)
+    if (count == 0) {
+      soundOff.classList.add('d-block');
+      let soundPlay = setTimeout(() => {
+        sound.play();
+        sound.volume = 0.5;
+      }, 1000)
+
+      count = 1;
+    }
+
+    soundOff.addEventListener('click', () => {
+      sound.pause();
+      soundOff.classList.remove('d-block');
+    })
   }
+
 }
 firework();

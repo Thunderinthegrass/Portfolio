@@ -129,7 +129,9 @@
   // color: $main-color;
   text-transform: uppercase;
   mix-blend-mode: multiply;
-  background: #ffffffe0;
+  // background: #ffffffe0;
+  background: transparent;
+  color: rgb(189, 94, 94);
 }
 .menu-btn {
   display: none;
@@ -355,6 +357,7 @@
   transform: translateY(-50%) rotate(2deg);
   opacity: 0;
   animation: header-bg 1s linear 2s forwards;
+  mix-blend-mode: multiply;
 }
 .header__bg {
   height: 800px;
