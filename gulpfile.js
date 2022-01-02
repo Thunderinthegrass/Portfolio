@@ -30,11 +30,11 @@ function cleanDist() {
 // }
 
 function images() {
-  return src('app/**/img/**/*')
+  return src('app/img/**/*')
     .pipe(imagemin([
       imagemin.gifsicle({ interlaced: true }),
       imagemin.mozjpeg({ quality: 75, progressive: true }),
-      imagemin.optipng({ optimizationLevel: 5 }),
+      // imagemin.optipng({ optimizationLevel: 5 }),
       imagemin.svgo({
         plugins: [
           { removeViewBox: true },
@@ -120,6 +120,6 @@ exports.images = images;
 exports.cleanDist = cleanDist;
 // exports.pug2html = pug2html;
 
-exports.build = series(cleanDist, images, build);
+exports.build = series(cleanDist, build, images);
 // exports.default = parallel(pug2html, styles, css, scripts, js, browsersync, watching);
 exports.default = parallel(styles, css, scripts, js, browsersync, watching);

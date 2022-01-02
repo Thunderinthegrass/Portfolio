@@ -42,7 +42,7 @@
   opacity: 0;
   background-position: 0 0;
   a {
-    background-image: url(/img/portfolio/store.jpg);
+    background-image: url(../img/portfolio/store.jpg);
   }
 }
 .portfolio__wrapper._active {
@@ -87,7 +87,7 @@
 .portfolio__item-2 {
   opacity: 0;
   a {
-    background-image: url(/img/portfolio/all-sorts-of-things.jpg);
+    background-image: url(../img/portfolio/all-sorts-of-things.jpg);
   }
 }
 .portfolio__wrapper._active {
@@ -132,7 +132,7 @@
   opacity: 0;
   mix-blend-mode: hard-light;
   a {
-    background-image: url(/img/portfolio/sleep.jpg);
+    background-image: url(../img/portfolio/sleep.jpg);
   }
 }
 .portfolio__wrapper._active {
