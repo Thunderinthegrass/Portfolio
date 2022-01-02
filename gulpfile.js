@@ -30,7 +30,7 @@ function cleanDist() {
 // }
 
 function images() {
-  return src('app/img/**/*')
+  return src('app/**/img/**/*')
     .pipe(imagemin([
       imagemin.gifsicle({ interlaced: true }),
       imagemin.mozjpeg({ quality: 75, progressive: true }),

@@ -1,0 +1,104 @@
+.async-body {
+  background: #01031f;
+  background: -webkit-gradient(linear, left top, left bottom, from(#01031f), color-stop(#01031f), color-stop(#010534), color-stop(#030d87), color-stop(#202ab0), to(#69a5f6));
+  background: -o-linear-gradient(#01031f, #01031f, #010534, #030d87, #202ab0, #69a5f6);
+  background: linear-gradient(#01031f, #01031f, #010534, #030d87, #202ab0, #69a5f6);
+  overflow: hidden;
+}
+
+.async-body .logo {
+  z-index: 10;
+}
+
+.async-body-header {
+  height: 100px;
+  z-index: 10;
+}
+
+.async-body .wrapper {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+  height: 100vh;
+}
+
+.async-body p {
+  color: #aca4a4;
+  line-height: 25px;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.async-body strong {
+  color: #fff;
+}
+
+.async-body .btn {
+  display: inline-block;
+  color: #fff;
+  padding: 10px;
+  background: #57d467;
+  margin-left: 50px;
+  border-radius: 2px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.async-body .async-title {
+  color: #9de047;
+  font-size: 25px;
+  font-weight: bold;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.async-body .async-elem {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  -webkit-animation: firework 6s linear forwards;
+          animation: firework 6s linear forwards;
+  z-index: -1;
+}
+
+@-webkit-keyframes firework {
+  0% {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  50% {
+    opacity: .3;
+  }
+  100% {
+    width: 1000px;
+    height: 1000px;
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes firework {
+  0% {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  50% {
+    opacity: .3;
+  }
+  100% {
+    width: 1000px;
+    height: 1000px;
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
+.async-body .counter {
+  display: inline-block;
+  width: 100px;
+  height: 20px;
+  background: #fff;
+}

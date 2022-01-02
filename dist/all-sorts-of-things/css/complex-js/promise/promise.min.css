@@ -1,0 +1,21 @@
+.promise-body {
+  background: #fff;
+}
+
+h3 {
+  text-align: center;
+  color: #6adbb6;
+  font-size: 25px;
+}
+
+.wrapper {
+  height: 100vh;
+}
+
+.promise-out {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 30px;
+  color: #105717;
+  font-weight: bold;
+}
