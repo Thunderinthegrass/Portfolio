@@ -8,65 +8,65 @@
 @import "header";
 @import "about";
 @import "portfolio";
-@import "new-year";
 @import "garlang";
-
+@import "new-year";
 // blocks
-
 // p{
 //   font-size: 3rem;
 //   background: #c91313;
 //   color: #000;
 // }
 .progress {
-  position: fixed;
-  right: 0;
-  top: 0;
-  width: 6px;
-  height: 0;
-  background: $main-color;
-  border-left: 1px solid #ffffff;
-  border-bottom: 1px solid #ffffff;
-  z-index: 2;
-}
-.btn-totop {
-  position: fixed;
-  display: inline-block;
-  right: 20px;
-  bottom: 20px;
-  padding: 6px 15px;
-  background: $main-color;
-  border-radius: 2px;
-  z-index: 5;
-  font-size: 20px;
-  transition: 0.5s;
-  color: #ffffff;
-  display: none;
-  &:hover {
-    background: rgb(209, 14, 14);
-  }
-}
-.contacts {
-  height: 100vh;
-  border-bottom: 1px solid $main-color;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 6px;
+    height: 0;
+    background: $main-color;
+    border-left: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    z-index: 2;
 }
 
-.wrap-cont{
-  position: relative;
-  img{
-    width: 1000px;
-  }
-  .mask{
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 1000px;
-    height: 100%;
-    background: #ffffff;
-    color: #000000;
-    font-size: 8px;
-    mix-blend-mode: lighten;
-  }
+.btn-totop {
+    position: fixed;
+    display: inline-block;
+    right: 20px;
+    bottom: 20px;
+    padding: 6px 15px;
+    background: $main-color;
+    border-radius: 2px;
+    z-index: 5;
+    font-size: 20px;
+    transition: 0.5s;
+    color: #ffffff;
+    display: none;
+    &:hover {
+        background: rgb(209, 14, 14);
+    }
+}
+
+.contacts {
+    height: 100vh;
+    border-bottom: 1px solid $main-color;
+}
+
+.wrap-cont {
+    position: relative;
+    img {
+        width: 1000px;
+    }
+    .mask {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 1000px;
+        height: 100%;
+        background: #ffffff;
+        color: #000000;
+        font-size: 8px;
+        mix-blend-mode: lighten;
+    }
 }
 
 @import "media";

@@ -9,15 +9,15 @@ const del = require('del');
 // const pug = require('gulp-pug');
 
 function browsersync() {
-  browserSync.init({
-    server: {
-      baseDir: 'app/'
-    }
-  });
+    browserSync.init({
+        server: {
+            baseDir: 'app/'
+        }
+    });
 }
 
 function cleanDist() {
-  return del('dist')
+    return del('dist')
 }
 
 // function pug2html() {
@@ -30,84 +30,84 @@ function cleanDist() {
 // }
 
 function images() {
-  return src('app/img/**/*')
-    .pipe(imagemin([
-      imagemin.gifsicle({ interlaced: true }),
-      imagemin.mozjpeg({ quality: 75, progressive: true }),
-      // imagemin.optipng({ optimizationLevel: 5 }),
-      imagemin.svgo({
-        plugins: [
-          { removeViewBox: true },
-          { cleanupIDs: false }
-        ]
-      })
-    ]))
-    .pipe(dest('dist/img'))
+    return src('app/img/**/*')
+        .pipe(imagemin([
+            imagemin.gifsicle({ interlaced: true }),
+            imagemin.mozjpeg({ quality: 75, progressive: true }),
+            // imagemin.optipng({ optimizationLevel: 5 }),
+            imagemin.svgo({
+                plugins: [
+                    { removeViewBox: true },
+                    { cleanupIDs: false }
+                ]
+            })
+        ]))
+        .pipe(dest('dist/img'))
 }
 
 function scripts() {
-  return src([
-    'app/js/main.js'
-  ])
-    .pipe(concat('main.min.js'))
-    .pipe(uglify())
-    .pipe(dest('app/js'))
-    .pipe(browserSync.stream())
+    return src([
+            'app/js/main.js'
+        ])
+        .pipe(concat('main.min.js'))
+        .pipe(uglify())
+        .pipe(dest('app/js'))
+        .pipe(browserSync.stream())
 }
 
 function js() {
-  return src([
-    'node_modules/jquery/dist/jquery.js',
-    'node_modules/slick-carousel/slick/slick.js',
-  ])
-  .pipe(concat('libs.min.js'))
-  .pipe(uglify())
-  .pipe(dest('app/js'))
-  .pipe(browserSync.stream())
+    return src([
+            'node_modules/jquery/dist/jquery.js',
+            'node_modules/slick-carousel/slick/slick.js',
+        ])
+        .pipe(concat('libs.min.js'))
+        .pipe(uglify())
+        .pipe(dest('app/js'))
+        .pipe(browserSync.stream())
 }
 
 function styles() {
-  return src(['app/scss/style.scss',
-    // 'node_modules/normalize-css/normalize.css',
-    // 'node_modules/slick-carousel/slick/slick.scss'
-  ])
-    .pipe(scss({ outputStyle: 'compressed' }))
-    .pipe(concat('style.min.css'))
-    .pipe(autoprefixer({
-      overrideBrowserslist: ['last 10 version'],
-      grid: true
-    }))
-    .pipe(dest('app/css'))
-    .pipe(browserSync.stream())
+    return src(['app/scss/style.scss',
+            // 'node_modules/normalize-css/normalize.css',
+            // 'node_modules/slick-carousel/slick/slick.scss'
+        ])
+        .pipe(scss({ outputStyle: 'compressed' }))
+        .pipe(concat('style.min.css'))
+        .pipe(autoprefixer({
+            overrideBrowserslist: ['last 10 version'],
+            grid: true
+        }))
+        .pipe(dest('app/css'))
+        .pipe(browserSync.stream())
 }
 
 function css() {
-  return src([
-    'node_modules/normalize-css/normalize.css',
-    'node_modules/slick-carousel/slick/slick.scss'
-  ])
-    .pipe(scss({ outputStyle: 'compressed' }))
-    .pipe(concat('libs.min.css'))
-    .pipe(dest('app/css'))
-    .pipe(browserSync.stream())
+    return src([
+            'node_modules/normalize-css/normalize.css'
+            // 'node_modules/slick-carousel/slick/slick.scss'
+        ])
+        .pipe(scss({ outputStyle: 'compressed' }))
+        .pipe(concat('libs.min.css'))
+        .pipe(dest('app/css'))
+        .pipe(browserSync.stream())
 }
 
 function build() {
-  return src([
-    'app/css/style.min.css',
-    'app/fonts/**/*',
-    'app/js/main.min.js',
-    'app/js/libs.min.js', 
-    'app/**/*html'
-  ], { base: 'app' })
-    .pipe(dest('dist'))
+    return src([
+            'app/css/style.min.css',
+            'app/fonts/**/*',
+            'app/js/main.min.js',
+            'app/js/libs.min.js',
+            'app/**/*html'
+        ], { base: 'app' })
+        .pipe(dest('dist'))
 }
 
 function watching() {
-  watch(['app/scss/**/*.scss'], styles);
-  watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
-  // watch(['app/pug/**/*pug'], pug2html);
-  watch(['app/**/*html']).on('change', browserSync.reload);
+    watch(['app/scss/**/*.scss'], styles);
+    watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
+    // watch(['app/pug/**/*pug'], pug2html);
+    watch(['app/**/*html']).on('change', browserSync.reload);
 }
 
 exports.styles = styles;
