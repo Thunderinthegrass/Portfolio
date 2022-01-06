@@ -22,8 +22,8 @@ function fireworks() {
     setInterval(createElem, 1000);
 
 
-    setTimeout(function() {
-        setInterval(function() {
+    setTimeout(function () {
+        setInterval(function () {
             newYear.firstChild.remove();
         }, 1000);
     }, 4000)
@@ -36,6 +36,11 @@ function garlang() {
     item.forEach((elem, index) => {
         let randRot = Math.round(Math.random(1) * 40);
         let randOffset = Math.round(Math.random(1) * 15);
+
+        if (body.clientWidth < 450) {
+            randRot = Math.round(Math.random(1) * 20);
+            randOffset = Math.round(Math.random(1) * 5);
+        }
 
         if (index % 2 == 1) {
             elem.style.transform = `translateY(${randOffset}px) rotate(${randRot}deg)`;
