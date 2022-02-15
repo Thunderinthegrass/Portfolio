@@ -1,125 +1,55 @@
-const { src, dest, watch, parallel, series } = require('gulp');
-const scss = require('gulp-sass');
-const concat = require('gulp-concat');
-const browserSync = require('browser-sync').create();
-const uglify = require('gulp-uglify-es').default;
-const autoprefixer = require('gulp-autoprefixer');
-const imagemin = require('gulp-imagemin');
-const del = require('del');
-// const pug = require('gulp-pug');
+//Основной модуль
+import gulp from "gulp";
+//Импорт путей
+import { path } from "./gulp/config/path.js";
+//импорт общих плагинов
+import { plugins } from "./gulp/config/plugins.js";
 
-function browsersync() {
-    browserSync.init({
-        server: {
-            baseDir: 'app/'
-        }
-    });
+//Передаем значения в глобальную переменную
+global.app = {
+    isBuild: process.argv.includes('--build'),
+    isDev: !process.argv.includes('--build'),
+    path: path,
+    gulp: gulp,
+    plugins: plugins
 }
 
-function cleanDist() {
-    return del('dist')
+//импорт задач
+import { copy } from "./gulp/tasks/copy.js";
+import { reset } from "./gulp/tasks/reset.js";
+import { html } from "./gulp/tasks/html.js";
+import { server } from "./gulp/tasks/server.js";
+import { scss } from "./gulp/tasks/scss.js";
+import { js } from "./gulp/tasks/js.js";
+import { images } from "./gulp/tasks/images.js";
+import { otfToTtf, ttfToWoff, fontsStyle } from "./gulp/tasks/fonts.js";
+import { svgSpriteTask } from "./gulp/tasks/svgSprive.js";
+import { zip } from "./gulp/tasks/zip.js";
+// import { ftp } from "./gulp/tasks/ftp.js";
+
+//наблюдатель за изменениями в файлах
+function watcher() {
+    gulp.watch(path.watch.files, copy);
+    gulp.watch(path.watch.html, html);
+    gulp.watch(path.watch.scss, scss);
+    gulp.watch(path.watch.js, js);
+    gulp.watch(path.watch.images, images);
 }
 
-// function pug2html() {
-//   return src('app/pug/**/**/*.pug')
-//     .pipe(pug({
-//       pretty:true
-//     }))
-//     .pipe(dest('app'))
-//     .pipe(browserSync.stream())
-// }
+//экспорт сценариев
+export { svgSpriteTask }
 
-function images() {
-    return src('app/img/**/*')
-        .pipe(imagemin([
-            imagemin.gifsicle({ interlaced: true }),
-            imagemin.mozjpeg({ quality: 75, progressive: true }),
-            // imagemin.optipng({ optimizationLevel: 5 }),
-            imagemin.svgo({
-                plugins: [
-                    { removeViewBox: true },
-                    { cleanupIDs: false }
-                ]
-            })
-        ]))
-        .pipe(dest('dist/img'))
-}
+const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
 
-function scripts() {
-    return src([
-            'app/js/main.js'
-        ])
-        .pipe(concat('main.min.js'))
-        .pipe(uglify())
-        .pipe(dest('app/js'))
-        .pipe(browserSync.stream())
-}
+const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images));
 
-function js() {
-    return src([
-            'node_modules/jquery/dist/jquery.js',
-            'node_modules/slick-carousel/slick/slick.js',
-        ])
-        .pipe(concat('libs.min.js'))
-        .pipe(uglify())
-        .pipe(dest('app/js'))
-        .pipe(browserSync.stream())
-}
+const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
+const build = gulp.series(reset, mainTasks);
+const deployZIP = gulp.series(reset, mainTasks, zip);
 
-function styles() {
-    return src(['app/scss/style.scss',
-            // 'node_modules/normalize-css/normalize.css',
-            // 'node_modules/slick-carousel/slick/slick.scss'
-        ])
-        .pipe(scss({ outputStyle: 'compressed' }))
-        .pipe(concat('style.min.css'))
-        .pipe(autoprefixer({
-            overrideBrowserslist: ['last 10 version'],
-            grid: true
-        }))
-        .pipe(dest('app/css'))
-        .pipe(browserSync.stream())
-}
+export { dev }
+export { build }
+export { deployZIP }
 
-function css() {
-    return src([
-            'node_modules/normalize-css/normalize.css'
-            // 'node_modules/slick-carousel/slick/slick.scss'
-        ])
-        .pipe(scss({ outputStyle: 'compressed' }))
-        .pipe(concat('libs.min.css'))
-        .pipe(dest('app/css'))
-        .pipe(browserSync.stream())
-}
-
-function build() {
-    return src([
-            'app/css/style.min.css',
-            'app/fonts/**/*',
-            'app/js/main.min.js',
-            'app/js/libs.min.js',
-            'app/**/*html'
-        ], { base: 'app' })
-        .pipe(dest('dist'))
-}
-
-function watching() {
-    watch(['app/scss/**/*.scss'], styles);
-    watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
-    // watch(['app/pug/**/*pug'], pug2html);
-    watch(['app/**/*html']).on('change', browserSync.reload);
-}
-
-exports.styles = styles;
-exports.css = css;
-exports.js = js;
-exports.watching = watching;
-exports.browsersync = browsersync;
-exports.scripts = scripts;
-exports.images = images;
-exports.cleanDist = cleanDist;
-// exports.pug2html = pug2html;
-
-exports.build = series(cleanDist, build, images);
-// exports.default = parallel(pug2html, styles, css, scripts, js, browsersync, watching);
-exports.default = parallel(styles, css, scripts, js, browsersync, watching);
+//выполнение сценария по умолчанию
+gulp.task('default', dev);
