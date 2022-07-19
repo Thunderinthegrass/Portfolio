@@ -323,6 +323,7 @@
 // form-------------------------------
 .form {
   padding: 0 20px;
+  position: relative;
 }
 .form__body {
   position: relative;
@@ -352,8 +353,9 @@
 .form__label {
   font-size: 18px;
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
   font-weight: bold;
+  position: relative;
 }
 .form__input {
   height: 35px;
@@ -361,15 +363,11 @@
   border-radius: 3px;
   border: none;
   padding: 0 20px;
-  margin-bottom: 5px;
   font-size: 18px;
   border: 1px solid $main-color;
-  &:focus {
-    box-shadow: 0 0 5px #00e1ff, 0 0 10px #00e1ff, 0 0 15px #00e1ff;
+  &[type="file"]{
+    display: none;
   }
-}
-.form__input._error {
-  box-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000;
 }
 textarea.form__input {
   min-height: 120px;
@@ -378,11 +376,13 @@ textarea.form__input {
   outline: none;
   border: 1px solid $main-color;
   font-size: 18px;
+  position: relative;
 }
 .form__button {
   position: absolute;
-  top: 80%;
-  right: 30px;
+  left: 50%;
+  bottom: -55px;
+  transform: translateX(-50%);
   display: inline-flex;
   min-height: 40px;
   justify-content: center;
@@ -395,5 +395,16 @@ textarea.form__input {
   outline: none;
   font-size: 18px;
   font-weight: bold;
+  transition: .3s;
   cursor: pointer;
+  &:hover{
+    background: $main-color;
+    color: rgb(255, 255, 255);
+  }
+}
+.just-validate-error-label{
+  position: absolute;
+  top: -20px;
+  font-weight: 400;
+  font-size: 16px;
 }

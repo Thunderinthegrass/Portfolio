@@ -21,14 +21,14 @@ validation
     {
       rule: 'required',
       value: true,
-      errorMessage: 'Введите имя!'
+      errorMessage: 'Введите имя'
     }
   ])
   .addField('.input-mail', [
     {
       rule: 'required',
       value: true,
-      errorMessage: 'Email обязателен',
+      errorMessage: 'Введите Email',
     },
     {
       rule: 'email',
@@ -40,7 +40,7 @@ validation
     {
       rule: 'required',
       value: true,
-      errorMessage: 'Телефон обязателен',
+      errorMessage: 'Введите телефон',
     },
     {
       rule: 'function',

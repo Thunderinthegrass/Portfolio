@@ -264,44 +264,25 @@
                     </div>
                 </div>
                 <div class="about__item about__item-3 form-wrapper _anim-items brdr--color">
-                    <!-- <div class="form">
-                        <form action="#" id="form" class="form__body" method="POST" enctype="multipart/form-data">
-                            <h3 class="form__title _lang main--color">Write me</h3>
-                            <div class="form__item">
-                                <label for="formName" class="form__label _lang main--color">Name*:</label>
-                                <input id="formName" type="text" data-validate-field="name" name="name" class="form__input _req">
-                            </div>
-                            <div class="form__item">
-                                <label for="formEmail" class="form__label main--color">E-mail*:</label>
-                                <input id="formEmail" type="text" name="email" class="form__input _req _email">
-                            </div>
-                            <div class="form__item">
-                                <label for="formMessage" class="form__label _lang main--color">Massage:</label>
-                                <textarea name="message" id="formMessage" class="form__input"></textarea>
-                            </div>
-
-                            <button type="submit" class="form__button _lang main--color brdr--color">Send</button>
-                        </form>
-
-                    </div> -->
                     <form action="#" class="form" method="POST" enctype="multipart/form-data">
+                        <div class="form__title">Написать мне</div>
                         <label class="form__label">
-                          <input class="input input-name" type="text" data-validate-field="name" name="Имя" placeholder="Введите имя">
+                          <input class="form__input input-name" type="text" data-validate-field="name" name="Имя" placeholder="Введите имя">
                         </label>
                         <label class="form__label">
-                          <input class="input input-mail" type="email" data-validate-field="email" name="Email"
+                          <input class="form__input input-mail" type="email" data-validate-field="email" name="Email"
                             placeholder="Введите email">
                         </label>
                         <label class="form__label">
-                          <input class="input input-tel" type="tel" data-validate-field="tel" name="Телефон"
+                          <input class="form__input input-tel" type="tel" data-validate-field="tel" name="Телефон"
                             placeholder="Введите телефон">
                         </label>
                         <label class="form__label">
-                          <textarea class="textarea" name="Сообщение" id="" cols="30" rows="10"
-                            placeholder="Введите ваше сообщение"></textarea>
+                          <textarea class="form__input" name="Сообщение" id="" cols="30" rows="10"
+                            placeholder="Введите сообщение"></textarea>
                         </label>
-                        <input class="input" type="file" name="file[]" multiple id="myfile">
-                        <button class="button">Отправить</button>
+                        <input class="form__input" type="file" name="file[]" multiple id="myfile">
+                        <button class="form__button">Отправить</button>
                       </form>
                 </div>
             </div>

@@ -1419,6 +1419,7 @@ a {
 
 .form {
   padding: 0 20px;
+  position: relative;
 }
 
 .form__body {
@@ -1453,8 +1454,9 @@ a {
 .form__label {
   font-size: 18px;
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
   font-weight: bold;
+  position: relative;
 }
 
 .form__input {
@@ -1463,18 +1465,11 @@ a {
   border-radius: 3px;
   border: none;
   padding: 0 20px;
-  margin-bottom: 5px;
   font-size: 18px;
   border: 1px solid #373841;
 }
-.form__input:focus {
-  -webkit-box-shadow: 0 0 5px #00e1ff, 0 0 10px #00e1ff, 0 0 15px #00e1ff;
-          box-shadow: 0 0 5px #00e1ff, 0 0 10px #00e1ff, 0 0 15px #00e1ff;
-}
-
-.form__input._error {
-  -webkit-box-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000;
-          box-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000;
+.form__input[type=file] {
+  display: none;
 }
 
 textarea.form__input {
@@ -1484,12 +1479,16 @@ textarea.form__input {
   outline: none;
   border: 1px solid #373841;
   font-size: 18px;
+  position: relative;
 }
 
 .form__button {
   position: absolute;
-  top: 80%;
-  right: 30px;
+  left: 50%;
+  bottom: -55px;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -1508,7 +1507,21 @@ textarea.form__input {
   outline: none;
   font-size: 18px;
   font-weight: bold;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
   cursor: pointer;
+}
+.form__button:hover {
+  background: #373841;
+  color: rgb(255, 255, 255);
+}
+
+.just-validate-error-label {
+  position: absolute;
+  top: -20px;
+  font-weight: 400;
+  font-size: 16px;
 }
 
 .portfolio {
@@ -2740,13 +2753,6 @@ strong {
   }
   .form .form__input {
     width: 100%;
-  }
-  .form .form__button {
-    top: 102%;
-    right: 50%;
-    -webkit-transform: translate(50%);
-        -ms-transform: translate(50%);
-            transform: translate(50%);
   }
 }
 @media (max-width: 1024px) {
