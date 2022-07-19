@@ -1,55 +1,146 @@
-//Основной модуль
-import gulp from "gulp";
-//Импорт путей
-import { path } from "./gulp/config/path.js";
-//импорт общих плагинов
-import { plugins } from "./gulp/config/plugins.js";
+const { src, dest, watch, parallel, series } = require("gulp");
 
-//Передаем значения в глобальную переменную
-global.app = {
-    isBuild: process.argv.includes('--build'),
-    isDev: !process.argv.includes('--build'),
-    path: path,
-    gulp: gulp,
-    plugins: plugins
+const scss = require("gulp-sass")(require("sass"));
+const concat = require("gulp-concat");
+const browserSync = require("browser-sync").create();
+const uglify = require("gulp-uglify-es").default;
+const autoprefixer = require("gulp-autoprefixer");
+const imagemin = require("gulp-imagemin");
+const del = require("del");
+const webp = require("gulp-webp");
+const webpHtml = require("gulp-webp-html");
+const webpCss = require("gulp-webp-css");
+const svgSprite = require("gulp-svg-sprite");
+
+function svgSprites() {
+  return src("app/img/svg/**.svg")
+    .pipe(
+      svgSprite({
+        mode: {
+          stack: {
+            sprite: "../sprite.svg",
+          },
+        },
+      })
+    )
+    .pipe(dest("app/img/sprite"));
 }
 
-//импорт задач
-import { copy } from "./gulp/tasks/copy.js";
-import { reset } from "./gulp/tasks/reset.js";
-import { html } from "./gulp/tasks/html.js";
-import { server } from "./gulp/tasks/server.js";
-import { scss } from "./gulp/tasks/scss.js";
-import { js } from "./gulp/tasks/js.js";
-import { images } from "./gulp/tasks/images.js";
-import { otfToTtf, ttfToWoff, fontsStyle } from "./gulp/tasks/fonts.js";
-import { svgSpriteTask } from "./gulp/tasks/svgSprive.js";
-import { zip } from "./gulp/tasks/zip.js";
-// import { ftp } from "./gulp/tasks/ftp.js";
-
-//наблюдатель за изменениями в файлах
-function watcher() {
-    gulp.watch(path.watch.files, copy);
-    gulp.watch(path.watch.html, html);
-    gulp.watch(path.watch.scss, scss);
-    gulp.watch(path.watch.js, js);
-    gulp.watch(path.watch.images, images);
+function browsersync() {
+  browserSync.init({
+    server: {
+      baseDir: "app/",
+    },
+  });
 }
 
-//экспорт сценариев
-export { svgSpriteTask }
+function cleanDist() {
+  return del("dist");
+}
 
-const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
+function images() {
+  return src("app/img/**/*")
+    .pipe(
+      imagemin([
+        imagemin.gifsicle({ interlaced: true }),
+        imagemin.mozjpeg({ quality: 75, progressive: true }),
+        imagemin.optipng({ optimizationLevel: 5 }),
+        imagemin.svgo({
+          plugins: [{ removeViewBox: true }, { cleanupIDs: false }],
+        }),
+      ])
+    )
+    .pipe(dest("dist/img"))
+    .pipe(webp())
+    .pipe(dest("app/img"))
+    .pipe(dest("dist/img"));
+}
 
-const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images));
+function scripts() {
+  return (
+    src([
+      // 'node_modules/jquery/dist/jquery.js',
+      "app/js/main.js",
+    ])
+      .pipe(concat("main.min.js"))
+      // .pipe(uglify())
+      .pipe(dest("app/js"))
+      .pipe(browserSync.stream())
+  );
+}
 
-const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
-const build = gulp.series(reset, mainTasks);
-const deployZIP = gulp.series(reset, mainTasks, zip);
+function libs() {
+  return (
+    src([
+      "app/js/mail/inputmask.min.js",
+      "app/js/mail/just-validate3.3.3.min.js",
+      "app/js/mail/script-new.js",
+    ])
+      // .pipe(concat("libs.min.js"))
+      // .pipe(uglify())
+      .pipe(dest("app/js/mail"))
+      .pipe(browserSync.stream())
+  );
+}
 
-export { dev }
-export { build }
-export { deployZIP }
+function html() {
+  return src("app/**/*.html").pipe(webpHtml()).pipe(dest("dist/"));
+}
 
-//выполнение сценария по умолчанию
-gulp.task('default', dev);
+function styles() {
+  return src("app/scss/style.scss")
+    .pipe(scss({ outputStyle: "expanded" }))
+    .pipe(concat("style.min.css"))
+    .pipe(
+      autoprefixer({
+        overrideBrowserslist: ["last 10 version"],
+        grid: true,
+      })
+    )
+    .pipe(webpCss())
+    .pipe(dest("app/css"))
+    .pipe(browserSync.stream());
+}
+
+function build() {
+  return src(
+    [
+      "app/css/style.min.css",
+      "app/fonts/**/*",
+      "app/js/main.min.js",
+      "app/js/mail/**/*",
+      "app/phpmailer/**/*",
+      "app/mail.php"
+      // 'app/*.html'
+    ],
+    { base: "app" }
+  ).pipe(dest("dist"));
+}
+
+function watching() {
+  watch(["app/scss/**/*.scss"], styles);
+  watch(["app/js/**/*.js", "!app/js/main.min.js"], scripts);
+  watch(["app/img/**svg"], svgSprites);
+  watch(["app/*.html"]).on("change", browserSync.reload);
+}
+
+exports.styles = styles;
+exports.watching = watching;
+exports.browsersync = browsersync;
+exports.scripts = scripts;
+exports.images = images;
+exports.cleanDist = cleanDist;
+exports.html = html;
+exports.svgSprites = svgSprites;
+exports.libs = libs;
+
+exports.build = series(cleanDist, html, images, build);
+exports.default = parallel(
+  images,
+  styles,
+  scripts,
+  libs,
+  svgSprites,
+  browsersync,
+  watching
+);
