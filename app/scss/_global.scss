@@ -4,7 +4,9 @@ html {
 body {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
-  color: $main-color;
+  color: var(--color-text);
+  background: var(--bg-color);
+  transition: all .3s;
   // position: relative;
   // overflow: hidden;
   // background: #09113D;
@@ -24,10 +26,15 @@ h5,
 h6 {
   margin: 0;
   padding: 0;
+  color: var(--color-text);
 }
 a {
   text-decoration: none;
   color: $main-color;
+}
+button{
+  background: none;
+  border: none;
 }
 .container {
   margin: 0 auto;

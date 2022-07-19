@@ -186,7 +186,7 @@
   .header__text {
     padding: 19px 86px;
     &-mask {
-      border: 2px solid #373841;
+      border: 2px solid var(--color-text);
     }
   }
 }
@@ -333,7 +333,7 @@
     transform: translateX(-50%);
     animation: header__text-854 3s linear forwards;
     &-mask {
-      border: 2px solid #373841;
+      border: 2px solid var(--color-text);
     }
   }
   .about__inner {

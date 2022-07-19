@@ -10,3 +10,19 @@ $main-font: #0a0a0a;
 // fill: #00ffb3;
 $section-border: rgb(159, 32, 170);
 $button-to-top-color: #09e3eb;
+
+
+:root,
+[data-theme=default] {
+  --color-text: #373841;
+  --bg-color: #ffffff;
+  --color-transparent: transparent;
+}
+
+@supports (--css: variables) {
+  [data-theme=dark] {
+    --color-text: #ffffff;
+    --bg-color: #373841;
+    --color-transparent: transparent;
+  }
+}

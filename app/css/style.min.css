@@ -1,3 +1,17 @@
+:root,
+[data-theme=default] {
+  --color-text: #373841;
+  --bg-color: #ffffff;
+  --color-transparent: transparent;
+}
+
+@supports (--css: variables) {
+  [data-theme=dark] {
+    --color-text: #ffffff;
+    --bg-color: #373841;
+    --color-transparent: transparent;
+  }
+}
 @font-face {
   font-family: roboto;
   font-display: swap;
@@ -33,7 +47,11 @@ html {
 body {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
-  color: #373841;
+  color: var(--color-text);
+  background: var(--bg-color);
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 *,
@@ -53,11 +71,17 @@ h5,
 h6 {
   margin: 0;
   padding: 0;
+  color: var(--color-text);
 }
 
 a {
   text-decoration: none;
   color: #373841;
+}
+
+button {
+  background: none;
+  border: none;
 }
 
 .container {
@@ -249,7 +273,10 @@ a {
   -o-transition: 0.5s linear;
   transition: 0.5s linear;
   font-size: 14px;
-  background: rgba(255, 255, 255, 0.8862745098);
+  background: var(--color-transparent);
+}
+.tuning__inner {
+  padding-left: 15px;
 }
 .tuning__title {
   font-size: 17px;
@@ -282,7 +309,7 @@ a {
 .header__top {
   font-size: 1.3rem;
   letter-spacing: 0.3px;
-  background: #ffffff;
+  background: var(--bg-color);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -396,6 +423,7 @@ a {
   text-transform: uppercase;
   mix-blend-mode: multiply;
   background: transparent;
+  color: var(--color-text);
 }
 
 .menu-btn {
@@ -428,11 +456,11 @@ a {
   width: 100%;
   height: 6px;
   border-radius: 1.1px;
-  background: #373841;
   opacity: 1;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
+  background: var(--color-text);
 }
 .menu-btn__elem--active {
   -webkit-transition: 0.2s;
@@ -447,7 +475,7 @@ a {
   position: absolute;
   top: 0;
   left: 0;
-  background: #373841;
+  background: var(--color-text);
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -462,7 +490,7 @@ a {
   position: absolute;
   bottom: 0;
   left: 0;
-  background: #373841;
+  background: var(--color-text);
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -565,8 +593,8 @@ a {
   -webkit-appearance: none;
   outline: none;
   border-radius: 2px;
-  -webkit-box-shadow: 0 0 0 3px #7a7b85;
-          box-shadow: 0 0 0 3px #7a7b85;
+  -webkit-box-shadow: 0 0 0 3px var(--color-text);
+          box-shadow: 0 0 0 3px var(--color-text);
   cursor: pointer;
 }
 
@@ -576,7 +604,7 @@ a {
   left: 20px;
   width: 15px;
   height: 15px;
-  background: #373841;
+  background: var(--color-text);
   border-radius: 2px;
   -webkit-transform: scale(0.98, 0.96);
       -ms-transform: scale(0.98, 0.96);
@@ -596,8 +624,8 @@ a {
   -webkit-appearance: none;
   outline: none;
   border-radius: 2px;
-  -webkit-box-shadow: 0 0 0 3px #7a7b85;
-          box-shadow: 0 0 0 3px #7a7b85;
+  -webkit-box-shadow: 0 0 0 3px var(--color-text);
+          box-shadow: 0 0 0 3px var(--color-text);
   cursor: pointer;
 }
 
@@ -607,7 +635,7 @@ a {
   left: 53px;
   width: 12px;
   height: 15px;
-  background: #373841;
+  background: var(--color-text);
   border-radius: 2px;
   -webkit-transform: scale(0.98, 0.96);
       -ms-transform: scale(0.98, 0.96);
@@ -793,13 +821,10 @@ a {
       -ms-flex-align: center;
           align-items: center;
   text-transform: uppercase;
-  -webkit-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s;
   -webkit-animation: header__text 3s linear forwards;
           animation: header__text 3s linear forwards;
-  mix-blend-mode: multiply;
-  background-color: transparent !important;
+  background-color: var(--bg-color);
+  border-color: var(--bg-color);
 }
 .header__text-mask {
   position: absolute;
@@ -810,6 +835,9 @@ a {
   border: 5px solid;
   border-radius: 2px;
   background: transparent;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
   -webkit-animation: header__text-mask 2s linear forwards;
           animation: header__text-mask 2s linear forwards;
 }
@@ -2429,6 +2457,15 @@ strong {
   display: block;
 }
 
+.color-theme__btn {
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  color: #373841;
+  margin-bottom: 5px;
+  cursor: pointer;
+  color: var(--color-text);
+}
+
 .progress {
   position: fixed;
   right: 0;
@@ -2776,7 +2813,7 @@ strong {
     padding: 19px 86px;
   }
   .header__text-mask {
-    border: 2px solid #373841;
+    border: 2px solid var(--color-text);
   }
 }
 @media only screen and (max-width: 1024px) {
@@ -2936,7 +2973,7 @@ strong {
             animation: header__text-854 3s linear forwards;
   }
   .header__text-mask {
-    border: 2px solid #373841;
+    border: 2px solid var(--color-text);
   }
   .about__inner {
     padding: 0 10px 0 10px;
