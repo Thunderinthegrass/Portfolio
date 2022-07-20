@@ -7,9 +7,6 @@ body {
   color: var(--color-text);
   background: var(--bg-color);
   transition: all .3s;
-  // position: relative;
-  // overflow: hidden;
-  // background: #09113D;
 }
 *,
 *::after,
@@ -41,6 +38,7 @@ button{
   max-width: 1140px;
   width: 100%;
   position: relative;
+  // background: var(--bg-color);
 }
 .logo {
   display: block;

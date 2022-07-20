@@ -44,7 +44,8 @@
   transform: translateX(300px);
   transition: 0.5s linear;
   font-size: 14px;
-  background: var(--color-transparent);
+  background: var(--bg-color);
+  opacity: .9;
   &__inner{
     padding-left: 15px;
   }

@@ -17,6 +17,8 @@ $button-to-top-color: #09e3eb;
   --color-text: #373841;
   --bg-color: #ffffff;
   --color-transparent: transparent;
+  --mix-blend-mode: multiply;
+  --hover-color: #373841;
 }
 
 @supports (--css: variables) {
@@ -24,5 +26,7 @@ $button-to-top-color: #09e3eb;
     --color-text: #ffffff;
     --bg-color: #373841;
     --color-transparent: transparent;
+    --mix-blend-mode: difference;
+    --hover-color: #ffffff;
   }
 }

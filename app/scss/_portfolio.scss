@@ -1,7 +1,6 @@
 // portfolio--------------------------------------------------------------
 .portfolio {
   border-bottom: 1px solid;
-  // height: 100vh;
   padding-top: 50px;
   border-top: 1px solid;
   position: relative;
@@ -12,20 +11,16 @@
   font-weight: 800;
   transform: translate(-200px);
   text-transform: uppercase;
-  // color: $main-color;
-  mix-blend-mode: difference;
+  mix-blend-mode: soft-dark;
+  color: var(--color-text);
 }
 .portfolio__wrapper {
-  // height: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
 }
 .portfolio__item {
   border: 1px solid;
-  background: #ffffff;
-  // width: 100%;
-  mix-blend-mode: difference;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -39,6 +34,7 @@
   }
 }
 .portfolio__item-1 {
+  mix-blend-mode: var(--mix-blend-mode);
   opacity: 0;
   background-position: 0 0;
   a {
@@ -130,7 +126,7 @@
 }
 .portfolio__item-3 {
   opacity: 0;
-  mix-blend-mode: hard-light;
+  // mix-blend-mode: hard-light;
   a {
     background-image: url(../img/portfolio/sleep.jpg);
   }
