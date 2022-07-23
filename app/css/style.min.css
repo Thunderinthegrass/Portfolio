@@ -551,6 +551,7 @@ button {
   height: 18px;
   position: relative;
   margin-top: 20px;
+  display: none;
 }
 .lang__rus {
   position: absolute;
@@ -578,7 +579,7 @@ button {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  margin-top: 15px;
+  margin-top: 35px;
 }
 .eue-inp span {
   display: inline-block;
@@ -1402,38 +1403,39 @@ button {
 }
 .contactss__item {
   margin-top: 15px;
+  position: relative;
 }
 .contactss__phone {
   display: inline-block;
   position: relative;
-  padding-left: 22px;
+  padding-left: 35px;
   line-height: 22px;
 }
-.contactss__phone::before {
+.contactss__phone svg {
+  width: 30px;
+  height: 30px;
   position: absolute;
-  width: 22px;
-  height: 22px;
   left: 0;
-  top: 0;
-  content: "";
-  background-image: url(../img/mobile.svg);
-  background-size: cover;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 .contactss__email {
+  position: relative;
   display: inline-block;
   position: relative;
-  padding-left: 25px;
+  padding-left: 35px;
   line-height: 22px;
 }
-.contactss__email::before {
+.contactss__email svg {
+  width: 30px;
   position: absolute;
-  width: 22px;
-  height: 22px;
   left: 0;
-  top: 0;
-  content: "";
-  background-image: url(../img/envelop.svg);
-  background-size: cover;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .icon-vk {
@@ -1566,11 +1568,14 @@ textarea.form__input {
 
 .portfolio__title {
   position: absolute;
-  font-size: 110px;
+  font-size: 70px;
   font-weight: 800;
   -webkit-transform: translate(-200px);
       -ms-transform: translate(-200px);
           transform: translate(-200px);
+  -webkit-transform: translate(-45px, 8px);
+      -ms-transform: translate(-45px, 8px);
+          transform: translate(-45px, 8px);
   text-transform: uppercase;
   mix-blend-mode: soft-dark;
   color: var(--color-text);
@@ -1598,6 +1603,7 @@ textarea.form__input {
   width: 100%;
   height: 100%;
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .portfolio__item-1 {
@@ -1683,7 +1689,8 @@ textarea.form__input {
   opacity: 0;
 }
 .portfolio__item-2 a {
-  background-image: url(../img/portfolio/all-sorts-of-things.jpg);
+  background-image: url(../img/portfolio/ag.jpg);
+  background-position: right 0;
 }
 
 .portfolio__wrapper._active .portfolio__item-2 {
@@ -2525,12 +2532,6 @@ strong {
   mix-blend-mode: lighten;
 }
 
-.svg-sprite {
-  position: absolute;
-  width: 100px;
-  fill: #cf1717;
-}
-
 @media (max-width: 1600px) {
   .header__text {
     -webkit-animation: header__text-1600 3s linear forwards;
@@ -3086,11 +3087,9 @@ strong {
   }
 }
 @supports (-webkit-appearance:none){
-.contactss__phone::before{background-image:url(../img/mobile.svg)}
-.contactss__email::before{background-image:url(../img/envelop.svg)}
 .form__body::after{background:rgba(0, 0, 0, 0.411) url(../img/loading.gif) center 50% no-repeat}
 .portfolio__item-1 a{background-image:url(../img/portfolio/store.webp)}
-.portfolio__item-2 a{background-image:url(../img/portfolio/all-sorts-of-things.webp)}
+.portfolio__item-2 a{background-image:url(../img/portfolio/ag.webp)}
 .portfolio__item-3 a{background-image:url(../img/portfolio/sleep.webp)}
 }
 

@@ -270,37 +270,34 @@
   }
   &__item{
     margin-top: 15px;
+    position: relative;
   }
   &__phone {
     display: inline-block;
     position: relative;
-    padding-left: 22px;
+    padding-left: 35px;
     line-height: 22px;
-    &::before {
+    svg{
+      width: 30px;
+      height: 30px;
       position: absolute;
-      width: 22px;
-      height: 22px;
       left: 0;
-      top: 0;
-      content: "";
-      background-image: url(../img/mobile.svg);
-      background-size: cover;
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
   &__email {
+    position: relative;
     display: inline-block;
     position: relative;
-    padding-left: 25px;
+    padding-left: 35px;
     line-height: 22px;
-    &::before {
+    svg{
+      width: 30px;
       position: absolute;
-      width: 22px;
-      height: 22px;
       left: 0;
-      top: 0;
-      content: "";
-      background-image: url(../img/envelop.svg);
-      background-size: cover;
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
 }

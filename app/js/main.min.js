@@ -1,5 +1,5 @@
-let changeLanguage = document.querySelector(".change__language"),
-  eyeSlider = document.querySelector(".eye-slider"),
+function changeLang() {
+  let changeLanguage = document.querySelector(".change__language"),
   langSlider = document.querySelector(".lang-slider"),
   contentLangEn = [
     "наверх",
@@ -57,34 +57,47 @@ changeLanguage.onclick = () => {
     ? langSlider.classList.add("lang-slider--checked")
     : langSlider.classList.remove("lang-slider--checked");
 };
-let eyeSwitch = document.querySelector(".eye-switch");
-eyeSwitch.onclick = function () {
-  let e = document.querySelector(".eye");
-  eyeSwitch.checked
-    ? (e.classList.remove("eye-red"),
-      eyeSlider.classList.add("eye-slider--checked"))
-    : (e.classList.add("eye-red"),
-      eyeSlider.classList.remove("eye-slider--checked"));
-};
-let menuBtn = document.querySelector(".menu-btn"),
-  menuBtnElem = document.querySelector(".menu-btn__elem"),
-  headerMenu = document.querySelector(".header__menu"),
-  headerMenuItem = document.querySelectorAll(".header__menu_item");
-
-function menuBtnAnim() {
-  menuBtn.classList.toggle("menu-btn--active"),
-    menuBtnElem.classList.toggle("menu-btn__elem--active"),
-    headerMenu.classList.toggle("menu--active");
 }
+// changeLang();
 
-function hiddMenu() {
-  "block" === window.getComputedStyle(menuBtn).display && menuBtnAnim();
+function eye() {
+  let eyeSwitch = document.querySelector(".eye-switch");
+  eyeSlider = document.querySelector(".eye-slider")
+
+  eyeSwitch.onclick = function () {
+    let e = document.querySelector(".eye");
+    eyeSwitch.checked
+      ? (e.classList.remove("eye-red"),
+        eyeSlider.classList.add("eye-slider--checked"))
+      : (e.classList.add("eye-red"),
+        eyeSlider.classList.remove("eye-slider--checked"));
+  };
 }
+eye();
 
-menuBtn.addEventListener("click", menuBtnAnim);
+function mobileMenu() {
+  let menuBtn = document.querySelector(".menu-btn"),
+    menuBtnElem = document.querySelector(".menu-btn__elem"),
+    headerMenu = document.querySelector(".header__menu"),
+    headerMenuItem = document.querySelectorAll(".header__menu_item");
 
-for (let e = 0; e < headerMenuItem.length; e++)
-  headerMenuItem[e].addEventListener("click", hiddMenu);
+  function menuBtnAnim() {
+    menuBtn.classList.toggle("menu-btn--active"),
+      menuBtnElem.classList.toggle("menu-btn__elem--active"),
+      headerMenu.classList.toggle("menu--active");
+  }
+
+  function hiddMenu() {
+    "block" === window.getComputedStyle(menuBtn).display && menuBtnAnim();
+  }
+
+  menuBtn.addEventListener("click", menuBtnAnim);
+
+  for (let e = 0; e < headerMenuItem.length; e++)
+    headerMenuItem[e].addEventListener("click", hiddMenu);
+}
+mobileMenu();
+
 const anchors = document.querySelectorAll('a[href*="#"]');
 for (let e of anchors)
   e.addEventListener("click", function (o) {
@@ -159,36 +172,6 @@ let gnatsStop = 0,
   brdrColor = document.querySelectorAll(".brdr--color"),
   headerBgWrapper = document.querySelector(".header__bg-wrapper"),
   elemBg = document.querySelectorAll(".elem--bg");
-// function colorThemeLight() {
-//   (document.querySelector(".change__language").style.boxShadow =
-//     "0 0 0 3px #373841"),
-//     (document.querySelector(".eye-switch").style.boxShadow =
-//       "0 0 0 3px #373841");
-//   for (let e = 0; e < mainColor.length; e++)
-//     (mainColor[e].classList.contains("main--color-dark") ||
-//       mainColor[e].classList.contains("main--color-colorful")) &&
-//       (mainColor[e].classList.remove("main--color-dark"),
-//       mainColor[e].classList.remove("main--color-colorful")),
-//       mainColor[e].classList.add("main--color-light"),
-//       (mainColor[e].style.color = "#383942");
-//   for (let e = 0; e < bgHead.length; e++) bgHead[e].style.fill = "#383942";
-//   body.classList.add("main--color-light");
-// }
-// function colorThemeDark() {
-//   (document.querySelector(".change__language").style.boxShadow =
-//     "0 0 0 3px #aaa6a6"),
-//     (document.querySelector(".eye-switch").style.boxShadow =
-//       "0 0 0 3px #aaa6a6");
-//   for (let e = 0; e < mainColor.length; e++)
-//     (mainColor[e].classList.contains("main--color-light") ||
-//       mainColor[e].classList.contains("main--color-colorful")) &&
-//       (mainColor[e].classList.remove("main--color-light"),
-//       mainColor[e].classList.remove("main--color-colorful")),
-//       mainColor[e].classList.add("main--color-dark"),
-//       (mainColor[e].style.color = "#aaa6a6");
-//   for (let e = 0; e < bgHead.length; e++) bgHead[e].style.fill = "#1f1e1e";
-//   document.querySelector("body").classList.add("main--color-dark");
-// }
 // function colorThemeColorful() {
 //   function e(e, o) {
 //     return Math.floor(Math.random() * (o - e)) + e;
@@ -234,7 +217,6 @@ let gnatsStop = 0,
 function colorThemes() {
   let theme = "light";
   function detectColorScheme() {
-
     if (localStorage.getItem("theme")) {
       if (localStorage.getItem("theme") == "dark") {
         theme = "dark";
