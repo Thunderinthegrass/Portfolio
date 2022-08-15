@@ -1,16 +1,13 @@
 // portfolio--------------------------------------------------------------
 .portfolio {
   border-bottom: 1px solid;
-  padding-top: 50px;
+  padding-top: 30px;
   border-top: 1px solid;
   position: relative;
 }
 .portfolio__title {
-  position: absolute;
   font-size: 70px;
-  font-weight: 800;
-  transform: translate(-200px);
-  transform: translate(-45px, 8px);
+  transform: translateX(40px);
   text-transform: uppercase;
   mix-blend-mode: soft-dark;
   color: var(--color-text);
@@ -40,7 +37,7 @@
   opacity: 0;
   background-position: 0 0;
   a {
-    background-image: url(../img/portfolio/store.jpg);
+    background-image: url(../img/portfolio/ag.jpg);
   }
 }
 .portfolio__wrapper._active {
@@ -85,7 +82,7 @@
 .portfolio__item-2 {
   opacity: 0;
   a {
-    background-image: url(../img/portfolio/ag.jpg);
+    background-image: url(../img/portfolio/sleep.jpg);
     background-position: right 0;
   }
 }
@@ -131,7 +128,7 @@
   opacity: 0;
   // mix-blend-mode: hard-light;
   a {
-    background-image: url(../img/portfolio/sleep.jpg);
+    background-image: url(../img/portfolio/store.jpg);
   }
 }
 .portfolio__wrapper._active {

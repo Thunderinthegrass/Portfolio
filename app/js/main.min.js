@@ -1,68 +1,68 @@
 function changeLang() {
   let changeLanguage = document.querySelector(".change__language"),
-  langSlider = document.querySelector(".lang-slider"),
-  contentLangEn = [
-    "наверх",
-    "главная",
-    "портфолио",
-    "обо мне",
-    "выключить глаз",
-    "роман насачевский",
-    "верстальщик",
-    "роман насачевский",
-    "верстальщик",
-    "портфолио",
-    "обо мне",
-    "Стек веб-технологий",
-    "CSS-анимация",
-    "Кроссбраузерная, адаптивная вёрстка",
-    "БЭМ-методология",
-    "Pixel Perfect",
-    "Контакты",
-    "Напиcать мне",
-    "Имя*",
-    "Сообщение",
-    "Отправить",
-  ],
-  contentLangRu = [
-    "up",
-    "home",
-    "portfolio",
-    "about me",
-    "turn off the eye",
-    "roman nasachevsky",
-    "layout designer",
-    "roman nasachevsky",
-    "layout designer",
-    "portfolio",
-    "about me",
-    "Web technology stack",
-    "CSS animation",
-    "Cross-browser, responsive layout",
-    "BEM methodology",
-    "Pixel Perfect",
-    "Contacts",
-    "Write me",
-    "Name*",
-    "Massage",
-    "Send",
-  ],
-  contentItem = document.querySelectorAll("._lang");
-changeLanguage.onclick = () => {
-  for (let e = 0; e < contentItem.length; e++)
+    langSlider = document.querySelector(".lang-slider"),
+    contentLangEn = [
+      "наверх",
+      "главная",
+      "портфолио",
+      "обо мне",
+      "выключить глаз",
+      "роман насачевский",
+      "верстальщик",
+      "роман насачевский",
+      "верстальщик",
+      "портфолио",
+      "обо мне",
+      "Стек веб-технологий",
+      "CSS-анимация",
+      "Кроссбраузерная, адаптивная вёрстка",
+      "БЭМ-методология",
+      "Pixel Perfect",
+      "Контакты",
+      "Напиcать мне",
+      "Имя*",
+      "Сообщение",
+      "Отправить",
+    ],
+    contentLangRu = [
+      "up",
+      "home",
+      "portfolio",
+      "about me",
+      "turn off the eye",
+      "roman nasachevsky",
+      "layout designer",
+      "roman nasachevsky",
+      "layout designer",
+      "portfolio",
+      "about me",
+      "Web technology stack",
+      "CSS animation",
+      "Cross-browser, responsive layout",
+      "BEM methodology",
+      "Pixel Perfect",
+      "Contacts",
+      "Write me",
+      "Name*",
+      "Massage",
+      "Send",
+    ],
+    contentItem = document.querySelectorAll("._lang");
+  changeLanguage.onclick = () => {
+    for (let e = 0; e < contentItem.length; e++)
+      changeLanguage.checked
+        ? (contentItem[e].textContent = contentLangEn[e])
+        : (contentItem[e].textContent = contentLangRu[e]);
     changeLanguage.checked
-      ? (contentItem[e].textContent = contentLangEn[e])
-      : (contentItem[e].textContent = contentLangRu[e]);
-  changeLanguage.checked
-    ? langSlider.classList.add("lang-slider--checked")
-    : langSlider.classList.remove("lang-slider--checked");
-};
+      ? langSlider.classList.add("lang-slider--checked")
+      : langSlider.classList.remove("lang-slider--checked");
+  };
 }
 // changeLang();
 
 function eye() {
   let eyeSwitch = document.querySelector(".eye-switch");
-  eyeSlider = document.querySelector(".eye-slider")
+  eyeSlider = document.querySelector(".eye-slider");
 
   eyeSwitch.onclick = function () {
     let e = document.querySelector(".eye");
@@ -98,24 +98,36 @@ function mobileMenu() {
 }
 mobileMenu();
 
-const anchors = document.querySelectorAll('a[href*="#"]');
-for (let e of anchors)
-  e.addEventListener("click", function (o) {
-    o.preventDefault();
-    const t = e.getAttribute("href");
-    document
-      .querySelector("" + t)
-      .scrollIntoView({ behavior: "smooth", block: "start" });
-  });
-const progress = document.querySelector(".progress");
-function progressBar(e) {
-  let o =
-    ((document.body.scrollTop || document.documentElement.scrollTop) /
-      (document.documentElement.scrollHeight -
-        document.documentElement.clientHeight)) *
-    100;
-  progress.style.height = o + "%";
+function scrollToLink() {
+  const anchors = document.querySelectorAll('a[href*="#"]');
+
+  for (let anchor of anchors) {
+    anchor.addEventListener("click", function (event) {
+      event.preventDefault();
+      const blockID = anchor.getAttribute("href");
+      document.querySelector("" + blockID).scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
+  }
 }
+scrollToLink();
+
+function progressScroll() {
+  const progress = document.querySelector(".progress");
+  function progressBar(e) {
+    let o =
+      ((document.body.scrollTop || document.documentElement.scrollTop) /
+        (document.documentElement.scrollHeight -
+          document.documentElement.clientHeight)) *
+      100;
+    progress.style.height = o + "%";
+  }
+  progressBar();
+}
+window.addEventListener("scroll", progressScroll);
+
 function btnToTop() {
   let e = $(".btn-totop");
   $(window).on("scroll", () => {
@@ -125,43 +137,51 @@ function btnToTop() {
       e.preventDefault(), $("html").animate({ scrollTop: 0 }, 500);
     });
 }
-window.addEventListener("scroll", progressBar), btnToTop();
-const animItems = document.querySelectorAll("._anim-items");
-if (animItems.length > 0) {
-  function animOnScroll() {
-    for (let e = 0; e < animItems.length; e++) {
-      const o = animItems[e],
-        t = o.offsetHeight,
-        n = offset(o).top,
-        l = 2;
-      let c = window.innerHeight - t / l;
-      t > window.innerHeight &&
-        (c = window.innerHeight - window.innerHeight / l),
-        pageYOffset > n - c && pageYOffset < n + t
-          ? o.classList.add("_active")
-          : o.classList.remove("_active");
+btnToTop();
+
+function scrollAnimation() {
+  const animItems = document.querySelectorAll("._anim-items");
+  if (animItems.length > 0) {
+    function animOnScroll() {
+      for (let e = 0; e < animItems.length; e++) {
+        const o = animItems[e],
+          t = o.offsetHeight,
+          n = offset(o).top,
+          l = 2;
+        let c = window.innerHeight - t / l;
+        t > window.innerHeight &&
+          (c = window.innerHeight - window.innerHeight / l),
+          pageYOffset > n - c && pageYOffset < n + t
+            ? o.classList.add("_active")
+            : o.classList.remove("_active");
+      }
     }
-  }
-  function offset(e) {
-    const o = e.getBoundingClientRect(),
-      t = window.pageXOffset || document.documentElement.scrollLeft,
-      n = window.pageYOffset || document.documentElement.scrollTop;
-    return { top: o.top + n, left: o.left + t };
-  }
-  window.addEventListener("scroll", animOnScroll),
-    setTimeout(() => {
+    function offset(e) {
+      const o = e.getBoundingClientRect(),
+        t = window.pageXOffset || document.documentElement.scrollLeft,
+        n = window.pageYOffset || document.documentElement.scrollTop;
+      return { top: o.top + n, left: o.left + t };
+    }
+    window.addEventListener("scroll", animOnScroll),
+      setTimeout(() => {
+        animOnScroll();
+      }, 100),
       animOnScroll();
-    }, 100),
-    animOnScroll();
+  }
 }
-let tuningBtn = document.querySelector(".tuning-btn"),
-  tuning = document.querySelector(".tuning"),
-  zzzzz = 0;
-function tuningActive() {
-  tuning.classList.toggle("tuning--active"),
-    tuningBtn.classList.toggle("tuning-btn--rotate");
+scrollAnimation();
+
+function tuningPanel() {
+  let tuningBtn = document.querySelector(".tuning-btn"),
+    tuning = document.querySelector(".tuning");
+  function tuningActive() {
+    tuning.classList.toggle("tuning--active"),
+      tuningBtn.classList.toggle("tuning-btn--rotate");
+  }
+  tuningBtn.addEventListener("click", tuningActive);
 }
-tuningBtn.addEventListener("click", tuningActive);
+tuningPanel();
+
 let gnatsStop = 0,
   colorThemeInput = document.querySelectorAll(".color-theme-input"),
   colorThemeLabel = document.querySelectorAll(".color-theme-label"),
@@ -251,3 +271,30 @@ function colorThemes() {
   darkSwitchBtn.addEventListener("click", switchThemeDark, false);
 }
 colorThemes();
+
+//accordion
+
+function accordions() {
+  const accordion = document.querySelectorAll(".scills__list");
+
+  accordion.forEach((elem) => {
+    elem.addEventListener("click", (e) => {
+      const self = e.currentTarget;
+      const control = self.querySelector(".accordion__control");
+      const content = self.querySelector(".accordion__content");
+
+      self.classList.toggle("open");
+
+      if (self.classList.contains("open")) {
+        control.setAttribute("aria-expanded", true);
+        content.setAttribute("aria-hidden", false);
+        content.style.maxHeight = content.scrollHeight + "px";
+      } else {
+        control.setAttribute("aria-expanded", false);
+        content.setAttribute("aria-hidden", true);
+        content.style.maxHeight = null;
+      }
+    });
+  });
+}
+accordions();

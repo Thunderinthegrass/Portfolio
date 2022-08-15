@@ -45,8 +45,8 @@
   transition: 0.5s linear;
   font-size: 14px;
   background: var(--bg-color);
-  opacity: .9;
-  &__inner{
+  opacity: 0.9;
+  &__inner {
     padding-left: 15px;
   }
   &__title {
@@ -128,7 +128,7 @@
 }
 .header__menu_item {
   display: inline-block;
-  padding: 2px 20px;
+  padding: 2px 17px;
   margin-right: 10px;
   border: 2px solid;
   text-decoration: none;
@@ -136,6 +136,7 @@
   mix-blend-mode: multiply;
   background: transparent;
   color: var(--color-text);
+  font-size: 16px;
 }
 .menu-btn {
   display: none;

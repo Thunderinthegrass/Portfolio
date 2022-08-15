@@ -98,15 +98,15 @@ button {
 .logo {
   display: block;
   position: fixed;
-  left: 0;
-  top: 10px;
+  left: -25px;
+  top: 5px;
   -webkit-transform: translate(-1000px);
       -ms-transform: translate(-1000px);
           transform: translate(-1000px);
   padding: 7px 15px;
-  border: 3px solid #373841;
-  color: #373841;
-  background: rgba(255, 255, 255, 0.937254902);
+  border: 3px solid var(--color-text);
+  color: var(--color-text);
+  background: var(--bg-color);
   text-align: center;
   text-transform: uppercase;
   -webkit-transition: 0.5s;
@@ -421,7 +421,7 @@ button {
 }
 .header__menu_item {
   display: inline-block;
-  padding: 2px 20px;
+  padding: 2px 17px;
   margin-right: 10px;
   border: 2px solid;
   text-decoration: none;
@@ -429,6 +429,7 @@ button {
   mix-blend-mode: multiply;
   background: transparent;
   color: var(--color-text);
+  font-size: 16px;
 }
 
 .menu-btn {
@@ -948,7 +949,6 @@ button {
 .about__title {
   position: absolute;
   font-size: 70px;
-  font-weight: 800;
   -webkit-transform: translate(-45px, 8px);
       -ms-transform: translate(-45px, 8px);
           transform: translate(-45px, 8px);
@@ -1127,6 +1127,7 @@ button {
   -ms-grid-row-span: 4;
   grid-row: 7/11;
   opacity: 0;
+  padding-bottom: 60px;
 }
 
 .about__item-3._active {
@@ -1405,6 +1406,9 @@ button {
   margin-top: 15px;
   position: relative;
 }
+.contactss__item a {
+  color: var(--color-text);
+}
 .contactss__phone {
   display: inline-block;
   position: relative;
@@ -1439,10 +1443,12 @@ button {
 }
 
 .icon-vk {
-  fill: #373841;
+  fill: var(--color-text);
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
+  width: 30px;
+  height: 30px;
 }
 .icon-vk:hover {
   fill: rgb(93, 108, 155);
@@ -1561,21 +1567,16 @@ textarea.form__input {
 
 .portfolio {
   border-bottom: 1px solid;
-  padding-top: 50px;
+  padding-top: 30px;
   border-top: 1px solid;
   position: relative;
 }
 
 .portfolio__title {
-  position: absolute;
   font-size: 70px;
-  font-weight: 800;
-  -webkit-transform: translate(-200px);
-      -ms-transform: translate(-200px);
-          transform: translate(-200px);
-  -webkit-transform: translate(-45px, 8px);
-      -ms-transform: translate(-45px, 8px);
-          transform: translate(-45px, 8px);
+  -webkit-transform: translateX(40px);
+      -ms-transform: translateX(40px);
+          transform: translateX(40px);
   text-transform: uppercase;
   mix-blend-mode: soft-dark;
   color: var(--color-text);
@@ -1612,7 +1613,7 @@ textarea.form__input {
   background-position: 0 0;
 }
 .portfolio__item-1 a {
-  background-image: url(../img/portfolio/store.jpg);
+  background-image: url(../img/portfolio/ag.jpg);
 }
 
 .portfolio__wrapper._active .portfolio__item-1 {
@@ -1689,7 +1690,7 @@ textarea.form__input {
   opacity: 0;
 }
 .portfolio__item-2 a {
-  background-image: url(../img/portfolio/ag.jpg);
+  background-image: url(../img/portfolio/sleep.jpg);
   background-position: right 0;
 }
 
@@ -1767,7 +1768,7 @@ textarea.form__input {
   opacity: 0;
 }
 .portfolio__item-3 a {
-  background-image: url(../img/portfolio/sleep.jpg);
+  background-image: url(../img/portfolio/store.jpg);
 }
 
 .portfolio__wrapper._active .portfolio__item-3 {
@@ -2477,6 +2478,56 @@ strong {
   color: var(--color-text);
 }
 
+.mail-icon {
+  fill: var(--color-text);
+  stroke: var(--bg-color);
+}
+
+.phone-icon {
+  fill: var(--color-text);
+  stroke: var(--bg-color);
+}
+
+.accordion__content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  will-change: max-height;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-box-sizing: content-box !important;
+          box-sizing: content-box !important;
+}
+
+.open .accordion__content {
+  opacity: 1;
+}
+
+.accordion__control {
+  position: relative;
+  cursor: pointer;
+}
+.accordion__control .arrow {
+  position: absolute;
+  top: 7px;
+  right: -25px;
+  width: 15px;
+  height: 10px;
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.open .accordion__control .arrow {
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
 .progress {
   position: fixed;
   right: 0;
@@ -3088,9 +3139,9 @@ strong {
 }
 @supports (-webkit-appearance:none){
 .form__body::after{background:rgba(0, 0, 0, 0.411) url(../img/loading.gif) center 50% no-repeat}
-.portfolio__item-1 a{background-image:url(../img/portfolio/store.webp)}
-.portfolio__item-2 a{background-image:url(../img/portfolio/ag.webp)}
-.portfolio__item-3 a{background-image:url(../img/portfolio/sleep.webp)}
+.portfolio__item-1 a{background-image:url(../img/portfolio/ag.webp)}
+.portfolio__item-2 a{background-image:url(../img/portfolio/sleep.webp)}
+.portfolio__item-3 a{background-image:url(../img/portfolio/store.webp)}
 }
 
  @media (max-width: 960px){

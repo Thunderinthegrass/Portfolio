@@ -7,7 +7,6 @@
 .about__title {
   position: absolute;
   font-size: 70px;
-  font-weight: 800;
   transform: translate(-45px, 8px);
   text-transform: uppercase;
   mix-blend-mode: soft-dark;
@@ -108,6 +107,7 @@
   grid-column: 1/4;
   grid-row: 7/11;
   opacity: 0;
+  padding-bottom: 60px;
 }
 .about__item-3._active {
   animation: about-item-3 0.8s 0.1s forwards;
@@ -255,7 +255,6 @@
   font-weight: bold;
   line-height: 50px;
   text-align: center;
-  // color: $main-color;
 }
 
 //contacts
@@ -271,6 +270,9 @@
   &__item{
     margin-top: 15px;
     position: relative;
+    a{
+      color: var(--color-text);
+    }
   }
   &__phone {
     display: inline-block;
@@ -302,8 +304,10 @@
   }
 }
 .icon-vk {
-  fill: $main-color;
+  fill: var(--color-text);
   transition: 0.3s;
+  width: 30px;
+  height: 30px;
   &:hover {
     fill: rgb(93, 108, 155);
   }

@@ -134,7 +134,7 @@ exports.html = html;
 exports.svgSprites = svgSprites;
 exports.libs = libs;
 
-exports.build = series(cleanDist, html, images, build);
+exports.build = series(cleanDist, html, images, svgSprites, build);
 exports.default = parallel(
   images,
   styles,

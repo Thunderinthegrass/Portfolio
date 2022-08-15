@@ -1,0 +1,30 @@
+.accordion__content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  will-change: max-height;
+  transition: all 0.3s;
+  box-sizing: content-box!important;
+}
+.open .accordion__content {
+  opacity: 1;
+}
+.accordion__control {
+  position: relative;
+  cursor: pointer;
+  .arrow{
+    position: absolute;
+    top: 7px;
+    right: -25px;
+    width: 15px;
+    height: 10px;
+    transform: rotateX(180deg);
+    transition: .5s;
+  }
+}
+.open .accordion__control {
+  .arrow{
+    transform: rotate(0deg);
+  }
+}

@@ -43,13 +43,13 @@ button{
 .logo {
   display: block;
   position: fixed;
-  left: 0;
-  top: 10px;
+  left: -25px;
+  top: 5px;
   transform: translate(-1000px);
   padding: 7px 15px;
-  border: 3px solid $main-color;
-  color: $main-color;
-  background: #ffffffef;
+  border: 3px solid var(--color-text);
+  color: var(--color-text);
+  background: var(--bg-color);
   text-align: center;
   text-transform: uppercase;
   transition: 0.5s;
