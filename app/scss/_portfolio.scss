@@ -82,7 +82,7 @@
 .portfolio__item-2 {
   opacity: 0;
   a {
-    background-image: url(../img/portfolio/sleep.jpg);
+    background-image: url(../img/portfolio/clusterfloor.jpg);
     background-position: right 0;
   }
 }
@@ -128,7 +128,7 @@
   opacity: 0;
   // mix-blend-mode: hard-light;
   a {
-    background-image: url(../img/portfolio/store.jpg);
+    background-image: url(../img/portfolio/axlab.jpg);
   }
 }
 .portfolio__wrapper._active {
@@ -171,6 +171,9 @@
 }
 .portfolio__item-4 {
   opacity: 0;
+  a {
+    background-image: url(../img/portfolio/morinfo.jpg);
+  }
 }
 .portfolio__wrapper._active {
   .portfolio__item-4 {

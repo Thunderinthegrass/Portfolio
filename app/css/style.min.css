@@ -813,7 +813,7 @@ button {
 .header__text {
   position: absolute;
   top: 50%;
-  padding: 44px 125px;
+  padding: 44px 110px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -933,6 +933,7 @@ button {
 .header__title {
   font-size: 3.3rem;
   background: transparent;
+  white-space: nowrap;
 }
 
 .header__subtitle {
@@ -1690,7 +1691,7 @@ textarea.form__input {
   opacity: 0;
 }
 .portfolio__item-2 a {
-  background-image: url(../img/portfolio/sleep.jpg);
+  background-image: url(../img/portfolio/clusterfloor.jpg);
   background-position: right 0;
 }
 
@@ -1768,7 +1769,7 @@ textarea.form__input {
   opacity: 0;
 }
 .portfolio__item-3 a {
-  background-image: url(../img/portfolio/store.jpg);
+  background-image: url(../img/portfolio/axlab.jpg);
 }
 
 .portfolio__wrapper._active .portfolio__item-3 {
@@ -1843,6 +1844,9 @@ textarea.form__input {
 }
 .portfolio__item-4 {
   opacity: 0;
+}
+.portfolio__item-4 a {
+  background-image: url(../img/portfolio/morinfo.jpg);
 }
 
 .portfolio__wrapper._active .portfolio__item-4 {
@@ -3140,8 +3144,9 @@ strong {
 @supports (-webkit-appearance:none){
 .form__body::after{background:rgba(0, 0, 0, 0.411) url(../img/loading.gif) center 50% no-repeat}
 .portfolio__item-1 a{background-image:url(../img/portfolio/ag.webp)}
-.portfolio__item-2 a{background-image:url(../img/portfolio/sleep.webp)}
-.portfolio__item-3 a{background-image:url(../img/portfolio/store.webp)}
+.portfolio__item-2 a{background-image:url(../img/portfolio/clusterfloor.webp)}
+.portfolio__item-3 a{background-image:url(../img/portfolio/axlab.webp)}
+.portfolio__item-4 a{background-image:url(../img/portfolio/morinfo.webp)}
 }
 
  @media (max-width: 960px){

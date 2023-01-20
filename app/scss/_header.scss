@@ -401,7 +401,7 @@
 .header__text {
   position: absolute;
   top: 50%;
-  padding: 44px 125px;
+  padding: 44px 110px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -460,6 +460,7 @@
 .header__title {
   font-size: 3.3rem;
   background: transparent;
+  white-space: nowrap;
 }
 .header__subtitle {
   font-size: 1.7rem;

@@ -813,7 +813,7 @@ button {
 .header__text {
   position: absolute;
   top: 50%;
-  padding: 44px 125px;
+  padding: 44px 110px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -933,6 +933,7 @@ button {
 .header__title {
   font-size: 3.3rem;
   background: transparent;
+  white-space: nowrap;
 }
 
 .header__subtitle {
@@ -1127,6 +1128,7 @@ button {
   -ms-grid-row-span: 4;
   grid-row: 7/11;
   opacity: 0;
+  padding-bottom: 60px;
 }
 
 .about__item-3._active {
@@ -1566,20 +1568,16 @@ textarea.form__input {
 
 .portfolio {
   border-bottom: 1px solid;
-  padding-top: 50px;
+  padding-top: 30px;
   border-top: 1px solid;
   position: relative;
 }
 
 .portfolio__title {
-  position: absolute;
   font-size: 70px;
-  -webkit-transform: translate(-200px);
-      -ms-transform: translate(-200px);
-          transform: translate(-200px);
-  -webkit-transform: translate(-45px, 8px);
-      -ms-transform: translate(-45px, 8px);
-          transform: translate(-45px, 8px);
+  -webkit-transform: translateX(40px);
+      -ms-transform: translateX(40px);
+          transform: translateX(40px);
   text-transform: uppercase;
   mix-blend-mode: soft-dark;
   color: var(--color-text);
@@ -1616,7 +1614,7 @@ textarea.form__input {
   background-position: 0 0;
 }
 .portfolio__item-1 a {
-  background-image: url(../img/portfolio/store.jpg);
+  background-image: url(../img/portfolio/ag.jpg);
 }
 
 .portfolio__wrapper._active .portfolio__item-1 {
@@ -1693,7 +1691,7 @@ textarea.form__input {
   opacity: 0;
 }
 .portfolio__item-2 a {
-  background-image: url(../img/portfolio/ag.jpg);
+  background-image: url(../img/portfolio/sleep.jpg);
   background-position: right 0;
 }
 
@@ -1771,7 +1769,7 @@ textarea.form__input {
   opacity: 0;
 }
 .portfolio__item-3 a {
-  background-image: url(../img/portfolio/sleep.jpg);
+  background-image: url(../img/portfolio/store.jpg);
 }
 
 .portfolio__wrapper._active .portfolio__item-3 {
@@ -3142,9 +3140,9 @@ strong {
 }
 @supports (-webkit-appearance:none){
 .form__body::after{background:rgba(0, 0, 0, 0.411) url(../img/loading.gif) center 50% no-repeat}
-.portfolio__item-1 a{background-image:url(../img/portfolio/store.webp)}
-.portfolio__item-2 a{background-image:url(../img/portfolio/ag.webp)}
-.portfolio__item-3 a{background-image:url(../img/portfolio/sleep.webp)}
+.portfolio__item-1 a{background-image:url(../img/portfolio/ag.webp)}
+.portfolio__item-2 a{background-image:url(../img/portfolio/sleep.webp)}
+.portfolio__item-3 a{background-image:url(../img/portfolio/store.webp)}
 }
 
  @media (max-width: 960px){

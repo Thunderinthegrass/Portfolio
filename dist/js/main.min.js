@@ -176,7 +176,7 @@ function tuningPanel() {
     tuning = document.querySelector(".tuning");
   function tuningActive() {
     tuning.classList.toggle("tuning--active"),
-      tuningBtn.classList.toggle("tuning-btn--rotate");
+    tuningBtn.classList.toggle("tuning-btn--rotate");
   }
   tuningBtn.addEventListener("click", tuningActive);
 }
