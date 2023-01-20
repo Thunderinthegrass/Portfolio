@@ -87,6 +87,7 @@ function mobileMenu() {
       menuBtnElem.classList.toggle("menu-btn__elem--active"),
       headerMenu.classList.toggle("menu--active");
       overlay.classList.toggle('d-none');
+      document.body.classList.toggle('ov-hidden');
   }
 
   function hiddMenu() {

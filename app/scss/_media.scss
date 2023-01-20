@@ -259,6 +259,7 @@
   }
   .header__top {
     padding-left: 0;
+    background-color: transparent;
   }
   .menu-btn {
     display: block;
@@ -283,7 +284,7 @@
       background: $main-color;
       color: #fff;
       font-size: 1.3rem;
-      background: rgb(64, 223, 215);
+      // background: rgb(64, 223, 215);
       mix-blend-mode: luminosity;
     }
   }
@@ -299,6 +300,19 @@
     height: 40px;
     right: 25px;
     top: 8px;
+  }
+  .about{
+    padding-top: 110px;
+    &__title{
+      padding-top: 50px;
+      padding-left: 15px;
+    }
+  }
+  .portfolio{
+    padding-top: 45px;
+    &__title{
+      padding-left: 15px;
+    }
   }
   .portfolio__wrapper {
     grid-template-columns: repeat(2, 1fr);

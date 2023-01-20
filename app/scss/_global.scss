@@ -7,6 +7,7 @@ body {
   color: var(--color-text);
   background: var(--bg-color);
   transition: all .3s;
+  position: relative;
 }
 .overlay{
   overflow: hidden;
@@ -15,8 +16,8 @@ body {
   right: 0;
   top: 0;
   bottom: 0;
-  background: rgba(255, 255, 255, 0.603);
-  z-index: 10;
+  background: rgb(255, 255, 255);
+  z-index: 14;
 }
 *,
 *::after,
@@ -82,8 +83,10 @@ button{
 .container._active {
   .logo {
     animation: logo 1s forwards;
-    // transform: rotate(360deg);
-    transform: translate(57px);
+    z-index: 12;
+    @media(max-width: 960px) {
+      transform: translate(87px);
+    }
   }
 }
 

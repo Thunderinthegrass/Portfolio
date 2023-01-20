@@ -56,6 +56,7 @@ body {
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
+  position: relative;
 }
 
 .overlay {
@@ -65,8 +66,8 @@ body {
   right: 0;
   top: 0;
   bottom: 0;
-  background: rgba(255, 255, 255, 0.603);
-  z-index: 10;
+  background: rgb(255, 255, 255);
+  z-index: 14;
 }
 
 *,
@@ -143,9 +144,14 @@ button {
 .container._active .logo {
   -webkit-animation: logo 1s forwards;
           animation: logo 1s forwards;
-  -webkit-transform: translate(57px);
-      -ms-transform: translate(57px);
-          transform: translate(57px);
+  z-index: 12;
+}
+@media (max-width: 960px) {
+  .container._active .logo {
+    -webkit-transform: translate(87px);
+        -ms-transform: translate(87px);
+            transform: translate(87px);
+  }
 }
 
 .main--color {
@@ -351,7 +357,7 @@ button {
   padding-left: 302px;
   position: fixed;
   top: 0;
-  z-index: 12;
+  z-index: 15;
   mix-blend-mode: luminosity;
 }
 .header__top-inner {
@@ -459,8 +465,7 @@ button {
   left: 12px;
   top: 12px;
   border: none;
-  background: transparent;
-  z-index: 10;
+  z-index: 14;
   outline: none;
   -webkit-appearance: none;
 }
@@ -479,13 +484,14 @@ button {
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
   width: 100%;
-  height: 6px;
+  height: 7px;
   border-radius: 1.1px;
   opacity: 1;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
   background: var(--color-text);
+  border: 1px solid #fff;
 }
 .menu-btn__elem--active {
   -webkit-transition: 0.2s;
@@ -495,7 +501,7 @@ button {
 }
 .menu-btn__elem-top {
   width: 100%;
-  height: 6px;
+  height: 7px;
   border-radius: 1.1px;
   position: absolute;
   top: 0;
@@ -507,10 +513,11 @@ button {
   -webkit-transform: translate(0, 0) rotate(0);
       -ms-transform: translate(0, 0) rotate(0);
           transform: translate(0, 0) rotate(0);
+  border: 1px solid #fff;
 }
 .menu-btn__elem-bottom {
   width: 100%;
-  height: 6px;
+  height: 7px;
   border-radius: 1.1px;
   position: absolute;
   bottom: 0;
@@ -522,6 +529,7 @@ button {
   -webkit-transform: translate(0, 0) rotate(0);
       -ms-transform: translate(0, 0) rotate(0);
           transform: translate(0, 0) rotate(0);
+  border: 1px solid #fff;
 }
 
 .menu-btn--active .menu-btn__elem-top {
@@ -2961,6 +2969,7 @@ strong {
   }
   .header__top {
     padding-left: 0;
+    background-color: transparent;
   }
   .menu-btn {
     display: block;
@@ -2995,7 +3004,6 @@ strong {
     background: #373841;
     color: #fff;
     font-size: 1.3rem;
-    background: rgb(64, 223, 215);
     mix-blend-mode: luminosity;
   }
   .header__title {
@@ -3010,6 +3018,19 @@ strong {
     height: 40px;
     right: 25px;
     top: 8px;
+  }
+  .about {
+    padding-top: 110px;
+  }
+  .about__title {
+    padding-top: 50px;
+    padding-left: 15px;
+  }
+  .portfolio {
+    padding-top: 45px;
+  }
+  .portfolio__title {
+    padding-left: 15px;
   }
   .portfolio__wrapper {
     -ms-grid-columns: (1fr)[2];
