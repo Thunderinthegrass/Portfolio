@@ -58,6 +58,17 @@ body {
   transition: all 0.3s;
 }
 
+.overlay {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.603);
+  z-index: 10;
+}
+
 *,
 *::after,
 *::before {
@@ -217,6 +228,10 @@ button {
   display: none;
 }
 
+.ov-hidden {
+  overflow: hidden;
+}
+
 .header {
   height: 100vh;
   border-bottom: 1px solid;
@@ -237,6 +252,7 @@ button {
   position: absolute;
   right: 15px;
   top: 15px;
+  z-index: 1;
   cursor: pointer;
   -webkit-transform: rotate(0deg);
       -ms-transform: rotate(0deg);
@@ -246,6 +262,10 @@ button {
   transition: 0.5s linear;
 }
 
+.blind-gear {
+  position: relative;
+  z-index: 0;
+}
 .blind-gear .cls-1 {
   fill: #373841;
   stroke-width: 10;
@@ -331,7 +351,7 @@ button {
   padding-left: 302px;
   position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 12;
   mix-blend-mode: luminosity;
 }
 .header__top-inner {
@@ -358,7 +378,6 @@ button {
       -ms-flex-pack: left;
           justify-content: left;
   position: relative;
-  z-index: 1;
 }
 
 .header__menu.menu--active {

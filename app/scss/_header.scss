@@ -19,11 +19,14 @@
   position: absolute;
   right: 15px;
   top: 15px;
+  z-index: 1;
   cursor: pointer;
   transform: rotate(0deg);
   transition: 0.5s linear;
 }
 .blind-gear {
+  position: relative;
+  z-index: 0;
   .cls-1 {
     fill: $main-color;
     stroke-width: 10;
@@ -84,7 +87,7 @@
   padding-left: 302px;
   position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 12;
   mix-blend-mode: luminosity;
   &-inner {
     width: 100%;
@@ -98,7 +101,6 @@
   align-items: center;
   justify-content: left;
   position: relative;
-  z-index: 1;
   // mix-blend-mode: difference;
 }
 .header__menu.menu--active {

@@ -79,12 +79,14 @@ function mobileMenu() {
   let menuBtn = document.querySelector(".menu-btn"),
     menuBtnElem = document.querySelector(".menu-btn__elem"),
     headerMenu = document.querySelector(".header__menu"),
-    headerMenuItem = document.querySelectorAll(".header__menu_item");
+    headerMenuItem = document.querySelectorAll(".header__menu_item"),
+    overlay = document.querySelector('.overlay');
 
   function menuBtnAnim() {
-    menuBtn.classList.toggle("menu-btn--active"),
+      menuBtn.classList.toggle("menu-btn--active"),
       menuBtnElem.classList.toggle("menu-btn__elem--active"),
       headerMenu.classList.toggle("menu--active");
+      overlay.classList.toggle('d-none');
   }
 
   function hiddMenu() {
@@ -92,6 +94,7 @@ function mobileMenu() {
   }
 
   menuBtn.addEventListener("click", menuBtnAnim);
+  overlay.addEventListener('click', menuBtnAnim);
 
   for (let e = 0; e < headerMenuItem.length; e++)
     headerMenuItem[e].addEventListener("click", hiddMenu);
@@ -172,13 +175,24 @@ function scrollAnimation() {
 scrollAnimation();
 
 function tuningPanel() {
-  let tuningBtn = document.querySelector(".tuning-btn"),
-    tuning = document.querySelector(".tuning");
+
+  let tuningBtn = document.querySelector(".tuning-btn");
+  let tuning = document.querySelector(".tuning");
+  let tuningElems = document.querySelectorAll('._tuning');
+
   function tuningActive() {
-    tuning.classList.toggle("tuning--active"),
+    tuning.classList.toggle("tuning--active");
     tuningBtn.classList.toggle("tuning-btn--rotate");
   }
+
   tuningBtn.addEventListener("click", tuningActive);
+
+  document.body.addEventListener('click', (e) => {
+    if ((e.target.classList.contains('_tuning')) == false) {
+      tuning.classList.remove("tuning--active");
+      tuningBtn.classList.remove("tuning-btn--rotate");
+    }
+  })
 }
 tuningPanel();
 

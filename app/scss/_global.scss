@@ -8,6 +8,16 @@ body {
   background: var(--bg-color);
   transition: all .3s;
 }
+.overlay{
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.603);
+  z-index: 10;
+}
 *,
 *::after,
 *::before {
@@ -153,4 +163,7 @@ button{
 }
 .d-none {
   display: none;
+}
+.ov-hidden{
+  overflow: hidden;
 }
